@@ -1,53 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cholera & Civic Belfast</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 40px;
-            line-height: 1.6;
-            color: #222;
-        }
-        header {
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 5px;
-        }
-        .subtitle {
-            font-style: italic;
-            color: #555;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #2c3e50;
-        }
-        nav {
-            margin-top: 15px;
-        }
-        .intro {
-            margin-top: 30px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Cholera & Civic Belfast</title>
+
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    color: #1f1f1f;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 70px 20px 35px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    border-bottom: 4px solid #4a6fa5;
+}
+
+h1 {
+    font-size: 2.7em;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1.1em;
+}
+
+.author {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #d8d2c3;
+}
+
+/* NAVIGATION */
+nav {
+    margin-top: 25px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #f4f1e8;
+    font-family: Arial, sans-serif;
+    font-size: 0.95em;
+}
+
+nav a:hover {
+    color: #4a6fa5;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* INTRO */
+.hero {
+    margin-bottom: 40px;
+}
+
+.hero p {
+    font-size: 1.1em;
+}
+
+/* SECTION HEADINGS */
+.section-title {
+    font-size: 1.4em;
+    margin-top: 40px;
+    border-left: 4px solid #4a6fa5;
+    padding-left: 12px;
+    color: #2f4f3e;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* CARDS */
+.card {
+    background: #faf8f3;
+    padding: 18px;
+    border: 1px solid #d8d2c3;
+    transition: transform 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card a {
+    text-decoration: none;
+    color: #2f4f3e;
+    font-weight: bold;
+    font-size: 1.05em;
+}
+
+.card p {
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #444;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+    border-top: 1px solid #d8d2c3;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.contact {
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.contact a {
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #4a6fa5;
+}
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>Cholera & Civic Belfast</h1>
+
     <div class="subtitle">
         Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
     </div>
-    <div class="subtitle">
+
+    <div class="author">
         Research and writing by Dr Nigel Farrell
     </div>
 
@@ -57,24 +161,81 @@
         <a href="#">Public Health</a>
         <a href="#">People</a>
         <a href="#">Places</a>
-        <a href="#">Sources</a>
         <a href="#">Blog</a>
+        <a href="#">Sources</a>
+        <a href="#">Research</a>
     </nav>
 </header>
 
-<div class="intro">
-    <p>
-        Belfast’s nineteenth century was shaped by rapid industrial growth, repeated epidemics,
-        and major struggles over water, sanitation, and public health. This website explores the
-        people, places, and policies that shaped the city’s response to disease and its journey
-        towards modern urban infrastructure.
-    </p>
+<div class="container">
 
-    <p>
-        Through archival research and historical storytelling, Cholera & Civic Belfast brings
-        together cholera epidemics, civic reform, and everyday life in nineteenth-century Belfast.
-    </p>
+    <div class="hero">
+        <p>
+            Belfast’s nineteenth century was shaped by rapid industrial expansion,
+            repeated epidemics, and intense struggles over water, sanitation, and civic reform.
+        </p>
+
+        <p>
+            This site explores cholera outbreaks, public health responses, and the lived experiences
+            of those who navigated the transformation of the city into an industrial capital.
+        </p>
+    </div>
+
+    <div class="section-title">Explore the archive</div>
+
+    <div class="grid">
+
+        <div class="card">
+            <a href="#">Cholera in Belfast</a>
+            <p>1832, 1849, 1854 and 1866 epidemics.</p>
+        </div>
+
+        <div class="card">
+            <a href="#">Public Health</a>
+            <p>Water supply, sanitation and civic reform.</p>
+        </div>
+
+        <div class="card">
+            <a href="#">People</a>
+            <p>Doctors, reformers and civic administrators.</p>
+        </div>
+
+        <div class="card">
+            <a href="#">Places</a>
+            <p>Workhouses, cemeteries and water infrastructure.</p>
+        </div>
+
+        <div class="card">
+            <a href="#">Blog</a>
+            <p>Short research-based essays and discoveries.</p>
+        </div>
+
+        <div class="card">
+            <a href="#">Sources</a>
+            <p>Archives, maps and historical materials.</p>
+        </div>
+
+    </div>
+
 </div>
+
+<footer>
+
+    <div>
+        <strong>Cholera & Civic Belfast</strong><br>
+        A public history project by Dr Nigel Farrell
+    </div>
+
+    <div class="contact">
+        <p><strong>Contact:</strong> choleraandcivicbelfast@gmail.com</p>
+        <p>
+            <a href="#">Bluesky</a> |
+            <a href="#">X / Twitter</a> |
+            <a href="#">Academic profile</a>
+        </p>
+    </div>
+
+</footer>
 
 </body>
 </html>
