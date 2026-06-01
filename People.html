@@ -19,19 +19,24 @@ header {
     color: #f4f1e8;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* GRID */
+/* MAIN CONTAINER */
 .people-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 30px;
-    max-width: 900px;
+    max-width: 600px;
     margin: 60px auto;
     padding: 0 20px;
+
+    /* VERTICAL LAYOUT */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+/* CARD */
+.person-card {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
 }
 
 /* OVAL IMAGE */
@@ -50,6 +55,14 @@ a {
 .person-card:hover .person-img {
     transform: scale(1.05);
 }
+
+/* NAME */
+.person-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2f4f3e;
+    font-size: 0.95em;
+}
 </style>
 </head>
 
@@ -61,18 +74,20 @@ a {
 
 <div class="people-grid">
 
-    <!-- ✔ KEEP MALCOLM -->
-  <a href="people/malcolm.html" class="person-card">
-    <div class="person-img"
-         style="background-image:url('images/malcolm.png')"></div>
+    <!-- ✔ MALCOLM (ACTIVE) -->
+    <a href="people/malcolm.html" class="person-card">
 
-    <div class="person-title">
-        Dr Andrew George Malcolm
-    </div>
-</a>
+        <div class="person-img"
+             style="background-image:url('images/malcolm.png')">
+        </div>
+
+        <div class="person-title">
+            Dr Andrew George Malcolm
+        </div>
+
     </a>
 
-    <!-- EMPTY SLOTS (future people) -->
+    <!-- EMPTY ENTRIES -->
     <a href="#" class="person-card">
         <div class="person-img"></div>
     </a>
