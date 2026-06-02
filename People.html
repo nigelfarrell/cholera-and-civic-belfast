@@ -10,22 +10,37 @@ body {
     background-color: #f4f1e8;
     margin: 0;
     color: #1f1f1f;
+    line-height: 1.7;
 }
 
-header {
+/* HEADER / BANNER */
+.people-banner {
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
     background: #2f4f3e;
     color: #f4f1e8;
+    border-bottom: 4px solid #4a6fa5;
+}
+
+.people-banner h1 {
+    margin: 0;
+    font-size: 2.2em;
+    letter-spacing: 0.5px;
+}
+
+.people-banner p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #e8e2d3;
+    font-size: 1.05em;
 }
 
 /* MAIN CONTAINER */
 .people-grid {
     max-width: 600px;
-    margin: 60px auto;
+    margin: 40px auto 60px auto;
     padding: 0 20px;
 
-    /* VERTICAL LAYOUT */
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -41,19 +56,20 @@ header {
 
 /* OVAL IMAGE */
 .person-img {
-    width: 140px;
-    height: 180px;
+    width: 150px;
+    height: 190px;
     margin: 0 auto;
-    border-radius: 50% / 40%;
+    border-radius: 50% / 42%;
     background-color: #cfd8e3;
     border: 2px solid #2f4f3e;
     background-size: cover;
     background-position: center;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .person-card:hover .person-img {
     transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* NAME */
@@ -63,15 +79,37 @@ header {
     color: #2f4f3e;
     font-size: 0.95em;
 }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+    border-top: 1px solid #d8d2c3;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer a {
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4a6fa5;
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- PAGE HEADER -->
+<div class="people-banner">
     <h1>People</h1>
-</header>
+    <p>Doctors, reformers and civic administrators in nineteenth-century Belfast</p>
+</div>
 
+<!-- PEOPLE GRID -->
 <div class="people-grid">
 
     <!-- ✔ MALCOLM (ACTIVE) -->
@@ -87,7 +125,7 @@ header {
 
     </a>
 
-    <!-- EMPTY ENTRIES -->
+    <!-- PLACEHOLDERS -->
     <a href="#" class="person-card">
         <div class="person-img"></div>
     </a>
@@ -109,6 +147,8 @@ header {
     </a>
 
 </div>
+
+<!-- FOOTER -->
 <footer>
 
     <p>
@@ -126,4 +166,3 @@ header {
 
 </body>
 </html>
-
