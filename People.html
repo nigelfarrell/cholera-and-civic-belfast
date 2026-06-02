@@ -13,7 +13,7 @@ body {
     line-height: 1.7;
 }
 
-/* HEADER (MATCHES HOMEPAGE) */
+/* HEADER */
 header {
     text-align: center;
     padding: 50px 20px 20px;
@@ -24,10 +24,9 @@ header {
 h1 {
     font-size: 2.2em;
     margin: 0;
-    letter-spacing: 0.5px;
 }
 
-/* NAV BAR */
+/* NAV */
 .main-nav {
     margin-top: 25px;
 }
@@ -54,30 +53,21 @@ h1 {
     font-size: 0.95em;
 }
 
-.menu a:hover {
-    color: #e8e2d3;
-}
-
 /* DROPDOWN */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-
     background: #f4f1e8;
     min-width: 180px;
-
     border: 1px solid #d8d2c3;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-
     padding: 10px 0;
     z-index: 999;
 }
 
-.dropdown-content li {
-    list-style: none;
-}
+.dropdown-content li { list-style: none; }
 
 .dropdown-content a {
     color: #2f4f3e;
@@ -86,23 +76,11 @@ h1 {
     font-size: 0.9em;
 }
 
-.dropdown-content a:hover {
-    background: #e8e2d3;
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* OPTIONAL PAGE SUBTITLE */
-.subtitle {
-    margin-top: 10px;
-    font-style: italic;
-    color: #e8e2d3;
-    font-size: 1.05em;
-}
-
-/* MAIN GRID */
+/* PEOPLE GRID (UNCHANGED) */
 .people-grid {
     max-width: 600px;
     margin: 40px auto 60px auto;
@@ -114,14 +92,12 @@ h1 {
     align-items: center;
 }
 
-/* CARD */
 .person-card {
     text-decoration: none;
     text-align: center;
     width: 100%;
 }
 
-/* OVAL IMAGE (UNCHANGED SYSTEM) */
 .person-img {
     width: 150px;
     height: 190px;
@@ -139,31 +115,55 @@ h1 {
     box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* NAME */
 .person-title {
     margin-top: 10px;
     font-weight: bold;
     color: #2f4f3e;
-    font-size: 0.95em;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 50px 20px;
-    margin-top: 70px;
     border-top: 1px solid #d8d2c3;
-    font-size: 0.9em;
     color: #555;
 }
 
-footer a {
-    color: #2f4f3e;
-    text-decoration: none;
-}
+/* MOBILE NAV */
+@media (max-width: 768px) {
 
-footer a:hover {
-    color: #4a6fa5;
+    .menu {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(244,241,232,0.2);
+    }
+
+    .menu a {
+        display: block;
+        padding: 12px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background: #f4f1e8;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
 }
 </style>
 </head>
@@ -171,94 +171,80 @@ footer a:hover {
 <body>
 
 <header>
-    <h1>People</h1>
 
-    <div class="subtitle">
-        Doctors, reformers and civic administrators in nineteenth-century Belfast
-    </div>
+<h1>People</h1>
 
-    <!-- NAVIGATION RESTORED -->
-    <nav class="main-nav">
-        <ul class="menu">
+<nav class="main-nav">
+<ul class="menu">
 
-            <li><a href="index.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
-            <li class="dropdown">
-                <a href="People.html">People</a>
-                <ul class="dropdown-content">
-                    <li><a href="people/malcolm.html">Dr Andrew G. Malcolm</a></li>
-                    <li><a href="#">Doctors</a></li>
-                    <li><a href="#">Reformers</a></li>
-                </ul>
-            </li>
+<li class="dropdown">
+<a href="People.html">People</a>
+<ul class="dropdown-content">
+<li><a href="people/malcolm.html">Dr Andrew G. Malcolm</a></li>
+<li><a href="#">Doctors</a></li>
+<li><a href="#">Reformers</a></li>
+</ul>
+</li>
 
-            <li class="dropdown">
-                <a href="#">Cholera</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">1832</a></li>
-                    <li><a href="#">1849</a></li>
-                    <li><a href="#">1854</a></li>
-                    <li><a href="#">1866</a></li>
-                </ul>
-            </li>
+<li class="dropdown">
+<a href="#">Cholera</a>
+<ul class="dropdown-content">
+<li><a href="#">1832</a></li>
+<li><a href="#">1849</a></li>
+<li><a href="#">1854</a></li>
+<li><a href="#">1866</a></li>
+</ul>
+</li>
 
-            <li class="dropdown">
-                <a href="#">Public Health</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Water Supply</a></li>
-                    <li><a href="#">Sanitation</a></li>
-                    <li><a href="#">Civic Reform</a></li>
-                </ul>
-            </li>
+<li class="dropdown">
+<a href="#">Public Health</a>
+<ul class="dropdown-content">
+<li><a href="#">Water Supply</a></li>
+<li><a href="#">Sanitation</a></li>
+<li><a href="#">Civic Reform</a></li>
+</ul>
+</li>
 
-            <li><a href="Blog.html">Blog</a></li>
-            <li><a href="#">Sources</a></li>
+<li><a href="Blog.html">Blog</a></li>
+<li><a href="#">Sources</a></li>
 
-        </ul>
-    </nav>
+</ul>
+</nav>
 
 </header>
 
-<!-- PEOPLE LIST -->
 <div class="people-grid">
 
-    <!-- ACTIVE PERSON -->
-    <a href="people/malcolm.html" class="person-card">
+<a href="people/malcolm.html" class="person-card">
+<div class="person-img" style="background-image:url('images/malcolm.png')"></div>
+<div class="person-title">Dr Andrew George Malcolm</div>
+</a>
 
-        <div class="person-img"
-             style="background-image:url('images/malcolm.png')">
-        </div>
-
-        <div class="person-title">
-            Dr Andrew George Malcolm
-        </div>
-
-    </a>
-
-    <!-- PLACEHOLDERS -->
-    <a href="#" class="person-card"><div class="person-img"></div></a>
-    <a href="#" class="person-card"><div class="person-img"></div></a>
-    <a href="#" class="person-card"><div class="person-img"></div></a>
-    <a href="#" class="person-card"><div class="person-img"></div></a>
-    <a href="#" class="person-card"><div class="person-img"></div></a>
+<a href="#" class="person-card"><div class="person-img"></div></a>
+<a href="#" class="person-card"><div class="person-img"></div></a>
+<a href="#" class="person-card"><div class="person-img"></div></a>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
-
-<p>
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-        <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-        alt="CC BY-NC-ND 4.0">
-    </a>
-</p>
-
-<p>
-    <a href="licence.html">Copyright & Licence</a>
-</p>
-
+<p>© Cholera & Civic Belfast</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
