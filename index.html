@@ -19,7 +19,6 @@ header {
     padding: 70px 20px 35px;
     background: #2f4f3e;
     color: #f4f1e8;
-    border-bottom: 4px solid #4a6fa5;
 }
 
 h1 {
@@ -44,22 +43,36 @@ h1 {
 /* HERO BANNER */
 .hero-banner {
     width: 100%;
-    background: #f4f1e8;
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    border-bottom: 4px solid #4a6fa5;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
 }
 
+/* IMAGE */
 .hero-banner img {
-    max-width: 90%;
-    max-height: 260px;   /* 👈 THIS controls height */
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
     display: block;
-    object-fit: contain;
-    border: 1px solid #d8d2c3;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* OVERLAY (gives designed “archive” feel) */
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(47, 79, 62, 0.25),
+        rgba(0, 0, 0, 0)
+    );
+    pointer-events: none;
+}
+
+/* subtle depth */
+.hero-banner {
+    box-shadow: inset 0 -10px 20px rgba(0,0,0,0.15);
 }
 
 /* CONTAINER */
