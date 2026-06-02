@@ -43,21 +43,7 @@ h1 {
 }
 
 /* NAV */
-nav {
-    margin-top: 25px;
-}
 
-nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #f4f1e8;
-    font-family: Arial, sans-serif;
-    font-size: 0.95em;
-}
-
-nav a:hover {
-    color: #4a6fa5;
-}
 
 /* CONTAINER */
 .container {
@@ -130,7 +116,43 @@ footer {
 .contact {
     margin-top: 20px;
 }
+.nav {
+    margin-top: 25px;
+}
 
+
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+left: 0;
+    background: #f4f1e8;
+    min-width: 200px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+    margin: 0;
+    color: #2f4f3e;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 .contact a {
     color: #2f4f3e;
     text-decoration: none;
@@ -148,7 +170,7 @@ footer {
 <header>
     <h1>Cholera & Civic Belfast</h1>
 
-```
+
 <div class="subtitle">
     Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
@@ -157,19 +179,34 @@ footer {
     Research and writing by Dr Nigel Farrell
 </div>
 
-<nav>
+<nav class="nav">
+
     <a href="index.html">Home</a>
-    <a href="People.html">People</a>
-    <a href="Blog.html">Blog</a>
+
+    <div class="dropdown">
+        <a href="#">People</a>
+        <div class="dropdown-content">
+            <a href="People.html">All People</a>
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="Blog.html">Blog</a>
+        <div class="dropdown-content">
+            <a href="Blog.html">All Posts</a>
+        </div>
+    </div>
+
     <a href="licence.html">Licence</a>
+
 </nav>
-```
 
 </header>
 
 <div class="container">
 
-```
+
 <div class="hero">
     <p>
         Belfast’s nineteenth century was shaped by rapid industrial growth, repeated epidemics,
@@ -219,13 +256,13 @@ footer {
     </div>
 
 </div>
-```
+
 
 </div>
 
 <footer>
 
-```
+
 <div>
     <strong>Cholera & Civic Belfast</strong><br>
     A public history project by Dr Nigel Farrell
@@ -250,7 +287,7 @@ footer {
 <p>
     <a href="licence.html">Copyright & Licence</a>
 </p>
-```
+
 
 </footer>
 
