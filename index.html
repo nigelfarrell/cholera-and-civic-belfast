@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -42,8 +41,22 @@ h1 {
     color: #d8d2c3;
 }
 
-/* NAV */
+/* HERO BANNER */
+.hero-banner {
+    width: 100%;
+    background: #f4f1e8;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid #4a6fa5;
+}
 
+.hero-banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #d8d2c3;
+}
 
 /* CONTAINER */
 .container {
@@ -52,7 +65,7 @@ h1 {
     padding: 40px 20px;
 }
 
-/* HERO */
+/* HERO TEXT */
 .hero {
     margin-bottom: 40px;
 }
@@ -116,43 +129,7 @@ footer {
 .contact {
     margin-top: 20px;
 }
-.nav {
-    margin-top: 25px;
-}
 
-
-
-.dropdown {
-    display: inline-block;
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-left: 0;
-    background: #f4f1e8;
-    min-width: 200px;
-    border: 1px solid #d8d2c3;
-    box-shadow: 0px 6px 16px rgba(0,0,0,0.15);
-    z-index: 1000;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px 14px;
-    margin: 0;
-    color: #2f4f3e;
-}
-
-.dropdown-content a:hover {
-    background: #e8e2d3;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 .contact a {
     color: #2f4f3e;
     text-decoration: none;
@@ -162,7 +139,6 @@ left: 0;
     color: #4a6fa5;
 }
 </style>
-
 </head>
 
 <body>
@@ -170,54 +146,29 @@ left: 0;
 <header>
     <h1>Cholera & Civic Belfast</h1>
 
-
-<div class="subtitle">
-    Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
-</div>
-
-<div class="author">
-    Research and writing by Dr Nigel Farrell
-</div>
-
-<nav class="nav">
-
-    <a href="index.html">Home</a>
-
-    <div class="dropdown">
-        <a href="#">People</a>
-        <div class="dropdown-content">
-            <a href="People.html">All People</a>
-            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-        </div>
+    <div class="subtitle">
+        Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
     </div>
 
-    <div class="dropdown">
-        <a href="Blog.html">Blog</a>
-        <div class="dropdown-content">
-            <a href="Blog.html">All Posts</a>
-        </div>
+    <div class="author">
+        Research and writing by Dr Nigel Farrell
     </div>
-
-    <a href="licence.html">Licence</a>
-
-</nav>
-
 </header>
 
-<div class="container">
+<div class="hero-banner">
+    <img src="images/Royal_Avenue_Belfast.jpg" alt="Royal Avenue Belfast">
+</div>
 
+<div class="container">
 
 <div class="hero">
     <p>
         Belfast’s nineteenth century was shaped by rapid industrial growth, repeated epidemics,
-        and major struggles over water, sanitation, and public health. These pressures transformed
-        the city’s physical environment and reshaped the ways in which its inhabitants lived,
-        worked, and responded to crisis.
+        and major struggles over water, sanitation, and public health.
     </p>
 
     <p>
-        Through archival research and historical storytelling, Cholera & Civic Belfast explores
-        cholera epidemics, civic reform, and everyday life in nineteenth-century Belfast.
+        Through archival research and historical storytelling, Cholera & Civic Belfast explores cholera epidemics, civic reform, and everyday life in nineteenth-century Belfast.
     </p>
 </div>
 
@@ -257,11 +208,9 @@ left: 0;
 
 </div>
 
-
 </div>
 
 <footer>
-
 
 <div>
     <strong>Cholera & Civic Belfast</strong><br>
@@ -270,11 +219,6 @@ left: 0;
 
 <div class="contact">
     <p><strong>Contact:</strong> choleraandcivicbelfast@gmail.com</p>
-    <p>
-        <a href="#">Bluesky</a> |
-        <a href="#">X / Twitter</a> |
-        <a href="#">Academic profile</a>
-    </p>
 </div>
 
 <p>
@@ -287,7 +231,6 @@ left: 0;
 <p>
     <a href="licence.html">Copyright & Licence</a>
 </p>
-
 
 </footer>
 
