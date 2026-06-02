@@ -40,7 +40,7 @@ h1 {
     color: #d8d2c3;
 }
 
-/* NAV BAR */
+/* NAVIGATION */
 .main-nav {
     margin-top: 25px;
 }
@@ -71,7 +71,7 @@ h1 {
     color: #e8e2d3;
 }
 
-/* DROPDOWN */
+/* DROPDOWN (DESKTOP) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -119,11 +119,10 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 75%; /* FIXED: street-level framing */
+    object-position: center 75%;
     display: block;
 }
 
-/* subtle overlay */
 .hero-banner::after {
     content: "";
     position: absolute;
@@ -136,7 +135,6 @@ h1 {
     pointer-events: none;
 }
 
-/* subtle depth */
 .hero-banner {
     box-shadow: inset 0 -10px 20px rgba(0,0,0,0.15);
 }
@@ -209,17 +207,47 @@ footer {
     color: #555;
 }
 
-.contact {
-    margin-top: 20px;
-}
+/* ========================= */
+/* MOBILE NAVIGATION FIX     */
+/* ========================= */
 
-.contact a {
-    color: #2f4f3e;
-    text-decoration: none;
-}
+@media (max-width: 768px) {
 
-.contact a:hover {
-    color: #4a6fa5;
+    .menu {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(244,241,232,0.2);
+    }
+
+    .menu a {
+        display: block;
+        padding: 12px 10px;
+    }
+
+    /* disable hover dropdown on mobile */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    /* stacked dropdown */
+    .dropdown-content {
+        position: static;
+        display: none;
+        background: #f4f1e8;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
 }
 </style>
 </head>
@@ -237,7 +265,7 @@ footer {
         Research and writing by Dr Nigel Farrell
     </div>
 
-    <!-- NAVIGATION RESTORED -->
+    <!-- NAV -->
     <nav class="main-nav">
         <ul class="menu">
 
@@ -255,10 +283,10 @@ footer {
             <li class="dropdown">
                 <a href="#">Cholera</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">1832 Epidemic</a></li>
-                    <li><a href="#">1849 Epidemic</a></li>
-                    <li><a href="#">1854 Epidemic</a></li>
-                    <li><a href="#">1866 Epidemic</a></li>
+                    <li><a href="#">1832</a></li>
+                    <li><a href="#">1849</a></li>
+                    <li><a href="#">1854</a></li>
+                    <li><a href="#">1866</a></li>
                 </ul>
             </li>
 
@@ -279,12 +307,11 @@ footer {
 
 </header>
 
-<!-- HERO IMAGE -->
+<!-- HERO -->
 <div class="hero-banner">
     <img src="images/Royal_Avenue_Belfast.jpg" alt="Royal Avenue Belfast">
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="container">
 
 <div class="hero">
@@ -337,28 +364,38 @@ footer {
 </div>
 
 <footer>
+    <p>
+        <strong>Cholera & Civic Belfast</strong><br>
+        A public history project by Dr Nigel Farrell
+    </p>
 
-<div>
-    <strong>Cholera & Civic Belfast</strong><br>
-    A public history project by Dr Nigel Farrell
-</div>
+    <p>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+            <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
+                 alt="CC BY-NC-ND 4.0">
+        </a>
+    </p>
 
-<div class="contact">
-    <p><strong>Contact:</strong> choleraandcivicbelfast@gmail.com</p>
-</div>
-
-<p>
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-        <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-        alt="CC BY-NC-ND 4.0">
-    </a>
-</p>
-
-<p>
-    <a href="licence.html">Copyright & Licence</a>
-</p>
-
+    <p>
+        <a href="licence.html">Copyright & Licence</a>
+    </p>
 </footer>
+
+<!-- MOBILE DROPDOWN SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
