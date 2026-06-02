@@ -9,42 +9,127 @@ body {
     font-family: Georgia, serif;
     background-color: #f4f1e8;
     color: #1f1f1f;
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
+    margin: 0;
     line-height: 1.7;
 }
 
-h1 {
+/* HEADER (MATCHES SITE SYSTEM) */
+header {
     text-align: center;
-    color: #2f4f3e;
-    margin-bottom: 40px;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
 }
 
-/* ARTICLE CARD */
+h1 {
+    font-size: 2.2em;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* NAV BAR (SAME AS HOME + PEOPLE) */
+.main-nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #f4f1e8;
+    min-width: 180px;
+
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #2f4f3e;
+    padding: 8px 15px;
+    display: block;
+    font-size: 0.9em;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* PAGE TITLE (keeps your blog identity) */
+.page-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #2f4f3e;
+}
+
+/* MAIN CONTENT CONTAINER (keeps your layout width feel) */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ARTICLE CARD (UNCHANGED STRUCTURE) */
 .article {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
     margin-bottom: 30px;
     padding: 20px;
-    border-radius: 6px;
 }
 
-/* FLEX LAYOUT (image left, text right) */
+/* FLEX LAYOUT (UNCHANGED) */
 .article-flex {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-/* IMAGE */
+/* IMAGE (slightly refined, same behaviour) */
 .article-flex img {
     width: 40%;
     max-height: 220px;
     object-fit: contain;
     border: 1px solid #d8d2c3;
     background: #fff;
-    border-radius: 4px;
 }
 
 /* TEXT */
@@ -68,7 +153,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 700px) {
     .article-flex {
         flex-direction: column;
@@ -87,14 +172,70 @@ footer {
     font-size: 0.9em;
     border-top: 1px solid #d8d2c3;
     padding-top: 30px;
+    color: #555;
+}
+
+footer a {
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4a6fa5;
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>Research Blog</h1>
+<header>
+    <h1>Cholera & Civic Belfast</h1>
+
+    <!-- NAVIGATION (RESTORED SYSTEM) -->
+    <nav class="main-nav">
+        <ul class="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="People.html">People</a>
+                <ul class="dropdown-content">
+                    <li><a href="people/malcolm.html">Dr Andrew G. Malcolm</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Reformers</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Cholera</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">1832</a></li>
+                    <li><a href="#">1849</a></li>
+                    <li><a href="#">1854</a></li>
+                    <li><a href="#">1866</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Public Health</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Water Supply</a></li>
+                    <li><a href="#">Sanitation</a></li>
+                    <li><a href="#">Civic Reform</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="#">Sources</a></li>
+
+        </ul>
+    </nav>
+
+</header>
+
+<h2 class="page-title">Research Blog</h2>
+
+<div class="container">
 
 <!-- ARTICLE 1 -->
 <div class="article">
@@ -147,6 +288,8 @@ footer {
         </div>
 
     </div>
+</div>
+
 </div>
 
 <!-- FOOTER -->
