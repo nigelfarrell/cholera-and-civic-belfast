@@ -45,7 +45,7 @@ h1 {
 .hero-banner {
     width: 100%;
     background: #f4f1e8;
-    padding: 25px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     border-bottom: 4px solid #4a6fa5;
@@ -53,8 +53,11 @@ h1 {
 
 .hero-banner img {
     max-width: 90%;
+    max-height: 260px;   /* 👈 THIS controls height */
+    width: auto;
     height: auto;
     display: block;
+    object-fit: contain;
     border: 1px solid #d8d2c3;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
