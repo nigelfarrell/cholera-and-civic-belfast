@@ -13,29 +13,96 @@ body {
     line-height: 1.7;
 }
 
-/* HEADER / BANNER */
-.people-banner {
+/* HEADER (MATCHES HOMEPAGE) */
+header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px 20px;
     background: #2f4f3e;
     color: #f4f1e8;
-    border-bottom: 4px solid #4a6fa5;
 }
 
-.people-banner h1 {
-    margin: 0;
+h1 {
     font-size: 2.2em;
+    margin: 0;
     letter-spacing: 0.5px;
 }
 
-.people-banner p {
+/* NAV BAR */
+.main-nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #f4f1e8;
+    min-width: 180px;
+
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #2f4f3e;
+    padding: 8px 15px;
+    display: block;
+    font-size: 0.9em;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* OPTIONAL PAGE SUBTITLE */
+.subtitle {
     margin-top: 10px;
     font-style: italic;
     color: #e8e2d3;
     font-size: 1.05em;
 }
 
-/* MAIN CONTAINER */
+/* MAIN GRID */
 .people-grid {
     max-width: 600px;
     margin: 40px auto 60px auto;
@@ -54,7 +121,7 @@ body {
     width: 100%;
 }
 
-/* OVAL IMAGE */
+/* OVAL IMAGE (UNCHANGED SYSTEM) */
 .person-img {
     width: 150px;
     height: 190px;
@@ -103,16 +170,59 @@ footer a:hover {
 
 <body>
 
-<!-- PAGE HEADER -->
-<div class="people-banner">
+<header>
     <h1>People</h1>
-    <p>Doctors, reformers and civic administrators in nineteenth-century Belfast</p>
-</div>
 
-<!-- PEOPLE GRID -->
+    <div class="subtitle">
+        Doctors, reformers and civic administrators in nineteenth-century Belfast
+    </div>
+
+    <!-- NAVIGATION RESTORED -->
+    <nav class="main-nav">
+        <ul class="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="People.html">People</a>
+                <ul class="dropdown-content">
+                    <li><a href="people/malcolm.html">Dr Andrew G. Malcolm</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Reformers</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Cholera</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">1832</a></li>
+                    <li><a href="#">1849</a></li>
+                    <li><a href="#">1854</a></li>
+                    <li><a href="#">1866</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Public Health</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Water Supply</a></li>
+                    <li><a href="#">Sanitation</a></li>
+                    <li><a href="#">Civic Reform</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="#">Sources</a></li>
+
+        </ul>
+    </nav>
+
+</header>
+
+<!-- PEOPLE LIST -->
 <div class="people-grid">
 
-    <!-- ✔ MALCOLM (ACTIVE) -->
+    <!-- ACTIVE PERSON -->
     <a href="people/malcolm.html" class="person-card">
 
         <div class="person-img"
@@ -126,41 +236,27 @@ footer a:hover {
     </a>
 
     <!-- PLACEHOLDERS -->
-    <a href="#" class="person-card">
-        <div class="person-img"></div>
-    </a>
-
-    <a href="#" class="person-card">
-        <div class="person-img"></div>
-    </a>
-
-    <a href="#" class="person-card">
-        <div class="person-img"></div>
-    </a>
-
-    <a href="#" class="person-card">
-        <div class="person-img"></div>
-    </a>
-
-    <a href="#" class="person-card">
-        <div class="person-img"></div>
-    </a>
+    <a href="#" class="person-card"><div class="person-img"></div></a>
+    <a href="#" class="person-card"><div class="person-img"></div></a>
+    <a href="#" class="person-card"><div class="person-img"></div></a>
+    <a href="#" class="person-card"><div class="person-img"></div></a>
+    <a href="#" class="person-card"><div class="person-img"></div></a>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
 
-    <p>
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-            <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-            alt="CC BY-NC-ND 4.0">
-        </a>
-    </p>
+<p>
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+        <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
+        alt="CC BY-NC-ND 4.0">
+    </a>
+</p>
 
-    <p>
-        <a href="licence.html">Copyright & Licence</a>
-    </p>
+<p>
+    <a href="licence.html">Copyright & Licence</a>
+</p>
 
 </footer>
 
