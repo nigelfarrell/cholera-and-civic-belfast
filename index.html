@@ -16,7 +16,7 @@ body {
 /* HEADER */
 header {
     text-align: center;
-    padding: 70px 20px 35px;
+    padding: 50px 20px 20px;
     background: #2f4f3e;
     color: #f4f1e8;
 }
@@ -40,6 +40,73 @@ h1 {
     color: #d8d2c3;
 }
 
+/* NAV BAR */
+.main-nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    background: #f4f1e8;
+    min-width: 180px;
+
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #2f4f3e;
+    padding: 8px 15px;
+    display: block;
+    font-size: 0.9em;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* HERO BANNER */
 .hero-banner {
     width: 100%;
@@ -48,16 +115,15 @@ h1 {
     position: relative;
 }
 
-/* IMAGE */
 .hero-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 45%;
+    object-position: center 75%; /* FIXED: street-level framing */
     display: block;
 }
 
-/* OVERLAY (gives designed “archive” feel) */
+/* subtle overlay */
 .hero-banner::after {
     content: "";
     position: absolute;
@@ -170,12 +236,55 @@ footer {
     <div class="author">
         Research and writing by Dr Nigel Farrell
     </div>
+
+    <!-- NAVIGATION RESTORED -->
+    <nav class="main-nav">
+        <ul class="menu">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="People.html">People</a>
+                <ul class="dropdown-content">
+                    <li><a href="people/malcolm.html">Dr Andrew G. Malcolm</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Reformers</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Cholera</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">1832 Epidemic</a></li>
+                    <li><a href="#">1849 Epidemic</a></li>
+                    <li><a href="#">1854 Epidemic</a></li>
+                    <li><a href="#">1866 Epidemic</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Public Health</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Water Supply</a></li>
+                    <li><a href="#">Sanitation</a></li>
+                    <li><a href="#">Civic Reform</a></li>
+                </ul>
+            </li>
+
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="#">Sources</a></li>
+
+        </ul>
+    </nav>
+
 </header>
 
+<!-- HERO IMAGE -->
 <div class="hero-banner">
     <img src="images/Royal_Avenue_Belfast.jpg" alt="Royal Avenue Belfast">
 </div>
 
+<!-- MAIN CONTENT -->
 <div class="container">
 
 <div class="hero">
