@@ -16,8 +16,8 @@ body {
 }
 
 h1 {
-    color: #2f4f3e;
     text-align: center;
+    color: #2f4f3e;
     margin-bottom: 40px;
 }
 
@@ -25,29 +25,36 @@ h1 {
 .article {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
-    padding: 20px;
     margin-bottom: 30px;
+    padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
-/* IMAGE STYLE (clean + balanced) */
-.article img {
-    width: 100%;
-    height: auto;
-    max-height: 320px;
+/* FLEX LAYOUT (image left, text right) */
+.article-flex {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* IMAGE */
+.article-flex img {
+    width: 40%;
+    max-height: 220px;
     object-fit: contain;
-    display: block;
-    margin-bottom: 15px;
     border: 1px solid #d8d2c3;
-    border-radius: 4px;
     background: #fff;
+    border-radius: 4px;
 }
 
-/* TITLES */
-.article h2 {
+/* TEXT */
+.article-text {
+    width: 60%;
+}
+
+.article-text h2 {
+    margin-top: 0;
     color: #2f4f3e;
-    margin-top: 10px;
 }
 
 /* LINKS */
@@ -59,6 +66,18 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+    .article-flex {
+        flex-direction: column;
+    }
+
+    .article-flex img,
+    .article-text {
+        width: 100%;
+    }
 }
 
 /* FOOTER */
@@ -79,43 +98,55 @@ footer {
 
 <!-- ARTICLE 1 -->
 <div class="article">
+    <div class="article-flex">
 
-    <img src="images/cholera-1832-blog.jpg"
-         alt="Cholera in Belfast 1832 illustration">
+        <img src="images/cholera-1832-blog.jpg"
+             alt="Cholera in Belfast 1832">
 
-    <h2>Cholera in Belfast in 1832 and 1848</h2>
+        <div class="article-text">
 
-    <p>
-        A study of the cholera epidemics that affected Belfast in the early to mid-nineteenth century,
-        and their impact on urban governance and public health reform.
-    </p>
+            <h2>Cholera in Belfast in 1832 and 1848</h2>
 
-    <p>
-        <a href="blog/Cholera%20in%20Belfast%20in%201832%20and%201848.pdf" target="_blank">
-            Read Article (PDF)
-        </a>
-    </p>
+            <p>
+                A study of the cholera epidemics that affected Belfast in the early to mid-nineteenth century,
+                and their impact on urban governance and public health reform.
+            </p>
 
+            <p>
+                <a href="blog/Cholera%20in%20Belfast%20in%201832%20and%201848.pdf" target="_blank">
+                    Read Article (PDF)
+                </a>
+            </p>
+
+        </div>
+
+    </div>
 </div>
 
 <!-- ARTICLE 2 -->
 <div class="article">
+    <div class="article-flex">
 
-    <img src="images/cholera-poster.jpg"
-         alt="Cholera public health poster">
+        <img src="images/cholera-poster.jpg"
+             alt="Cholera public health poster">
 
-    <h2>Cholera in Nineteenth Century Belfast</h2>
+        <div class="article-text">
 
-    <p>
-        An exploration of cholera, industrialisation, and the development of sanitary reform in Belfast.
-    </p>
+            <h2>Cholera in Nineteenth Century Belfast</h2>
 
-    <p>
-        <a href="blog/Cholera%20in%20Nineteenth%20Century%20Belfast.pdf" target="_blank">
-            Read Article (PDF)
-        </a>
-    </p>
+            <p>
+                An exploration of cholera, industrialisation, and the development of sanitary reform in Belfast.
+            </p>
 
+            <p>
+                <a href="blog/Cholera%20in%20Nineteenth%20Century%20Belfast.pdf" target="_blank">
+                    Read Article (PDF)
+                </a>
+            </p>
+
+        </div>
+
+    </div>
 </div>
 
 <!-- FOOTER -->
