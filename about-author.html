@@ -25,7 +25,7 @@ h1 {
     margin: 0;
 }
 
-/* NAVIGATION */
+/* NAV */
 .main-nav {
     margin-top: 25px;
 }
@@ -81,17 +81,16 @@ h1 {
 
 /* CONTENT */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
-    overflow: auto; /* FIX FOR FLOAT ISSUE */
 }
 
-/* IMAGE */
+/* IMAGE — slightly larger + better wrap */
 .author-image {
     float: left;
-    width: 180px;
-    margin: 0 18px 12px 0;
+    width: 260px;
+    margin: 0 24px 12px 0;
 }
 
 .author-image img {
@@ -100,8 +99,16 @@ h1 {
     border: 1px solid #d8d2c3;
 }
 
+/* CLEARFIX (IMPORTANT FIX) */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -124,7 +131,7 @@ h1 {
 
     .author-image {
         float: none;
-        width: 220px;
+        width: 240px;
         margin: 0 auto 20px auto;
         display: block;
     }
@@ -135,7 +142,6 @@ h1 {
 <body>
 
 <header>
-
 <h1>About the Author</h1>
 
 <nav class="main-nav">
@@ -155,9 +161,7 @@ h1 {
     </li>
 
     <li><a href="public-health.html">Public Health</a></li>
-
     <li><a href="People.html">People</a></li>
-
     <li><a href="Stories.html">Stories</a></li>
 
     <li class="dropdown">
@@ -172,7 +176,6 @@ h1 {
 
 </ul>
 </nav>
-
 </header>
 
 <div class="container">
@@ -192,25 +195,10 @@ Since 2011, Nigel has taught widely across Irish, British, and European history,
 </p>
 
 <p>
-He completed his PhD in 2014 with a thesis entitled <em> Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
+He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
 </p>
 
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
