@@ -79,18 +79,18 @@ h1 {
     display: block;
 }
 
-/* LAYOUT */
+/* CONTENT */
 .container {
     max-width: 850px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* IMAGE WRAP */
+/* IMAGE */
 .project-image {
     float: left;
     width: 240px;
-    margin: 6px 22px 14px 0; /* top = moves image down slightly */
+    margin: 6px 22px 14px 0;
 }
 
 .project-image img {
@@ -99,8 +99,13 @@ h1 {
     border: 1px solid #d8d2c3;
 }
 
-/* CLEAR FIX */
-.clearfix::after {
+/* TEXT ADJUSTMENT (moves text up slightly) */
+.container p:first-of-type {
+    margin-top: -6px;
+}
+
+/* CLEARFIX */
+.container::after {
     content: "";
     display: block;
     clear: both;
@@ -130,9 +135,13 @@ h1 {
 
     .project-image {
         float: none;
-        width: 220px;
+        width: 260px;
         margin: 0 auto 20px auto;
         display: block;
+    }
+
+    .container p:first-of-type {
+        margin-top: 0;
     }
 }
 </style>
@@ -181,14 +190,12 @@ h1 {
 
 </header>
 
-<div class="container clearfix">
+<div class="container">
 
-<!-- IMAGE -->
 <div class="project-image">
     <img src="images/cholera-poster.jpg" alt="Cholera poster">
 </div>
 
-<!-- TEXT -->
 <p>
 Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city.
 </p>
@@ -206,21 +213,6 @@ The aim is to present research in an accessible format that bridges academic sch
 </p>
 
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
