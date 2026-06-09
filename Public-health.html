@@ -13,6 +13,7 @@ body {
     color: #1f1f1f;
 }
 
+/* HEADER */
 header {
     text-align: center;
     padding: 50px 20px 20px;
@@ -28,13 +29,61 @@ h1 { margin: 0; font-size: 2.4em; }
     margin-top: 10px;
 }
 
-nav a {
-    color: #f4f1e8;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
+/* NAVIGATION (STANDARDISED) */
+nav {
+    margin-top: 25px;
 }
 
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    min-width: 220px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* CONTENT */
 .container {
     max-width: 900px;
     margin: auto;
@@ -56,18 +105,28 @@ nav a {
     margin-top: 15px;
 }
 
-.card a {
-    font-weight: bold;
-    color: #2f4f3e;
-    text-decoration: none;
-}
+/* MOBILE */
+@media (max-width: 768px) {
 
-footer {
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid #d8d2c3;
-    margin-top: 60px;
-    color: #555;
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
 }
 </style>
 </head>
@@ -75,16 +134,46 @@ footer {
 <body>
 
 <header>
-    <h1>Public Health</h1>
-    <div class="subtitle">Sanitation, water supply and civic reform in nineteenth-century Belfast</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="cholera-1832.html">Cholera</a>
-        <a href="People.html">People</a>
-        <a href="Stories.html">Stories</a>
-        <a href="research.html">Research</a>
-    </nav>
+<h1>Public Health</h1>
+
+<div class="subtitle">
+Sanitation, water supply and civic reform in nineteenth-century Belfast
+</div>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li><a href="public-health.html">Public Health</a></li>
+    <li><a href="People.html">People</a></li>
+    <li><a href="Stories.html">Stories</a></li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
 </header>
 
 <div class="container">
@@ -113,9 +202,6 @@ footer {
 
 </div>
 
-<footer>
-    Cholera & Civic Belfast — Public History Project
-</footer>
-
 </body>
+</html>
 </html>
