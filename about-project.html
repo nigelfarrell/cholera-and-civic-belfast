@@ -25,8 +25,8 @@ h1 {
     margin: 0;
 }
 
-/* NAVIGATION */
-.main-nav {
+/* NAV */
+nav {
     margin-top: 25px;
 }
 
@@ -79,21 +79,18 @@ h1 {
     display: block;
 }
 
-/* CONTENT GRID */
+/* CONTENT */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
-
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 26px;
-    align-items: start;
 }
 
-/* IMAGE COLUMN */
+/* IMAGE FLOAT (KEY FIX) */
 .project-image {
-    width: 280px;
+    float: left;
+    width: 320px;
+    margin: 0 22px 12px 0;
 }
 
 .project-image img {
@@ -102,9 +99,11 @@ h1 {
     border: 1px solid #d8d2c3;
 }
 
-/* TEXT COLUMN */
-.project-text {
+/* CLEAR FIX */
+.clearfix::after {
+    content: "";
     display: block;
+    clear: both;
 }
 
 /* MOBILE */
@@ -130,13 +129,11 @@ h1 {
         display: block;
     }
 
-    .container {
-        display: block;
-    }
-
     .project-image {
+        float: none;
         width: 260px;
         margin: 0 auto 20px auto;
+        display: block;
     }
 }
 </style>
@@ -148,7 +145,7 @@ h1 {
 
 <h1>About the Project</h1>
 
-<nav class="main-nav">
+<nav>
 <ul class="menu">
 
     <li><a href="index.html">Home</a></li>
@@ -165,9 +162,7 @@ h1 {
     </li>
 
     <li><a href="public-health.html">Public Health</a></li>
-
     <li><a href="People.html">People</a></li>
-
     <li><a href="Stories.html">Stories</a></li>
 
     <li class="dropdown">
@@ -185,7 +180,7 @@ h1 {
 
 </header>
 
-<div class="container">
+<div class="container clearfix">
 
     <!-- IMAGE -->
     <div class="project-image">
@@ -193,7 +188,7 @@ h1 {
     </div>
 
     <!-- TEXT -->
-    <div class="project-text">
+    <div>
 
         <p>
         Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city.
