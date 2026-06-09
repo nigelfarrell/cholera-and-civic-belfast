@@ -21,7 +21,10 @@ header {
     color: #f4f1e8;
 }
 
-h1 { margin: 0; font-size: 2.4em; }
+h1 {
+    margin: 0;
+    font-size: 2.4em;
+}
 
 .subtitle {
     color: #e8e2d3;
@@ -29,19 +32,19 @@ h1 { margin: 0; font-size: 2.4em; }
     margin-top: 10px;
 }
 
-/* NAVIGATION (STANDARDISED) */
+/* NAVIGATION */
 nav {
     margin-top: 25px;
 }
 
 .menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
 }
 
 .menu > li {
@@ -55,16 +58,21 @@ nav {
     font-size: 0.95em;
 }
 
-/* DROPDOWN */
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: #f4f1e8;
-    min-width: 220px;
+    min-width: 230px;
     border: 1px solid #d8d2c3;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    padding: 10px 0;
     z-index: 999;
 }
 
@@ -73,6 +81,7 @@ nav {
     padding: 8px 15px;
     color: #2f4f3e;
     text-decoration: none;
+    font-size: 0.9em;
 }
 
 .dropdown-content a:hover {
@@ -105,12 +114,27 @@ nav {
     margin-top: 15px;
 }
 
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+    border-top: 1px solid #d8d2c3;
+    font-size: 0.9em;
+    color: #555;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 
     .menu {
         flex-direction: column;
         align-items: center;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
     }
 
     .dropdown-content {
@@ -144,32 +168,49 @@ Sanitation, water supply and civic reform in nineteenth-century Belfast
 <nav>
 <ul class="menu">
 
-    <li><a href="index.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
-    <li class="dropdown">
-        <a href="#">Cholera</a>
-        <div class="dropdown-content">
-            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
-            <a href="cholera-1832.html">Belfast 1832</a>
-            <a href="cholera-1849.html">Belfast 1849</a>
-            <a href="cholera-1854.html">Belfast 1854</a>
-            <a href="cholera-1866.html">Belfast 1866</a>
-        </div>
-    </li>
+<li class="dropdown">
+<a href="#">Cholera</a>
+<div class="dropdown-content">
+<a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+<a href="cholera-1832.html">Belfast 1832</a>
+<a href="cholera-1849.html">Belfast 1849</a>
+<a href="cholera-1854.html">Belfast 1854</a>
+<a href="cholera-1866.html">Belfast 1866</a>
+</div>
+</li>
 
-    <li><a href="public-health.html">Public Health</a></li>
-    <li><a href="People.html">People</a></li>
-    <li><a href="Stories.html">Stories</a></li>
+<li class="dropdown">
+<a href="Public-health.html">Public Health</a>
+<div class="dropdown-content">
+<a href="Public-health.html">About this Section</a>
+</div>
+</li>
 
-    <li class="dropdown">
-        <a href="Research.html">Research</a>
-        <div class="dropdown-content">
-            <a href="about-project.html">About the Project</a>
-            <a href="about-author.html">About the Author</a>
-            <a href="thesis.html">PhD Thesis</a>
-            <a href="sources.html">Sources</a>
-        </div>
-    </li>
+<li class="dropdown">
+<a href="People.html">People</a>
+<div class="dropdown-content">
+<a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+<a href="People.html">About this Section</a>
+</div>
+</li>
+
+<li class="dropdown">
+<a href="Stories.html">Stories</a>
+<div class="dropdown-content">
+<a href="Stories.html">Stories Archive</a>
+</div>
+</li>
+
+<li class="dropdown">
+<a href="Research.html">Research</a>
+<div class="dropdown-content">
+<a href="about-project.html">About the Project</a>
+<a href="about-author.html">About the Author</a>
+<a href="thesis.html">PhD Thesis</a>
+</div>
+</li>
 
 </ul>
 </nav>
@@ -181,27 +222,48 @@ Sanitation, water supply and civic reform in nineteenth-century Belfast
 <div class="section-title">Overview</div>
 
 <div class="card">
-    <p>
-        This section explores the development of public health infrastructure in nineteenth-century Belfast,
-        including water supply, sanitation systems, and the emergence of civic health governance.
-    </p>
+<p>
+This section explores the development of public health infrastructure in nineteenth-century Belfast, including water supply, sanitation systems, and the emergence of civic health governance.
+</p>
 
-    <p>
-        It is currently under development and will expand alongside ongoing research into cholera epidemics
-        and urban reform.
-    </p>
+<p>
+It is currently under development and will expand alongside ongoing research into cholera epidemics and urban reform.
+</p>
 </div>
 
 <div class="section-title">Planned Themes</div>
 
 <div class="card">
-    <p><strong>Water Supply:</strong> Belfast’s evolving water infrastructure and access inequality.</p>
-    <p><strong>Sanitation:</strong> drainage, waste removal, and urban contamination.</p>
-    <p><strong>Civic Reform:</strong> institutional responses to epidemic disease and urban growth.</p>
+<p><strong>Water Supply:</strong> Belfast’s evolving water infrastructure and access inequality.</p>
+
+<p><strong>Sanitation:</strong> drainage, waste removal, and urban contamination.</p>
+
+<p><strong>Civic Reform:</strong> institutional responses to epidemic disease and urban growth.</p>
 </div>
 
 </div>
+
+<footer>
+<p><strong>Cholera & Civic Belfast</strong><br>
+A public history project by Dr Nigel Farrell</p>
+
+<p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
-</html>
 </html>
