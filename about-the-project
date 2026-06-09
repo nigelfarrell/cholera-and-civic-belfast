@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About the Project | Cholera & Civic Belfast</title>
+
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* FLOAT IMAGE LEFT (UPDATED SIZE) */
+.project-image {
+    float: left;
+    width: 180px;
+    margin: 0 18px 12px 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #d8d2c3;
+}
+
+/* CLEARFIX */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .project-image {
+        float: none;
+        width: 200px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>About the Project</h1>
+</header>
+
+<div class="container clearfix">
+
+<!-- IMAGE -->
+<div class="project-image">
+    <img src="images/cholera-poster.jpg" alt="Cholera poster">
+</div>
+
+<!-- TEXT -->
+<p>
+Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city.
+</p>
+
+<p>
+The project is based on doctoral research into cholera in Belfast between 1832 and 1878, and draws on a wide range of historical sources including official reports, newspapers, medical accounts, and civic records. It examines how repeated epidemic outbreaks shaped urban infrastructure, medical practice, and civic reform.
+</p>
+
+<p>
+The site is organised around cholera epidemics, public health developments, biographical studies, and narrative research essays. Together, these sections provide a structured account of how disease and reform shaped nineteenth-century Belfast.
+</p>
+
+<p>
+The aim is to present research in an accessible format that bridges academic scholarship and public history, allowing wider audiences to engage with the social and medical history of nineteenth-century Belfast.
+</p>
+
+</div>
+
+</body>
+</html>
