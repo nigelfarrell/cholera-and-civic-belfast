@@ -25,8 +25,8 @@ h1 {
     margin: 0;
 }
 
-/* NAVIGATION */
-.main-nav {
+/* NAV */
+nav {
     margin-top: 25px;
 }
 
@@ -116,9 +116,27 @@ h1 {
     background: #3f6a52;
 }
 
+/* LICENCE */
+.licence {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #444;
+    border-top: 1px solid #d8d2c3;
+    padding-top: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #d8d2c3;
+    font-size: 0.9em;
+    color: #555;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
-
     .menu {
         flex-direction: column;
         align-items: center;
@@ -148,7 +166,7 @@ h1 {
 
 <h1>PhD Thesis</h1>
 
-<nav class="main-nav">
+<nav>
 <ul class="menu">
 
     <li><a href="index.html">Home</a></li>
@@ -205,13 +223,14 @@ Drawing on a wide range of archival sources including municipal records, medical
 </p>
 
 <p>
-This thesis argues that cholera epidemics were more influential in shaping Belfast’s public health landscape than has previously been acknowledged. These outbreaks acted as a powerful catalyst for systemic reform, significantly accelerating the development of modern public health systems
+This thesis argues that cholera epidemics were more influential in shaping Belfast’s public health landscape than has previously been acknowledged. These outbreaks acted as a powerful catalyst for systemic reform, significantly accelerating the development of modern public health systems.
 </p>
 
 <a class="download-btn" href="thesis/Farrell_PhD_Thesis.pdf" target="_blank">
 Download Full Thesis (PDF)
 </a>
-<div class="meta">
+
+<div class="licence">
 
 <strong>Licence & Use</strong><br><br>
 
@@ -224,6 +243,15 @@ The content may not be redistributed commercially without permission.
 </div>
 
 </div>
+
+</div>
+
+<footer>
+    <p><strong>Cholera & Civic Belfast</strong><br>
+    A public history project by Dr Nigel Farrell</p>
+
+    <p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
 
 </body>
 </html>
