@@ -13,7 +13,7 @@ body {
     line-height: 1.7;
 }
 
-/* HEADER (same style as site) */
+/* HEADER */
 header {
     text-align: center;
     padding: 50px 20px 20px;
@@ -32,27 +32,35 @@ h1 {
     padding: 40px 20px;
 }
 
-/* IMAGE STYLE */
+/* FLOATING IMAGE */
 .author-image {
-    text-align: center;
-    margin-bottom: 30px;
+    float: left;
+    width: 180px;
+    margin: 0 20px 15px 0;
 }
 
 .author-image img {
-    width: 250px;
+    width: 100%;
     height: auto;
     border: 1px solid #d8d2c3;
 }
 
-/* OPTIONAL: circular version (uncomment if preferred)
-.author-image img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #d8d2c3;
+/* CLEAR FLOAT AFTER CONTENT */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
-*/
+
+/* MOBILE: stack image above text */
+@media (max-width: 768px) {
+    .author-image {
+        float: none;
+        width: 220px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+}
 </style>
 </head>
 
@@ -62,14 +70,14 @@ h1 {
 <h1>About the Author</h1>
 </header>
 
-<div class="container">
+<div class="container clearfix">
 
-<!-- IMAGE PLACED HERE -->
+<!-- IMAGE (LEFT FLOAT) -->
 <div class="author-image">
     <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
 </div>
 
-<!-- BIO TEXT -->
+<!-- TEXT WRAPS AROUND IMAGE -->
 <p>
 Dr Nigel Farrell is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts, with particular interests in cholera, urban development, and the emergence of modern public health institutions.
 </p>
