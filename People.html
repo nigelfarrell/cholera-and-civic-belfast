@@ -27,7 +27,7 @@ h1 {
 }
 
 /* NAV */
-.main-nav {
+nav {
     margin-top: 25px;
 }
 
@@ -60,29 +60,32 @@ h1 {
     top: 100%;
     left: 0;
     background: #f4f1e8;
-    min-width: 180px;
+    min-width: 200px;
     border: 1px solid #d8d2c3;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     padding: 10px 0;
     z-index: 999;
 }
 
-.dropdown-content li { list-style: none; }
-
 .dropdown-content a {
     color: #2f4f3e;
     padding: 8px 15px;
     display: block;
     font-size: 0.9em;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* PEOPLE GRID (UNCHANGED) */
+/* PEOPLE GRID */
 .people-grid {
-    max-width: 600px;
+    max-width: 700px;
     margin: 40px auto 60px auto;
     padding: 0 20px;
 
@@ -127,9 +130,10 @@ footer {
     padding: 50px 20px;
     border-top: 1px solid #d8d2c3;
     color: #555;
+    font-size: 0.9em;
 }
 
-/* MOBILE NAV */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .menu {
@@ -174,41 +178,37 @@ footer {
 
 <h1>People</h1>
 
-<nav class="main-nav">
+<nav>
 <ul class="menu">
 
-<li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
 
-<li class="dropdown">
-<a href="People.html">People</a>
-<ul class="dropdown-content">
-<li><a href="people/malcolm.html">Dr Andrew G. Malcolm</a></li>
-<li><a href="#">Doctors</a></li>
-<li><a href="#">Reformers</a></li>
-</ul>
-</li>
+    <li class="dropdown">
+        <a href="cholera-1832.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics</a>
+            <a href="cholera-1832.html">1832</a>
+            <a href="cholera-1849.html">1849</a>
+            <a href="cholera-1854.html">1854</a>
+            <a href="cholera-1866.html">1866</a>
+        </div>
+    </li>
 
-<li class="dropdown">
-<a href="#">Cholera</a>
-<ul class="dropdown-content">
-<li><a href="#">1832</a></li>
-<li><a href="#">1849</a></li>
-<li><a href="#">1854</a></li>
-<li><a href="#">1866</a></li>
-</ul>
-</li>
+    <li><a href="public-health.html">Public Health</a></li>
 
-<li class="dropdown">
-<a href="#">Public Health</a>
-<ul class="dropdown-content">
-<li><a href="#">Water Supply</a></li>
-<li><a href="#">Sanitation</a></li>
-<li><a href="#">Civic Reform</a></li>
-</ul>
-</li>
+    <li><a href="people.html">People</a></li>
 
-<li><a href="Blog.html">Blog</a></li>
-<li><a href="#">Sources</a></li>
+    <li><a href="stories.html">Stories</a></li>
+
+    <li class="dropdown">
+        <a href="research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
 
 </ul>
 </nav>
@@ -218,18 +218,27 @@ footer {
 <div class="people-grid">
 
 <a href="people/malcolm.html" class="person-card">
-<div class="person-img" style="background-image:url('images/malcolm.png')"></div>
-<div class="person-title">Dr Andrew George Malcolm</div>
+    <div class="person-img" style="background-image:url('images/malcolm.png')"></div>
+    <div class="person-title">Dr Andrew George Malcolm</div>
 </a>
 
-<a href="#" class="person-card"><div class="person-img"></div></a>
-<a href="#" class="person-card"><div class="person-img"></div></a>
-<a href="#" class="person-card"><div class="person-img"></div></a>
+<a href="#" class="person-card">
+    <div class="person-img"></div>
+</a>
+
+<a href="#" class="person-card">
+    <div class="person-img"></div>
+</a>
+
+<a href="#" class="person-card">
+    <div class="person-img"></div>
+</a>
 
 </div>
 
 <footer>
-<p>© Cholera & Civic Belfast</p>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
 
 <script>
