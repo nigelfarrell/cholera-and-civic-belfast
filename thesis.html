@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PhD Thesis | Cholera & Civic Belfast</title>
+
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* NAVIGATION */
+.main-nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    min-width: 220px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* THESIS BOX */
+.thesis-box {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 30px;
+}
+
+/* META */
+.meta {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.download-btn:hover {
+    background: #3f6a52;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>PhD Thesis</h1>
+
+<nav class="main-nav">
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li><a href="public-health.html">Public Health</a></li>
+
+    <li><a href="People.html">People</a></li>
+
+    <li><a href="Stories.html">Stories</a></li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="thesis-box">
+
+<h2>Cholera and the Development of Public Health in Belfast, 1832–1878</h2>
+
+<div class="meta">
+Author-revised version of doctoral thesis (2014)<br>
+Social History of Medicine / Public Health / Nineteenth-Century Belfast
+</div>
+
+<p>
+This doctoral thesis examines the impact of repeated cholera epidemics on the development of public health infrastructure and civic reform in nineteenth-century Belfast. It explores how outbreaks in 1832, 1849, 1854, and 1866 shaped medical practice, urban governance, and sanitation policy.
+</p>
+
+<p>
+Drawing on a wide range of archival sources including municipal records, medical reports, newspapers, and correspondence, the study situates Belfast within wider Irish, British, and European responses to epidemic disease.
+</p>
+
+<p>
+This thesis argues that cholera epidemics were more influential in shaping Belfast’s public health landscape than has previously been acknowledged. These outbreaks acted as a powerful catalyst for systemic reform, significantly accelerating the development of modern public health systems
+</p>
+
+<a class="download-btn" href="thesis/Farrell_PhD_Thesis.pdf" target="_blank">
+Download Full Thesis (PDF)
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
