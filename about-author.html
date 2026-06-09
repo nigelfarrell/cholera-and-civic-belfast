@@ -84,9 +84,10 @@ h1 {
     max-width: 800px;
     margin: auto;
     padding: 40px 20px;
+    overflow: auto; /* FIX FOR FLOAT ISSUE */
 }
 
-/* IMAGE FLOAT */
+/* IMAGE */
 .author-image {
     float: left;
     width: 180px;
@@ -97,13 +98,6 @@ h1 {
     width: 100%;
     height: auto;
     border: 1px solid #d8d2c3;
-}
-
-/* CLEARFIX */
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /* MOBILE */
@@ -181,7 +175,7 @@ h1 {
 
 </header>
 
-<div class="container clearfix">
+<div class="container">
 
 <!-- IMAGE -->
 <div class="author-image">
@@ -194,7 +188,7 @@ Dr Nigel Farrell is a social historian specialising in the history of public hea
 </p>
 
 <p>
-Since 2011, Nigel has taught widely across Irish, British, and European history, covering themes including medicine, conflict and politics, gender, and witchcraft. Based on the North Coast of Northern Ireland, he has over a decade of experience in lecturing, historical research, and public speaking.
+Since 2011, Nigel has taught widely across Irish, British, and European history, covering themes including medicine, conflict and politics, gender, and witchcraft. He has over a decade of experience in lecturing, historical research, and public speaking.
 </p>
 
 <p>
