@@ -24,7 +24,6 @@ header {
 h1 {
     font-size: 2.7em;
     margin: 0;
-    letter-spacing: 0.5px;
 }
 
 .subtitle {
@@ -40,7 +39,7 @@ h1 {
     color: #d8d2c3;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav {
     margin-top: 25px;
 }
@@ -55,6 +54,10 @@ nav {
     flex-wrap: wrap;
 }
 
+.menu > li {
+    position: relative;
+}
+
 .menu a {
     color: #f4f1e8;
     text-decoration: none;
@@ -64,6 +67,36 @@ nav {
 
 .menu a:hover {
     color: #e8e2d3;
+}
+
+/* DROPDOWNS */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    min-width: 230px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* HERO */
@@ -85,20 +118,6 @@ nav {
     max-width: 950px;
     margin: auto;
     padding: 40px 20px;
-}
-
-/* SECTION TITLE */
-.section-title {
-    font-size: 1.4em;
-    margin-top: 40px;
-    border-left: 4px solid #2f4f3e;
-    padding-left: 12px;
-    color: #2f4f3e;
-}
-
-/* HERO TEXT */
-.hero p {
-    font-size: 1.1em;
 }
 
 /* GRID */
@@ -152,12 +171,26 @@ footer {
     .menu {
         flex-direction: column;
         align-items: center;
-        gap: 0;
     }
 
-    .menu li {
+    .menu > li {
         width: 100%;
         text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
     }
 }
 </style>
@@ -166,26 +199,74 @@ footer {
 <body>
 
 <header>
-    <h1>Cholera & Civic Belfast</h1>
 
-    <div class="subtitle">
-        Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
-    </div>
+<h1>Cholera & Civic Belfast</h1>
 
-    <div class="author">
-        Research and writing by Dr Nigel Farrell
-    </div>
+<div class="subtitle">
+    Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cholera-1832.html">Cholera</a></li>
-            <li><a href="public-health.html">Public Health</a></li>
-            <li><a href="People.html">People</a></li>
-            <li><a href="Stories.html">Stories</a></li>
-            <li><a href="research.html">Research</a></li>
-        </ul>
-    </nav>
+<div class="author">
+    Research and writing by Dr Nigel Farrell
+</div>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <!-- CHOLERA -->
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <!-- PUBLIC HEALTH -->
+    <li class="dropdown">
+        <a href="public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="public-health.html">About this Section</a>
+        </div>
+    </li>
+
+    <!-- PEOPLE -->
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="people/about.html">About this Section</a>
+        </div>
+    </li>
+
+    <!-- STORIES (FORMER BLOG → STORIES ARCHIVE) -->
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+        </div>
+    </li>
+
+    <!-- RESEARCH -->
+    <li class="dropdown">
+        <a href="research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+            <a href="resources.html">Further Resources</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
 </header>
 
 <div class="hero-banner">
@@ -194,45 +275,42 @@ footer {
 
 <div class="container">
 
-<div class="hero">
+<div class="info-box">
     <p>
         Belfast’s nineteenth century was shaped by rapid industrial growth, repeated epidemics,
         and major struggles over water, sanitation, and public health.
     </p>
 
     <p>
-        This site explores cholera epidemics, civic reform, and everyday life in nineteenth-century Belfast
-        through archival research and historical narrative.
+        This site presents research into cholera epidemics, civic reform and urban life in nineteenth-century Belfast.
     </p>
 </div>
-
-<div class="section-title">Explore the archive</div>
 
 <div class="grid">
 
     <div class="card">
         <a href="cholera-1832.html">Cholera</a>
-        <p>Cholera epidemics of 1832, 1849, 1854 and 1866 in Belfast and beyond.</p>
+        <p>Epidemics of 1832, 1849, 1854 and 1866.</p>
     </div>
 
     <div class="card">
         <a href="public-health.html">Public Health</a>
-        <p>Water supply, sanitation and civic institutions (developing section).</p>
+        <p>Water supply, sanitation and civic institutions.</p>
     </div>
 
     <div class="card">
         <a href="People.html">People</a>
-        <p>Doctors, reformers and individuals connected to cholera in Belfast.</p>
+        <p>Doctors, reformers and civic actors.</p>
     </div>
 
     <div class="card">
         <a href="Stories.html">Stories</a>
-        <p>Historical case studies, essays and research narratives.</p>
+        <p>Curated historical case studies and narrative research.</p>
     </div>
 
     <div class="card">
         <a href="research.html">Research</a>
-        <p>PhD thesis, sources, methodology and project background.</p>
+        <p>Thesis, sources and academic framework.</p>
     </div>
 
 </div>
@@ -240,22 +318,15 @@ footer {
 <div class="info-box">
     <h3>About the Project</h3>
     <p>
-        Cholera & Civic Belfast is a public history project based on doctoral research into nineteenth-century Belfast.
-        It explores the relationship between epidemic disease, urban development, and civic governance.
-    </p>
-    <p>
-        The site is an evolving scholarly resource and will continue to expand as research is developed and published.
+        An evolving public history project based on doctoral research into nineteenth-century Belfast,
+        focusing on epidemic disease and urban development.
     </p>
 </div>
 
 <div class="info-box">
     <h3>About the Author</h3>
     <p>
-        Dr Nigel Farrell is a historian specialising in cholera, public health and nineteenth-century Belfast.
-        His research combines archival investigation with public history approaches to make historical material accessible to wider audiences.
-    </p>
-    <p>
-        <a href="about-author.html">Read more →</a>
+        Dr Nigel Farrell is a historian of cholera and public health in nineteenth-century Belfast.
     </p>
 </div>
 
@@ -265,10 +336,22 @@ footer {
     <p><strong>Cholera & Civic Belfast</strong><br>
     A public history project by Dr Nigel Farrell</p>
 
-    <p>
-        <a href="licence.html">Copyright & Licence</a>
-    </p>
+    <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
