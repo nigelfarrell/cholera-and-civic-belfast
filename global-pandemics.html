@@ -8,8 +8,8 @@
 body {
     font-family: Georgia, serif;
     background-color: #f4f1e8;
-    color: #1f1f1f;
     margin: 0;
+    color: #1f1f1f;
     line-height: 1.7;
 }
 
@@ -22,36 +22,64 @@ header {
 }
 
 h1 {
-    font-size: 2.7em;
     margin: 0;
 }
 
-.subtitle {
-    font-style: italic;
-    margin-top: 10px;
-    color: #e8e2d3;
+/* NAV */
+nav {
+    margin-top: 25px;
 }
 
-/* NAV BAR */
-.nav-back {
-    text-align: center;
-    padding: 15px;
-    background: #efe9dc;
-    border-bottom: 1px solid #d8d2c3;
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.nav-back a {
-    color: #2f4f3e;
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    font-size: 0.95em;
 }
 
-.nav-back a:hover {
-    text-decoration: underline;
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    min-width: 220px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 999;
 }
 
-/* CONTAINER */
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* LAYOUT */
 .container {
     max-width: 1000px;
     margin: auto;
@@ -71,13 +99,11 @@ h1 {
     margin-top: 0;
 }
 
-/* LABELS */
 .label {
     font-weight: bold;
     color: #4a6fa5;
 }
 
-/* META GRID */
 .meta {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,7 +111,6 @@ h1 {
     margin-top: 10px;
 }
 
-/* BELFAST LINK BOX */
 .belfast-box {
     background: #efe9dc;
     border-left: 4px solid #2f4f3e;
@@ -96,11 +121,34 @@ h1 {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 50px 20px;
-    margin-top: 70px;
+    padding: 40px 20px;
+    margin-top: 60px;
     border-top: 1px solid #d8d2c3;
     font-size: 0.9em;
     color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
 }
 </style>
 </head>
@@ -108,89 +156,108 @@ footer {
 <body>
 
 <header>
-    <h1>Global Cholera Pandemics</h1>
-    <div class="subtitle">1817–1866: Transnational transmission, imperial networks, and urban vulnerability</div>
-</header>
 
-<!-- NAVIGATION BACK INTO SITE -->
-<div class="nav-back">
-    <a href="index.html">Home</a>
-    <a href="global-pandemics.html">Global Pandemics</a>
-    <a href="belfast/1832.html">1832</a>
-    <a href="belfast/1849.html">1849</a>
-    <a href="belfast/1854.html">1854</a>
-    <a href="belfast/1866.html">1866</a>
-</div>
+<h1>Global Cholera Pandemics</h1>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li><a href="public-health.html">Public Health</a></li>
+    <li><a href="People.html">People</a></li>
+    <li><a href="Stories.html">Stories</a></li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="licence.html">Licence</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
 
 <div class="container">
 
-    <!-- FIRST PANDEMIC -->
-    <div class="pandemic">
-        <h2>First Pandemic (1817–1824)</h2>
+<!-- PANDEMIC 1 -->
+<div class="pandemic">
+    <h2>First Pandemic (1817–1824)</h2>
 
-        <div class="meta">
-            <div><span class="label">Origin:</span> Bengal (Ganges Delta)</div>
-            <div><span class="label">Reach:</span> Asia, East Africa</div>
-        </div>
-
-        <p><span class="label">Transmission routes:</span> Trade routes across India, Southeast Asia, Middle East.</p>
-        <p><span class="label">Key developments:</span> First documented global expansion of cholera beyond South Asia.</p>
-
-        <div class="belfast-box">
-            No direct Belfast outbreak recorded in this phase.
-        </div>
+    <div class="meta">
+        <div><span class="label">Origin:</span> Bengal (Ganges Delta)</div>
+        <div><span class="label">Reach:</span> Asia, East Africa</div>
     </div>
 
-    <!-- SECOND PANDEMIC -->
-    <div class="pandemic">
-        <h2>Second Pandemic (1829–1837)</h2>
+    <p><span class="label">Transmission routes:</span> Trade routes across India, Southeast Asia, Middle East.</p>
+    <p><span class="label">Key developments:</span> First global expansion beyond South Asia.</p>
 
-        <div class="meta">
-            <div><span class="label">Origin:</span> India → Russia → Europe</div>
-            <div><span class="label">Reach:</span> Europe, UK, Ireland, Americas</div>
-        </div>
+    <div class="belfast-box">No direct Belfast outbreak recorded in this phase.</div>
+</div>
 
-        <p><span class="label">Transmission routes:</span> Overland caravan routes and maritime trade networks.</p>
-        <p><span class="label">Key developments:</span> Arrival in Europe (1831–32); establishment of cholera as a British public health crisis.</p>
+<!-- PANDEMIC 2 -->
+<div class="pandemic">
+    <h2>Second Pandemic (1829–1837)</h2>
 
-        <div class="belfast-box">
-            <strong>Includes:</strong> 1832 Belfast cholera epidemic
-        </div>
+    <div class="meta">
+        <div><span class="label">Origin:</span> India → Russia → Europe</div>
+        <div><span class="label">Reach:</span> Europe, UK, Ireland, Americas</div>
     </div>
 
-    <!-- THIRD PANDEMIC -->
-    <div class="pandemic">
-        <h2>Third Pandemic (1846–1860)</h2>
+    <p><span class="label">Key developments:</span> Arrival in Europe (1831–32).</p>
 
-        <div class="meta">
-            <div><span class="label">Origin:</span> Bengal → global maritime spread</div>
-            <div><span class="label">Reach:</span> Worldwide</div>
-        </div>
+    <div class="belfast-box">
+        Includes: 1832 Belfast cholera epidemic
+    </div>
+</div>
 
-        <p><span class="label">Transmission routes:</span> Shipping routes, military movement, and rapidly expanding port cities.</p>
-        <p><span class="label">Key developments:</span> Peak global mortality; John Snow’s 1854 epidemiological investigations.</p>
+<!-- PANDEMIC 3 -->
+<div class="pandemic">
+    <h2>Third Pandemic (1846–1860)</h2>
 
-        <div class="belfast-box">
-            <strong>Includes:</strong> 1848–49 and 1854 Belfast epidemics
-        </div>
+    <div class="meta">
+        <div><span class="label">Origin:</span> Bengal → global maritime spread</div>
+        <div><span class="label">Reach:</span> Worldwide</div>
     </div>
 
-    <!-- FOURTH PANDEMIC -->
-    <div class="pandemic">
-        <h2>Fourth Pandemic (1863–1875)</h2>
+    <p><span class="label">Key developments:</span> Peak global mortality; John Snow’s investigations.</p>
 
-        <div class="meta">
-            <div><span class="label">Origin:</span> Bengal</div>
-            <div><span class="label">Reach:</span> Global (uneven impact)</div>
-        </div>
-
-        <p><span class="label">Transmission routes:</span> Steamship expansion enabling faster global diffusion.</p>
-        <p><span class="label">Key developments:</span> Improved European sanitation reduces mortality impact, but outbreaks persist.</p>
-
-        <div class="belfast-box">
-            <strong>Includes:</strong> 1866 Belfast cholera outbreak
-        </div>
+    <div class="belfast-box">
+        Includes: 1848–49 and 1854 Belfast epidemics
     </div>
+</div>
+
+<!-- PANDEMIC 4 -->
+<div class="pandemic">
+    <h2>Fourth Pandemic (1863–1875)</h2>
+
+    <div class="meta">
+        <div><span class="label">Origin:</span> Bengal</div>
+        <div><span class="label">Reach:</span> Global</div>
+    </div>
+
+    <p><span class="label">Key developments:</span> Steamship expansion accelerates spread.</p>
+
+    <div class="belfast-box">
+        Includes: 1866 Belfast outbreak
+    </div>
+</div>
 
 </div>
 
