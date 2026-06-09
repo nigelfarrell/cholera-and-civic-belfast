@@ -7,27 +7,166 @@
 <style>
 body {
     font-family: Georgia, serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
     background-color: #f4f1e8;
+    margin: 0;
     color: #1f1f1f;
     line-height: 1.7;
 }
 
-h1 {
-    color: #2f4f3e;
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
 }
 
-a {
+h1 {
+    margin: 0;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    min-width: 220px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
     color: #2f4f3e;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* CONTENT */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid #d8d2c3;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<h1>Copyright and Licence</h1>
+<header>
+
+<h1>Licence & Copyright</h1>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li><a href="public-health.html">Public Health</a></li>
+
+    <li><a href="People.html">People</a></li>
+
+    <li><a href="Stories.html">Stories</a></li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h2>Copyright and Licence</h2>
 
 <p>
 © Dr Nigel Farrell, 2026.
@@ -64,14 +203,17 @@ Some images, archival materials, and third-party content may remain subject to t
 </p>
 
 <p>
-Full licence details:
-</p>
-
-<p>
 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
 https://creativecommons.org/licenses/by-nc-nd/4.0/
 </a>
 </p>
+
+</div>
+
+<footer>
+    <p><strong>Cholera & Civic Belfast</strong><br>
+    A public history project by Dr Nigel Farrell</p>
+</footer>
 
 </body>
 </html>
