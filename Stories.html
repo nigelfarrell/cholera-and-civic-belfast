@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Blog | Cholera & Civic Belfast</title>
+<title>Stories | Cholera & Civic Belfast</title>
 
 <style>
 body {
@@ -21,10 +21,15 @@ header {
     color: #f4f1e8;
 }
 
-h1 { margin: 0; font-size: 2.2em; }
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
 
 /* NAV */
-.main-nav { margin-top: 25px; }
+.main-nav {
+    margin-top: 25px;
+}
 
 .menu {
     list-style: none;
@@ -36,7 +41,9 @@ h1 { margin: 0; font-size: 2.2em; }
     margin: 0;
 }
 
-.menu > li { position: relative; }
+.menu > li {
+    position: relative;
+}
 
 .menu a {
     color: #f4f1e8;
@@ -53,25 +60,40 @@ h1 { margin: 0; font-size: 2.2em; }
     background: #f4f1e8;
     min-width: 180px;
     border: 1px solid #d8d2c3;
+    z-index: 999;
 }
 
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
     color: #2f4f3e;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* BLOG LAYOUT (UNCHANGED STRUCTURE) */
+/* ARCHIVE LAYOUT */
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
+/* INTRO BOX */
+.intro {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 18px;
+    margin-bottom: 30px;
+}
+
+/* ARTICLES */
 .article {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
@@ -94,12 +116,26 @@ h1 { margin: 0; font-size: 2.2em; }
     width: 60%;
 }
 
+.article-text h2 {
+    margin-top: 0;
+}
+
+.article-text a {
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
 
-    .menu { flex-direction: column; }
+    .menu {
+        flex-direction: column;
+    }
 
-    .dropdown:hover .dropdown-content { display: none; }
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
 
     .dropdown-content {
         position: static;
@@ -127,17 +163,27 @@ h1 { margin: 0; font-size: 2.2em; }
 
 <header>
 
-<h1>Blog</h1>
+<h1>Stories</h1>
 
 <nav class="main-nav">
 <ul class="menu">
 
 <li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+    <a href="#">Cholera</a>
+    <div class="dropdown-content">
+        <a href="cholera-1832.html">1832</a>
+        <a href="cholera-1849.html">1849</a>
+        <a href="cholera-1854.html">1854</a>
+        <a href="cholera-1866.html">1866</a>
+    </div>
+</li>
+
+<li><a href="public-health.html">Public Health</a></li>
 <li><a href="People.html">People</a></li>
-<li><a href="#">Cholera</a></li>
-<li><a href="#">Public Health</a></li>
-<li><a href="Blog.html">Blog</a></li>
-<li><a href="#">Sources</a></li>
+<li><a href="Stories.html">Stories</a></li>
+<li><a href="research.html">Research</a></li>
 
 </ul>
 </nav>
@@ -146,6 +192,19 @@ h1 { margin: 0; font-size: 2.2em; }
 
 <div class="container">
 
+<!-- INTRO -->
+<div class="intro">
+<p>
+This section presents curated historical case studies drawn from ongoing research into nineteenth-century Belfast.
+These narratives explore urban space, epidemic disease, and everyday life.
+</p>
+
+<p>
+Formerly published as blog posts, this archive now forms part of a structured research collection.
+</p>
+</div>
+
+<!-- ARTICLE 1 (UNCHANGED CONTENT) -->
 <div class="article">
 <div class="article-flex">
 <img src="images/cholera-1832-blog.jpg">
@@ -157,6 +216,7 @@ h1 { margin: 0; font-size: 2.2em; }
 </div>
 </div>
 
+<!-- ARTICLE 2 (UNCHANGED CONTENT) -->
 <div class="article">
 <div class="article-flex">
 <img src="images/cholera-poster.jpg">
@@ -171,7 +231,7 @@ h1 { margin: 0; font-size: 2.2em; }
 </div>
 
 <footer>
-<p>© Cholera & Civic Belfast</p>
+<p>Cholera & Civic Belfast — Public History Project</p>
 </footer>
 
 <script>
