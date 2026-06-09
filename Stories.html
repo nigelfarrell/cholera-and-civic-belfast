@@ -25,38 +25,43 @@ h1 {
     margin: 0;
 }
 
-/* NAV (same system as index for consistency) */
+/* NAV (STANDARDISED WITH INDEX) */
 nav {
     margin-top: 25px;
 }
 
 .menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
-    padding: 0;
+}
+
+.menu > li {
+    position: relative;
 }
 
 .menu a {
     color: #f4f1e8;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.95em;
 }
 
 /* DROPDOWN */
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background: #f4f1e8;
-    border: 1px solid #d8d2c3;
     min-width: 220px;
+    border: 1px solid #d8d2c3;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     z-index: 999;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .dropdown-content a {
@@ -68,6 +73,10 @@ nav {
 
 .dropdown-content a:hover {
     background: #e8e2d3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* CONTENT */
@@ -84,7 +93,7 @@ nav {
     margin-bottom: 30px;
 }
 
-/* ARTICLES */
+/* ARTICLE */
 .article {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
@@ -92,19 +101,21 @@ nav {
     padding: 20px;
 }
 
+/* FLEX LAYOUT (SOFTER THAN 40/60 SPLIT) */
 .article-flex {
     display: flex;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .article-flex img {
-    width: 40%;
+    width: 260px;
+    max-width: 40%;
     border: 1px solid #d8d2c3;
-    object-fit: contain;
 }
 
 .article-text {
-    width: 60%;
+    flex: 1;
 }
 
 .article-text h2 {
@@ -119,17 +130,34 @@ nav {
 
 /* MOBILE */
 @media (max-width: 768px) {
+
     .menu {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
     }
 
     .article-flex {
         flex-direction: column;
     }
 
-    .article-flex img,
-    .article-text {
+    .article-flex img {
         width: 100%;
+        max-width: 100%;
     }
 }
 </style>
@@ -144,13 +172,32 @@ nav {
 <nav>
 <ul class="menu">
 
-<li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
 
-<li><a href="cholera-1832.html">Cholera</a></li>
-<li><a href="Public-health.html">Public Health</a></li>
-<li><a href="People.html">People</a></li>
-<li><a href="Stories.html">Stories</a></li>
-<li><a href="Research.html">Research</a></li>
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li><a href="public-health.html">Public Health</a></li>
+    <li><a href="People.html">People</a></li>
+    <li><a href="Stories.html">Stories</a></li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
 
 </ul>
 </nav>
@@ -161,23 +208,21 @@ nav {
 
 <div class="intro">
 <p>
-This section contains research-based case studies.
-It presents narrative explorations of nineteenth-century Belfast and cholera epidemics.
+This section contains research-based case studies exploring nineteenth-century Belfast and cholera epidemics.
 </p>
-
-
 </div>
 
-<!-- ARTICLE 1 (RESTORED ORIGINAL TITLE + DESCRIPTION) -->
+<!-- ARTICLE 1 -->
 <div class="article">
 <div class="article-flex">
-<img src="images/cholera-1832-blog.jpg">
+
+<img src="images/cholera-1832-blog.jpg" alt="1832 cholera">
 
 <div class="article-text">
 <h2>Cholera in Belfast in 1832 and 1848</h2>
 
 <p>
-The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and the development of early municipal public health measures.
+The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and early municipal public health measures.
 </p>
 
 <a href="blog/Cholera in Belfast in 1832 and 1848.pdf" target="_blank">
@@ -188,10 +233,11 @@ Read PDF
 </div>
 </div>
 
-<!-- ARTICLE 2 (RESTORED ORIGINAL TITLE + DESCRIPTION) -->
+<!-- ARTICLE 2 -->
 <div class="article">
 <div class="article-flex">
-<img src="images/cholera-poster.jpg">
+
+<img src="images/cholera-poster.jpg" alt="Cholera poster">
 
 <div class="article-text">
 <h2>Cholera in Nineteenth Century Belfast</h2>
@@ -209,10 +255,6 @@ Read PDF
 </div>
 
 </div>
-
-<footer style="text-align:center; padding:40px; border-top:1px solid #d8d2c3;">
-<p>Cholera & Civic Belfast — Public History Project</p>
-</footer>
 
 </body>
 </html>
