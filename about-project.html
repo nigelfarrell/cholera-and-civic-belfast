@@ -79,18 +79,21 @@ h1 {
     display: block;
 }
 
-/* CONTENT */
+/* CONTENT GRID */
 .container {
-    max-width: 850px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 26px;
+    align-items: start;
 }
 
-/* IMAGE */
+/* IMAGE COLUMN */
 .project-image {
-    float: left;
-    width: 240px;
-    margin: 6px 22px 14px 0;
+    width: 280px;
 }
 
 .project-image img {
@@ -99,20 +102,14 @@ h1 {
     border: 1px solid #d8d2c3;
 }
 
-/* TEXT ADJUSTMENT (moves text up slightly) */
-.container p:first-of-type {
-    margin-top: -6px;
-}
-
-/* CLEARFIX */
-.container::after {
-    content: "";
+/* TEXT COLUMN */
+.project-text {
     display: block;
-    clear: both;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -133,15 +130,13 @@ h1 {
         display: block;
     }
 
-    .project-image {
-        float: none;
-        width: 260px;
-        margin: 0 auto 20px auto;
+    .container {
         display: block;
     }
 
-    .container p:first-of-type {
-        margin-top: 0;
+    .project-image {
+        width: 260px;
+        margin: 0 auto 20px auto;
     }
 }
 </style>
@@ -192,25 +187,31 @@ h1 {
 
 <div class="container">
 
-<div class="project-image">
-    <img src="images/cholera-poster.jpg" alt="Cholera poster">
-</div>
+    <!-- IMAGE -->
+    <div class="project-image">
+        <img src="images/cholera-poster.jpg" alt="Cholera poster">
+    </div>
 
-<p>
-Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city.
-</p>
+    <!-- TEXT -->
+    <div class="project-text">
 
-<p>
-The project is based on doctoral research into cholera in Belfast between 1832 and 1878, and draws on a wide range of historical sources including official reports, newspapers, medical accounts, and civic records. It examines how repeated epidemic outbreaks shaped urban infrastructure, medical practice, and civic reform.
-</p>
+        <p>
+        Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city.
+        </p>
 
-<p>
-The site is organised around cholera epidemics, public health developments, biographical studies, and narrative research essays. Together, these sections provide a structured account of how disease and reform shaped nineteenth-century Belfast.
-</p>
+        <p>
+        The project is based on doctoral research into cholera in Belfast between 1832 and 1878, and draws on a wide range of historical sources including official reports, newspapers, medical accounts, and civic records. It examines how repeated epidemic outbreaks shaped urban infrastructure, medical practice, and civic reform.
+        </p>
 
-<p>
-The aim is to present research in an accessible format that bridges academic scholarship and public history, allowing wider audiences to engage with the social and medical history of nineteenth-century Belfast.
-</p>
+        <p>
+        The site is organised around cholera epidemics, public health developments, biographical studies, and narrative research essays. Together, these sections provide a structured account of how disease and reform shaped nineteenth-century Belfast.
+        </p>
+
+        <p>
+        The aim is to present research in an accessible format that bridges academic scholarship and public history, allowing wider audiences to engage with the social and medical history of nineteenth-century Belfast.
+        </p>
+
+    </div>
 
 </div>
 
