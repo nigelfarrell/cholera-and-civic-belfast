@@ -23,11 +23,10 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.2em;
 }
 
-/* NAV */
-.main-nav {
+/* NAV (same system as index for consistency) */
+nav {
     margin-top: 25px;
 }
 
@@ -38,11 +37,6 @@ h1 {
     gap: 25px;
     flex-wrap: wrap;
     padding: 0;
-    margin: 0;
-}
-
-.menu > li {
-    position: relative;
 }
 
 .menu a {
@@ -55,12 +49,14 @@ h1 {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
     background: #f4f1e8;
-    min-width: 180px;
     border: 1px solid #d8d2c3;
+    min-width: 220px;
     z-index: 999;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a {
@@ -74,20 +70,15 @@ h1 {
     background: #e8e2d3;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* ARCHIVE LAYOUT */
+/* CONTENT */
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
-/* INTRO BOX */
 .intro {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #d8d2c3;
     padding: 18px;
     margin-bottom: 30px;
@@ -108,8 +99,8 @@ h1 {
 
 .article-flex img {
     width: 40%;
-    object-fit: contain;
     border: 1px solid #d8d2c3;
+    object-fit: contain;
 }
 
 .article-text {
@@ -128,23 +119,8 @@ h1 {
 
 /* MOBILE */
 @media (max-width: 768px) {
-
     .menu {
         flex-direction: column;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
-
-    .dropdown-content {
-        position: static;
-        display: none;
-        border: none;
-    }
-
-    .dropdown.open .dropdown-content {
-        display: block;
     }
 
     .article-flex {
@@ -165,25 +141,16 @@ h1 {
 
 <h1>Stories</h1>
 
-<nav class="main-nav">
+<nav>
 <ul class="menu">
 
 <li><a href="index.html">Home</a></li>
 
-<li class="dropdown">
-    <a href="#">Cholera</a>
-    <div class="dropdown-content">
-        <a href="cholera-1832.html">1832</a>
-        <a href="cholera-1849.html">1849</a>
-        <a href="cholera-1854.html">1854</a>
-        <a href="cholera-1866.html">1866</a>
-    </div>
-</li>
-
-<li><a href="public-health.html">Public Health</a></li>
+<li><a href="cholera-1832.html">Cholera</a></li>
+<li><a href="Public-health.html">Public Health</a></li>
 <li><a href="People.html">People</a></li>
 <li><a href="Stories.html">Stories</a></li>
-<li><a href="research.html">Research</a></li>
+<li><a href="Research.html">Research</a></li>
 
 </ul>
 </nav>
@@ -192,61 +159,60 @@ h1 {
 
 <div class="container">
 
-<!-- INTRO -->
 <div class="intro">
 <p>
-This section presents curated historical case studies drawn from ongoing research into nineteenth-century Belfast.
-These narratives explore urban space, epidemic disease, and everyday life.
+This section contains research-based case studies originally published as blog posts.
+It presents narrative explorations of nineteenth-century Belfast and cholera epidemics.
 </p>
 
-<p>
-Formerly published as blog posts, this archive now forms part of a structured research collection.
-</p>
+
 </div>
 
-<!-- ARTICLE 1 (UNCHANGED CONTENT) -->
+<!-- ARTICLE 1 (RESTORED ORIGINAL TITLE + DESCRIPTION) -->
 <div class="article">
 <div class="article-flex">
 <img src="images/cholera-1832-blog.jpg">
+
 <div class="article-text">
-<h2>Cholera in Belfast 1832 and 1848</h2>
-<p>Study of epidemics and reform.</p>
-<a href="#">Read PDF</a>
+<h2>Cholera in Belfast in 1832 and 1848</h2>
+
+<p>
+The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and the development of early municipal public health measures.
+</p>
+
+<a href="blog/Cholera in Belfast in 1832 and 1848.pdf" target="_blank">
+Read PDF
+</a>
+
 </div>
 </div>
 </div>
 
-<!-- ARTICLE 2 (UNCHANGED CONTENT) -->
+<!-- ARTICLE 2 (RESTORED ORIGINAL TITLE + DESCRIPTION) -->
 <div class="article">
 <div class="article-flex">
 <img src="images/cholera-poster.jpg">
+
 <div class="article-text">
-<h2>Cholera in Belfast</h2>
-<p>Urban disease and sanitation reform.</p>
-<a href="#">Read PDF</a>
+<h2>Cholera in Nineteenth Century Belfast</h2>
+
+<p>
+A historical overview of cholera and the evolving public health response in nineteenth century Belfast.
+</p>
+
+<a href="blog/Cholera in Nineteenth Century Belfast.pdf" target="_blank">
+Read PDF
+</a>
+
 </div>
 </div>
 </div>
 
 </div>
 
-<footer>
+<footer style="text-align:center; padding:40px; border-top:1px solid #d8d2c3;">
 <p>Cholera & Civic Belfast — Public History Project</p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
