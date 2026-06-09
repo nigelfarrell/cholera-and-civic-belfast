@@ -25,26 +25,20 @@ h1 {
     margin: 0;
 }
 
-/* SUBTITLE (optional consistency) */
-.subtitle {
-    color: #e8e2d3;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-/* NAVIGATION */
+/* NAV */
 nav {
     margin-top: 25px;
 }
 
 .menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
+
     display: flex;
     justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
 }
 
 .menu > li {
@@ -58,10 +52,6 @@ nav {
     font-size: 0.95em;
 }
 
-.menu a:hover {
-    color: #e8e2d3;
-}
-
 /* DROPDOWNS */
 .dropdown-content {
     display: none;
@@ -70,10 +60,8 @@ nav {
     left: 0;
     background: #f4f1e8;
     border: 1px solid #d8d2c3;
-    min-width: 230px;
-    padding: 10px 0;
+    min-width: 220px;
     z-index: 999;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .dropdown-content a {
@@ -81,7 +69,6 @@ nav {
     padding: 8px 15px;
     color: #2f4f3e;
     text-decoration: none;
-    font-size: 0.9em;
 }
 
 .dropdown-content a:hover {
@@ -99,7 +86,6 @@ nav {
     padding: 40px 20px;
 }
 
-/* INTRO */
 .intro {
     background: #ffffff;
     border: 1px solid #d8d2c3;
@@ -144,9 +130,7 @@ nav {
 footer {
     text-align: center;
     padding: 50px 20px;
-    margin-top: 70px;
     border-top: 1px solid #d8d2c3;
-    font-size: 0.9em;
     color: #555;
 }
 
@@ -158,26 +142,6 @@ footer {
         align-items: center;
     }
 
-    .menu > li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown-content {
-        position: static;
-        display: none;
-        box-shadow: none;
-        border: none;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
-
-    .dropdown.open .dropdown-content {
-        display: block;
-    }
-
     .article-flex {
         flex-direction: column;
     }
@@ -185,6 +149,21 @@ footer {
     .article-flex img,
     .article-text {
         width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
     }
 }
 </style>
@@ -196,56 +175,58 @@ footer {
 
 <h1>Stories</h1>
 
-<div class="subtitle">
-Narrative case studies of nineteenth-century Belfast and cholera epidemics
-</div>
-
 <nav>
 <ul class="menu">
 
-<li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
 
-<li class="dropdown">
-<a href="#">Cholera</a>
-<div class="dropdown-content">
-<a href="global-pandemics.html">Global Pandemics 1817–1866</a>
-<a href="cholera-1832.html">Belfast 1832</a>
-<a href="cholera-1849.html">Belfast 1849</a>
-<a href="cholera-1854.html">Belfast 1854</a>
-<a href="cholera-1866.html">Belfast 1866</a>
-</div>
-</li>
+    <!-- CHOLERA -->
+    <li class="dropdown">
+        <a href="#">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
 
-<li class="dropdown">
-<a href="Public-health.html">Public Health</a>
-<div class="dropdown-content">
-<a href="Public-health.html">About this Section</a>
-</div>
-</li>
+    <!-- PUBLIC HEALTH -->
+    <li class="dropdown">
+        <a href="public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="public-health.html">About this Section</a>
+        </div>
+    </li>
 
-<li class="dropdown">
-<a href="People.html">People</a>
-<div class="dropdown-content">
-<a href="People.html">About this Section</a>
-<a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-</div>
-</li>
+    <!-- PEOPLE -->
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="people/about.html">About this Section</a>
+        </div>
+    </li>
 
-<li class="dropdown">
-<a href="Stories.html">Stories</a>
-<div class="dropdown-content">
-<a href="Stories.html">Stories Archive</a>
-</div>
-</li>
+    <!-- STORIES -->
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+        </div>
+    </li>
 
-<li class="dropdown">
-<a href="Research.html">Research</a>
-<div class="dropdown-content">
-<a href="about-project.html">About the Project</a>
-<a href="about-author.html">About the Author</a>
-<a href="thesis.html">PhD Thesis</a>
-</div>
-</li>
+    <!-- RESEARCH -->
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
 
 </ul>
 </nav>
@@ -256,19 +237,19 @@ Narrative case studies of nineteenth-century Belfast and cholera epidemics
 
 <div class="intro">
 <p>
-This section contains research-based case studies exploring cholera epidemics and nineteenth-century Belfast.
+This section contains research-based case studies and narrative explorations of nineteenth-century Belfast and cholera epidemics.
 </p>
 </div>
 
 <!-- ARTICLE 1 -->
 <div class="article">
 <div class="article-flex">
-<img src="images/cholera-1832-blog.jpg" alt="Cholera 1832">
+<img src="images/cholera-1832-blog.jpg">
 
 <div class="article-text">
 <h2>Cholera in Belfast in 1832 and 1848</h2>
 <p>
-The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and early public health responses.
+The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and the development of early municipal public health measures.
 </p>
 <a href="blog/Cholera in Belfast in 1832 and 1848.pdf" target="_blank">Read PDF</a>
 </div>
@@ -279,12 +260,12 @@ The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease t
 <!-- ARTICLE 2 -->
 <div class="article">
 <div class="article-flex">
-<img src="images/cholera-poster.jpg" alt="Cholera poster">
+<img src="images/cholera-poster.jpg">
 
 <div class="article-text">
 <h2>Cholera in Nineteenth Century Belfast</h2>
 <p>
-A historical overview of cholera and evolving public health responses in nineteenth-century Belfast.
+A historical overview of cholera and the evolving public health response in nineteenth century Belfast.
 </p>
 <a href="blog/Cholera in Nineteenth Century Belfast.pdf" target="_blank">Read PDF</a>
 </div>
@@ -295,26 +276,9 @@ A historical overview of cholera and evolving public health responses in ninetee
 </div>
 
 <footer>
-<p><strong>Cholera & Civic Belfast</strong><br>
-A public history project by Dr Nigel Farrell</p>
-
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
 <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
