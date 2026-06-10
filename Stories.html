@@ -52,7 +52,7 @@ nav {
     font-size: 0.95em;
 }
 
-/* DROPDOWNS */
+/* DROPDOWNS CORE */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -62,8 +62,10 @@ nav {
     border: 1px solid #d8d2c3;
     min-width: 220px;
     z-index: 999;
+    padding: 10px 0;
 }
 
+/* DROPDOWN LINKS */
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
@@ -75,7 +77,8 @@ nav {
     background: #e8e2d3;
 }
 
-.dropdown:hover .dropdown-content {
+/* ✔ STANDARDISED HOVER BEHAVIOUR */
+.menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
@@ -158,12 +161,12 @@ footer {
         box-shadow: none;
     }
 
-    .dropdown.open .dropdown-content {
-        display: block;
-    }
-
     .dropdown:hover .dropdown-content {
         display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
     }
 }
 </style>
@@ -180,7 +183,6 @@ footer {
 
     <li><a href="index.html">Home</a></li>
 
-    <!-- CHOLERA -->
     <li class="dropdown">
         <a href="#">Cholera</a>
         <div class="dropdown-content">
@@ -192,7 +194,6 @@ footer {
         </div>
     </li>
 
-    <!-- PUBLIC HEALTH -->
     <li class="dropdown">
         <a href="public-health.html">Public Health</a>
         <div class="dropdown-content">
@@ -200,7 +201,6 @@ footer {
         </div>
     </li>
 
-    <!-- PEOPLE -->
     <li class="dropdown">
         <a href="People.html">People</a>
         <div class="dropdown-content">
@@ -209,7 +209,6 @@ footer {
         </div>
     </li>
 
-    <!-- STORIES -->
     <li class="dropdown">
         <a href="Stories.html">Stories</a>
         <div class="dropdown-content">
@@ -217,7 +216,6 @@ footer {
         </div>
     </li>
 
-    <!-- RESEARCH -->
     <li class="dropdown">
         <a href="Research.html">Research</a>
         <div class="dropdown-content">
@@ -249,7 +247,7 @@ This section contains research-based case studies and narrative explorations of 
 <div class="article-text">
 <h2>Cholera in Belfast in 1832 and 1848</h2>
 <p>
-The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and the development of early municipal public health measures.
+The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease transmission, mortality, and early municipal public health responses.
 </p>
 <a href="blog/Cholera in Belfast in 1832 and 1848.pdf" target="_blank">Read PDF</a>
 </div>
@@ -265,7 +263,7 @@ The story of Belfast’s cholera epidemics in 1832 and 1849, examining disease t
 <div class="article-text">
 <h2>Cholera in Nineteenth Century Belfast</h2>
 <p>
-A historical overview of cholera and the evolving public health response in nineteenth century Belfast.
+A historical overview of cholera and the evolving public health response in nineteenth-century Belfast.
 </p>
 <a href="blog/Cholera in Nineteenth Century Belfast.pdf" target="_blank">Read PDF</a>
 </div>
