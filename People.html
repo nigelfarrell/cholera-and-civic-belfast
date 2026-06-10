@@ -53,7 +53,7 @@ nav {
     font-size: 0.95em;
 }
 
-/* DROPDOWN */
+/* DROPDOWN CORE FIX */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -79,6 +79,7 @@ nav {
     background: #e8e2d3;
 }
 
+/* THIS IS THE IMPORTANT FIX */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -152,6 +153,7 @@ footer {
         padding: 12px;
     }
 
+    /* disable hover on mobile */
     .dropdown:hover .dropdown-content {
         display: none;
     }
@@ -159,7 +161,6 @@ footer {
     .dropdown-content {
         position: static;
         display: none;
-        background: #f4f1e8;
         box-shadow: none;
         border: none;
     }
@@ -182,7 +183,6 @@ footer {
 
     <li><a href="index.html">Home</a></li>
 
-    <!-- CHOLERA -->
     <li class="dropdown">
         <a href="#">Cholera</a>
         <div class="dropdown-content">
@@ -194,7 +194,6 @@ footer {
         </div>
     </li>
 
-    <!-- PUBLIC HEALTH -->
     <li class="dropdown">
         <a href="public-health.html">Public Health</a>
         <div class="dropdown-content">
@@ -202,7 +201,6 @@ footer {
         </div>
     </li>
 
-    <!-- PEOPLE -->
     <li class="dropdown">
         <a href="People.html">People</a>
         <div class="dropdown-content">
@@ -211,7 +209,6 @@ footer {
         </div>
     </li>
 
-    <!-- STORIES -->
     <li class="dropdown">
         <a href="Stories.html">Stories</a>
         <div class="dropdown-content">
@@ -219,7 +216,6 @@ footer {
         </div>
     </li>
 
-    <!-- RESEARCH -->
     <li class="dropdown">
         <a href="Research.html">Research</a>
         <div class="dropdown-content">
