@@ -53,7 +53,7 @@ nav {
     font-size: 0.95em;
 }
 
-/* DROPDOWN CORE FIX */
+/* DROPDOWN CORE */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -67,6 +67,7 @@ nav {
     z-index: 999;
 }
 
+/* DROPDOWN LINKS */
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
@@ -79,8 +80,8 @@ nav {
     background: #e8e2d3;
 }
 
-/* THIS IS THE IMPORTANT FIX */
-.dropdown:hover .dropdown-content {
+/* ✔ FIXED DROPDOWN BEHAVIOUR */
+.menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
