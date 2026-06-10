@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cholera in Nineteenth-Century Belfast | Stories</title>
 
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.9em;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #e8e2d3;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* CONTENT */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* PDF BOX */
+.pdf-box {
+    text-align: center;
+    margin: 20px 0 40px 0;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+}
+
+.pdf-box a {
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* HEADINGS */
+h2 {
+    color: #2f4f3e;
+    margin-top: 35px;
+}
+
+/* IMAGES */
+.figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #d8d2c3;
+}
+
+.caption {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Cholera in Nineteenth-Century Belfast</h1>
+
+<div class="subtitle">
+Originally published 2021 (Epidemic Belfast blog and podcast)
+</div>
+
+<nav>
+<ul class="menu">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../Stories.html">Stories</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- PDF -->
+<div class="pdf-box">
+    <a href="../blog/Cholera in Nineteenth Century Belfast.pdf" target="_blank">
+        📄 Download PDF version of this article
+    </a>
+</div>
+
+<h2>Introduction</h2>
+
+<p>As Ireland’s only major industrialised town, Victorian Belfast was outwardly prosperous...</p>
+
+<h2>Understanding Cholera</h2>
+
+<p>Cholera is an acute intestinal infection caused by Vibrio cholerae...</p>
+
+<h2>The Public Health Response in Belfast, 1831–32</h2>
+
+<p>The initial response was led by a hastily formed Board of Health...</p>
+
+<h2>Cholera’s Arrival and Impact</h2>
+
+<p>Cholera’s first case in Belfast occurred on 28 February 1832 in Quay Lane...</p>
+
+<div class="figure">
+    <img src="../images/High-Street-Belfast-1831.png" alt="High Street Belfast 1831">
+    <div class="caption">High Street Belfast c.1831. Ulster Museum.</div>
+</div>
+
+<h2>Public Health Reform and 1848–49 Epidemic</h2>
+
+<p>After 1832, cholera faded from public consciousness...</p>
+
+<div class="figure">
+    <img src="../images/Map-of-Belfast’s-Cholera-Localities-1832.jpg" alt="Cholera Localities Belfast 1832">
+    <div class="caption">Map of Belfast’s Cholera Localities, 1832.</div>
+</div>
+
+<h2>Reform and Later Epidemics</h2>
+
+<p>When cholera returned in 1854 and 1866, Belfast experienced further outbreaks...</p>
+
+<div class="figure">
+    <img src="../images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832">
+    <div class="caption">Cholera Poster, Belfast 1832.</div>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
