@@ -73,7 +73,7 @@ nav {
     top: 100%;
     left: 0;
     background: #f4f1e8;
-    min-width: 240px;
+    min-width: 260px;
     border: 1px solid #d8d2c3;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     padding: 10px 0;
@@ -91,7 +91,6 @@ nav {
     background: #e8e2d3;
 }
 
-/* IMPORTANT FIX: better hover stability */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -120,20 +119,27 @@ nav {
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
+/* CARDS (MAIN ENTRY POINTS) */
 .card {
     background: #faf8f3;
     padding: 18px;
     border: 1px solid #d8d2c3;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
 }
 
 .card a {
     text-decoration: none;
     color: #2f4f3e;
     font-weight: bold;
+    font-size: 1.05em;
 }
 
 /* INFO BOX */
@@ -142,6 +148,31 @@ nav {
     border: 1px solid #d8d2c3;
     padding: 18px;
     margin-top: 25px;
+}
+
+/* SECTION HUB BLOCKS */
+.hub-section {
+    margin-top: 25px;
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+}
+
+.hub-section h2 {
+    margin-top: 0;
+    color: #2f4f3e;
+}
+
+.hub-section a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+.hub-section a:hover {
+    text-decoration: underline;
 }
 
 /* FOOTER */
@@ -171,10 +202,6 @@ footer {
         position: static;
         box-shadow: none;
         border: none;
-    }
-
-    .dropdown-content a {
-        padding: 10px;
     }
 }
 </style>
@@ -210,42 +237,17 @@ footer {
                 </div>
             </li>
 
-            <!-- PUBLIC HEALTH (FIXED CLICKABILITY) -->
-            <li class="dropdown">
-                <a href="Public-health.html">Public Health ▾</a>
-                <div class="dropdown-content">
-                    <a href="Public-health.html">Public Health Overview</a>
-                </div>
-            </li>
+            <!-- PUBLIC HEALTH (NOW HUB READY) -->
+            <li><a href="Public-health.html">Public Health</a></li>
 
             <!-- PEOPLE -->
-            <li class="dropdown">
-                <a href="People.html">People ▾</a>
-                <div class="dropdown-content">
-                    <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-                </div>
-            </li>
+            <li><a href="People.html">People</a></li>
 
-            <!-- STORIES (FIXED STRUCTURE + CLEAR CLICKABILITY) -->
-            <li class="dropdown">
-                <a href="Stories.html">Stories ▾</a>
-                <div class="dropdown-content">
-                    <a href="Stories.html">Stories Archive</a>
-                    <a href="blog/cholera-1832-1849.html">Cholera in Belfast (1832–1849)</a>
-                    <a href="blog/cholera-nineteenth-century-belfast.html">Cholera in Nineteenth-Century Belfast</a>
-                </div>
-            </li>
+            <!-- STORIES (NOW CLEAR PRIMARY HUB ENTRY) -->
+            <li><a href="Stories.html">Stories</a></li>
 
             <!-- RESEARCH -->
-            <li class="dropdown">
-                <a href="Research.html">Research ▾</a>
-                <div class="dropdown-content">
-                    <a href="about-project.html">About the Project</a>
-                    <a href="about-author.html">About the Author</a>
-                    <a href="thesis.html">PhD Thesis</a>
-                    <a href="sources.html">Sources</a>
-                </div>
-            </li>
+            <li><a href="Research.html">Research</a></li>
 
         </ul>
     </nav>
@@ -257,16 +259,49 @@ footer {
 
 <div class="container">
 
+<!-- PRIMARY HUB ENTRY POINTS -->
 <div class="grid">
-    <div class="card"><a href="cholera-1832.html">Cholera</a></div>
-    <div class="card"><a href="Public-health.html">Public Health</a></div>
-    <div class="card"><a href="People.html">People</a></div>
-    <div class="card"><a href="Stories.html">Stories</a></div>
-    <div class="card"><a href="Research.html">Research</a></div>
+
+    <div class="card">
+        <a href="cholera-1832.html">Cholera</a>
+    </div>
+
+    <div class="card">
+        <a href="Public-health.html">Public Health</a>
+    </div>
+
+    <div class="card">
+        <a href="People.html">People</a>
+    </div>
+
+    <div class="card">
+        <a href="Stories.html">Stories</a>
+    </div>
+
+    <div class="card">
+        <a href="Research.html">Research</a>
+    </div>
+
 </div>
 
-<div class="info-box">
-    Belfast’s nineteenth century was shaped by industrial growth, epidemic disease, and civic reform.
+<!-- STRUCTURED HUB CONTEXT (RESEARCH-STYLE MODEL) -->
+
+<div class="hub-section">
+    <h2>Stories Archive</h2>
+    <p>Narrative case studies exploring cholera outbreaks and civic experience in nineteenth-century Belfast.</p>
+    <a href="Stories.html">Enter Stories Archive →</a>
+</div>
+
+<div class="hub-section">
+    <h2>Public Health</h2>
+    <p>Exploring sanitation, civic reform, and the development of public health systems in Belfast.</p>
+    <a href="Public-health.html">Enter Public Health →</a>
+</div>
+
+<div class="hub-section">
+    <h2>Research</h2>
+    <p>Project documentation, sources, thesis material, and scholarly context.</p>
+    <a href="Research.html">Enter Research →</a>
 </div>
 
 </div>
