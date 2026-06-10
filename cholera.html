@@ -1,1 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cholera | Cholera & Civic Belfast</title>
 
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.4em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1em;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 240px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* DROPDOWN LINKS */
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+/* STANDARDISED HOVER BEHAVIOUR */
+.menu > li.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* CONTENT */
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
+}
+
+/* INTRO BOX */
+.intro {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 22px 25px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* TIMELINE SECTION */
+.timeline-section {
+    margin-top: 30px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #2f4f3e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d8d2c3;
+    padding-bottom: 8px;
+}
+
+/* TIMELINE GRID */
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.timeline-card {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.timeline-year {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2f4f3e;
+    margin: 0 0 10px 0;
+    border-left: 3px solid #2f4f3e;
+    padding-left: 12px;
+}
+
+.timeline-card h3 {
+    margin: 10px 0;
+    color: #2f4f3e;
+}
+
+.timeline-card p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.timeline-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.timeline-card a:hover {
+    border-bottom-color: #2f4f3e;
+}
+
+/* INFO BOX */
+.info-box {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 18px;
+    margin-top: 25px;
+}
+
+/* GLOBAL CONTEXT CARD */
+.global-card {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.global-card h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+}
+
+.global-card a {
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.global-card a:hover {
+    border-bottom-color: #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #d8d2c3;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
+
+    .timeline-year {
+        font-size: 1.5em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="public-health.html">Public Health Overview</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1 class="page-title">Cholera in Nineteenth-Century Belfast</h1>
+
+<div class="intro">
+<p>
+Cholera first appeared in Belfast in 1832 and returned in three subsequent epidemics (1848–49, 1854, and 1866). Each outbreak exposed the vulnerabilities of a rapidly industrialising town and gradually reshaped public health thinking and civic governance in Belfast.
+</p>
+</div>
+
+<!-- TIMELINE SECTION -->
+<div class="timeline-section">
+
+<h2 class="section-title">Epidemic Timeline</h2>
+
+<div class="timeline-grid">
+
+    <!-- 1832 -->
+    <div class="timeline-card">
+        <div class="timeline-year">1832</div>
+        <h3>First Cholera Epidemic</h3>
+        <p>First case recorded on 28 February 1832. 2,831 cases and 418 deaths. Mortality rate: 14.8% — notably lower than other Irish towns due to proactive Board of Health.</p>
+        <a href="cholera-1832.html">Read more about 1832 →</a>
+    </div>
+
+    <!-- 1848-49 -->
+    <div class="timeline-card">
+        <div class="timeline-year">1848-49</div>
+        <h3>Second Cholera Epidemic</h3>
+        <p>Occurred during the Great Famine's aftermath. 3,538 cases and 1,163 deaths. Mortality rate: 33% — almost triple that of 1832.</p>
+        <a href="cholera-1849.html">Read more about 1848-49 →</a>
+    </div>
+
+    <!-- 1854 -->
+    <div class="timeline-card">
+        <div class="timeline-year">1854</div>
+        <h3>Third Cholera Epidemic</h3>
+        <p>1,871 cases and 677 deaths. Mortality rate: 36% — the highest of Belfast's epidemics, despite continued civic improvements.</p>
+        <a href="cholera-1854.html">Read more about 1854 →</a>
+    </div>
+
+    <!-- 1866 -->
+    <div class="timeline-card">
+        <div class="timeline-year">1866</div>
+        <h3>Fourth Cholera Epidemic</h3>
+        <p>Final outbreak in Belfast. 28 recorded cases and 15 deaths. Disease did not return to Ireland in epidemic form after this year.</p>
+        <a href="cholera-1866.html">Read more about 1866 →</a>
+    </div>
+
+</div>
+
+</div>
+
+<!-- GLOBAL CONTEXT -->
+<div class="global-card">
+    <h3>🌍 Global Pandemics (1817–1866)</h3>
+    <p>Belfast's cholera epidemics were part of four larger global pandemics that swept the world during the nineteenth century, transforming medical understanding and public health responses internationally.</p>
+    <a href="global-pandemics.html">Explore Global Pandemics →</a>
+</div>
+
+<!-- UNDERSTANDING CHOLERA -->
+<div class="info-box">
+    <h3 style="color: #2f4f3e; margin-top: 0;">Understanding Cholera</h3>
+    <p>Cholera is an acute intestinal infection caused by the waterborne bacterium <em>Vibrio cholerae</em>. It is transmitted through ingestion of water or food contaminated by the excreta of infected individuals. In nineteenth-century towns with rudimentary sanitation, this made cholera a particularly deadly hazard.</p>
+    <p><strong>Symptoms:</strong> Acute diarrhoea and vomiting, agonising cramps, rapid dehydration, blue-grey skin, and often death within hours.</p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+<script>
+// Mobile dropdown toggle
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
