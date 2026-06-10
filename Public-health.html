@@ -53,7 +53,7 @@ nav {
     font-size: 0.95em;
 }
 
-/* DROPDOWN */
+/* DROPDOWN (STANDARDISED WITH INDEX) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -79,18 +79,18 @@ nav {
     background: #e8e2d3;
 }
 
-.dropdown:hover .dropdown-content {
+/* STANDARD HOVER BEHAVIOUR */
+.menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
-/* CONTENT */
+/* CONTENT (UNCHANGED STRUCTURE) */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* SECTION TITLE */
 .section-title {
     font-size: 1.4em;
     border-left: 4px solid #2f4f3e;
@@ -99,7 +99,6 @@ nav {
     color: #2f4f3e;
 }
 
-/* CARDS */
 .card {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
@@ -107,7 +106,6 @@ nav {
     margin-top: 15px;
 }
 
-/* ABOUT BOX (RESTORED STRUCTURE) */
 .info-box {
     background: #ffffff;
     border: 1px solid #d8d2c3;
@@ -161,7 +159,6 @@ footer {
 
     <li><a href="index.html">Home</a></li>
 
-    <!-- CHOLERA -->
     <li class="dropdown">
         <a href="#">Cholera</a>
         <div class="dropdown-content">
@@ -173,15 +170,13 @@ footer {
         </div>
     </li>
 
-    <!-- PUBLIC HEALTH -->
     <li class="dropdown">
         <a href="public-health.html">Public Health</a>
         <div class="dropdown-content">
-            <a href="public-health.html">About this Section</a>
+            <a href="public-health.html">About this section — evolving research space</a>
         </div>
     </li>
 
-    <!-- PEOPLE -->
     <li class="dropdown">
         <a href="People.html">People</a>
         <div class="dropdown-content">
@@ -190,7 +185,6 @@ footer {
         </div>
     </li>
 
-    <!-- STORIES -->
     <li class="dropdown">
         <a href="Stories.html">Stories</a>
         <div class="dropdown-content">
@@ -198,7 +192,6 @@ footer {
         </div>
     </li>
 
-    <!-- RESEARCH -->
     <li class="dropdown">
         <a href="Research.html">Research</a>
         <div class="dropdown-content">
