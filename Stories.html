@@ -79,7 +79,6 @@ nav {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* DROPDOWN LINKS */
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
@@ -94,7 +93,6 @@ nav {
     color: #1f4f3e;
 }
 
-/* STANDARDISED HOVER BEHAVIOUR */
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
@@ -297,7 +295,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     <li><a href="index.html">Home</a></li>
 
     <li class="dropdown">
-        <a href="#">Cholera</a>
+        <a href="cholera.html">Cholera</a>
         <div class="dropdown-content">
             <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
             <a href="cholera-1832.html">Belfast 1832</a>
@@ -308,9 +306,10 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     </li>
 
     <li class="dropdown">
-        <a href="public-health.html">Public Health</a>
+        <a href="Public-health.html">Public Health</a>
         <div class="dropdown-content">
-            <a href="public-health.html">Public Health Overview</a>
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
         </div>
     </li>
 
@@ -318,6 +317,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <a href="People.html">People</a>
         <div class="dropdown-content">
             <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
         </div>
     </li>
 
@@ -325,6 +325,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <a href="Stories.html">Stories</a>
         <div class="dropdown-content">
             <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
         </div>
     </li>
 
@@ -335,6 +336,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
             <a href="about-author.html">About the Author</a>
             <a href="thesis.html">PhD Thesis</a>
             <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
         </div>
     </li>
 
@@ -395,6 +397,21 @@ A comprehensive historical overview of cholera and the evolving public health re
 <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
 <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
