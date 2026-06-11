@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Global Cholera Pandemics 1817–1866</title>
+<title>Global Cholera Pandemics 1817–1866 | Cholera & Civic Belfast</title>
 
 <style>
 body {
@@ -23,6 +23,14 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 2.2em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1em;
 }
 
 /* NAV */
@@ -49,19 +57,25 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.95em;
+    transition: color 0.2s ease;
 }
 
-/* DROPDOWN */
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: #f4f1e8;
-    min-width: 220px;
     border: 1px solid #d8d2c3;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    min-width: 240px;
     z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .dropdown-content a {
@@ -69,21 +83,34 @@ nav {
     padding: 8px 15px;
     color: #2f4f3e;
     text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
 }
 
 .dropdown-content a:hover {
     background: #e8e2d3;
+    color: #1f4f3e;
 }
 
-.dropdown:hover .dropdown-content {
+.menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
-/* LAYOUT */
+/* CONTENT */
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
+}
+
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
 }
 
 /* PANDEMIC CARD */
@@ -92,6 +119,7 @@ nav {
     border: 1px solid #d8d2c3;
     padding: 20px;
     margin-bottom: 25px;
+    border-radius: 4px;
 }
 
 .pandemic h2 {
@@ -116,6 +144,7 @@ nav {
     border-left: 4px solid #2f4f3e;
     padding: 15px;
     margin-top: 15px;
+    border-radius: 3px;
 }
 
 /* FOOTER */
@@ -128,18 +157,36 @@ footer {
     color: #555;
 }
 
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
         align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
     }
 
     .dropdown-content {
         position: static;
         display: none;
-        box-shadow: none;
         border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
     }
 
     .dropdown:hover .dropdown-content {
@@ -149,6 +196,10 @@ footer {
     .dropdown.open .dropdown-content {
         display: block;
     }
+
+    .meta {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -157,7 +208,11 @@ footer {
 
 <header>
 
-<h1>Global Cholera Pandemics</h1>
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
 
 <nav>
 <ul class="menu">
@@ -165,9 +220,9 @@ footer {
     <li><a href="index.html">Home</a></li>
 
     <li class="dropdown">
-        <a href="#">Cholera</a>
+        <a href="cholera.html">Cholera</a>
         <div class="dropdown-content">
-            <a href="global-pandemics.html">Global Pandemics</a>
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
             <a href="cholera-1832.html">Belfast 1832</a>
             <a href="cholera-1849.html">Belfast 1849</a>
             <a href="cholera-1854.html">Belfast 1854</a>
@@ -175,9 +230,26 @@ footer {
         </div>
     </li>
 
-    <li><a href="public-health.html">Public Health</a></li>
-    <li><a href="People.html">People</a></li>
-    <li><a href="Stories.html">Stories</a></li>
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+        </div>
+    </li>
 
     <li class="dropdown">
         <a href="Research.html">Research</a>
@@ -185,7 +257,7 @@ footer {
             <a href="about-project.html">About the Project</a>
             <a href="about-author.html">About the Author</a>
             <a href="thesis.html">PhD Thesis</a>
-            <a href="licence.html">Licence</a>
+            <a href="sources.html">Sources</a>
         </div>
     </li>
 
@@ -195,6 +267,8 @@ footer {
 </header>
 
 <div class="container">
+
+<h1 class="page-title">Global Cholera Pandemics 1817–1866</h1>
 
 <!-- PANDEMIC 1 -->
 <div class="pandemic">
@@ -208,7 +282,7 @@ footer {
     <p><span class="label">Transmission routes:</span> Trade routes across India, Southeast Asia, Middle East.</p>
     <p><span class="label">Key developments:</span> First global expansion beyond South Asia.</p>
 
-    <div class="belfast-box">No direct Belfast outbreak recorded in this phase.</div>
+    <div class="belfast-box">📋 No direct Belfast outbreak recorded in this phase.</div>
 </div>
 
 <!-- PANDEMIC 2 -->
@@ -222,9 +296,7 @@ footer {
 
     <p><span class="label">Key developments:</span> Arrival in Europe (1831–32).</p>
 
-    <div class="belfast-box">
-        Includes: 1832 Belfast cholera epidemic
-    </div>
+    <div class="belfast-box">⚠️ Includes: <strong>1832 Belfast cholera epidemic</strong></div>
 </div>
 
 <!-- PANDEMIC 3 -->
@@ -236,11 +308,9 @@ footer {
         <div><span class="label">Reach:</span> Worldwide</div>
     </div>
 
-    <p><span class="label">Key developments:</span> Peak global mortality; John Snow’s investigations.</p>
+    <p><span class="label">Key developments:</span> Peak global mortality; John Snow's investigations.</p>
 
-    <div class="belfast-box">
-        Includes: 1848–49 and 1854 Belfast epidemics
-    </div>
+    <div class="belfast-box">⚠️ Includes: <strong>1848–49 and 1854 Belfast epidemics</strong></div>
 </div>
 
 <!-- PANDEMIC 4 -->
@@ -254,17 +324,31 @@ footer {
 
     <p><span class="label">Key developments:</span> Steamship expansion accelerates spread.</p>
 
-    <div class="belfast-box">
-        Includes: 1866 Belfast outbreak
-    </div>
+    <div class="belfast-box">⚠️ Includes: <strong>1866 Belfast outbreak</strong></div>
 </div>
 
 </div>
 
 <footer>
-    <p><strong>Cholera & Civic Belfast</strong><br>
-    A public history project by Dr Nigel Farrell</p>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
+
 </body>
+</html>
 </html>
