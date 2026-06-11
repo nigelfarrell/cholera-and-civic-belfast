@@ -1,1 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Belfast Cholera Timeline 1832 | Cholera & Civic Belfast</title>
 
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1em;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 240px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.menu > li.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* HERO BANNER (REDUCED SIZE) */
+.hero-banner {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
+}
+
+/* INTRO TEXT */
+.intro-text {
+    margin: 20px 0 30px 0;
+    line-height: 1.7;
+}
+
+/* TABLE CONTAINER - SCROLLABLE ON MOBILE */
+.table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+/* TIMELINE TABLE */
+.timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #faf8f3;
+    font-size: 0.95em;
+    min-width: 600px;
+}
+
+.timeline-table th {
+    background: #2f4f3e;
+    color: #f4f1e8;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #4a6f5e;
+}
+
+.timeline-table td {
+    padding: 12px 15px;
+    border: 1px solid #d8d2c3;
+    vertical-align: top;
+}
+
+.timeline-table tr:nth-child(even) {
+    background: #f4f1e8;
+}
+
+.timeline-table tr:hover {
+    background: #e8e2d3;
+}
+
+/* SECTION BOXES */
+.info-section {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.info-section h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 8px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.info-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #d8d2c3;
+}
+
+.info-list li strong {
+    color: #2f4f3e;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
+
+    .hero-banner {
+        max-height: 180px;
+    }
+
+    .hero-banner img {
+        height: 180px;
+    }
+
+    .info-list {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="cholera-1832.html">Belfast 1832</a>
+            <a href="belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="cholera-1849.html">Belfast 1849</a>
+            <a href="cholera-1854.html">Belfast 1854</a>
+            <a href="cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO BANNER IMAGE (REDUCED SIZE) -->
+<div class="hero-banner">
+    <img src="images/1832-blog-image.jpg" alt="Belfast 1832 Cholera Epidemic">
+</div>
+
+<div class="container">
+
+<h1 class="page-title">Detailed Historical Timeline of the 1832 Belfast Cholera Epidemic</h1>
+
+<div class="intro-text">
+    <p>This timeline details the first arrival of Asiatic cholera in Belfast, an event that represented a critical moment in the history of Irish public health administration. While many areas of Ireland suffered some of the most severe per capita mortality, Belfast's rates were significantly lower by comparison, with relative success arguably achieved through the early establishment of preventative measures.</p>
+</div>
+
+<!-- SCROLLABLE TABLE -->
+<div class="table-container">
+    <table class="timeline-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Official Chronology</strong></td>
+                <td>25 September 1831 – November 1832 (with residual cases extending into 1834)</td>
+            </tr>
+            <tr>
+                <td><strong>Initial Local Outbreak Site</strong></td>
+                <td>No. 14 Quay Lane: A high-density lodging house situated near the banks of the River Lagan. 28/29 February 1832</td>
+            </tr>
+            <tr>
+                <td><strong>Potential Transmission Vector & Environmental Risks</strong></td>
+                <td>Cross-channel maritime trade with Scotland, e.g., the arrival of repatriated paupers removed from areas where cholera had been present. Many landed at the nearby ports of Bangor and Donaghadee. Local transmission was likely accelerated by environmental conditions including poor sanitation and overcrowding.</td>
+            </tr>
+            <tr>
+                <td><strong>Institutional Response</strong></td>
+                <td>Creation of Belfast Board of Health in advance of cholera's arrival. Town split into six medical districts supervised by board members. A temporary cholera hospital erected behind the Belfast Fever Hospital in Frederick Street, supplemented by quarantined isolation houses on Lancaster Street. Belfast Corporation intensified street cleaning and nuisance removal efforts. Houses of those most in need were whitewashed and fumigated, with food, clothing and new bedding also provided.</td>
+            </tr>
+            <tr>
+                <td><strong>Statistics</strong></td>
+                <td>Peak Period Spring–Autumn 1832 – 2,831 cases – 418 deaths. Mortality 14.8%</td>
+            </tr>
+            <tr>
+                <td><strong>Key Events</strong></td>
+                <td>
+                    • Belfast Charitable Society agrees to shut its Poorhouse at the earliest sign of cholera, effectively quarantining the institution (no subsequent cases of cholera were recorded), June 1831.<br>
+                    • Belfast Board of Health first established, 25 September 1831 (made official 22 November 1831).<br>
+                    • Establishment of temporary Cholera Hospital, February 1832.<br>
+                    • First unofficial case, 28 February 1832. First unofficial death, 29 February 1832 (19 hours).<br>
+                    • First Official Death, 18 March 1832.<br>
+                    • Epidemic escalates, mid-late June 1832.<br>
+                    • Epidemic Peaks, 8-14 July 1832.<br>
+                    • Belfast Newsletter final report on statistics, 20 November 1832.<br>
+                    • Cholera Hospital Closed, 16 December 1832.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- KEY INDIVIDUALS SECTION -->
+<div class="info-section">
+    <h3>Key Individuals</h3>
+    <ul class="info-list">
+        <li><strong>Bernard Murtagh:</strong> A 34-year-old cooper who became the first unofficial cholera victim in Belfast.</li>
+        <li><strong>Peter Murtagh:</strong> Brother of Bernard and the proprietor of the No. 14 Quay Lane lodging house where the initial outbreak occurred.</li>
+        <li><strong>George McKeown:</strong> Became first official victim when he died on 18 March.</li>
+        <li><strong>Dr. Henry McCormac:</strong> Prominent Belfast physician who was placed in charge of the temporary Frederick Street cholera hospital.</li>
+        <li><strong>Dr John Kidley:</strong> Secretary of the Belfast Board of Health.</li>
+        <li><strong>Dr Thomas Thompson:</strong> Belfast Board of Health member and dedicated physician.</li>
+        <li><strong>Dr Francis Barker:</strong> Secretary of the General Board of Health.</li>
+        <li><strong>Dr William Buchanan:</strong> Physician to the Ballymacarrett cholera hospital (contracted cholera and died in July 1832).</li>
+    </ul>
+</div>
+
+<!-- KEY LOCATIONS SECTION -->
+<div class="info-section">
+    <h3>Key Locations</h3>
+    <ul class="info-list">
+        <li>Frederick Street</li>
+        <li>Lancaster Street</li>
+        <li>Quay Lane</li>
+        <li>Talbot Street (Johnny's Court)</li>
+        <li>Millfield</li>
+        <li>Orr's Entry (High Street)</li>
+        <li>George's Place</li>
+        <li>Corr's Lane</li>
+    </ul>
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
