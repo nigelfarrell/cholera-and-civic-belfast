@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Page Title | Cholera & Civic Belfast</title>
+
+<style>
+/* === COPY YOUR EXISTING CSS FROM ANY CURRENT PAGE HERE === */
+/* Include all the styles from one of your updated pages (e.g., Public-health.html) */
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Cholera & Civic Belfast</h1>
+    <div class="subtitle">
+        Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+    </div>
+
+    <!-- MENU LOADER (DO NOT CHANGE) -->
+    <nav>
+        <div id="menu-container"></div>
+    </nav>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading menu:', error));
+    </script>
+</header>
+
+<div class="container">
+    <!-- YOUR PAGE'S UNIQUE CONTENT GOES HERE -->
+    <h1>New Page Title</h1>
+    <p>Your content...</p>
+</div>
+
+<footer>
+    <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+    <p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
