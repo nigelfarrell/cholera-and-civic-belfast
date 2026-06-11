@@ -78,7 +78,6 @@ nav {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* DROPDOWN LINKS */
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
@@ -93,7 +92,6 @@ nav {
     color: #1f4f3e;
 }
 
-/* STANDARDISED HOVER BEHAVIOUR */
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
@@ -125,9 +123,49 @@ nav {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+.intro p {
+    margin: 0;
+    font-size: 1.05em;
+    color: #333;
+}
+
+/* GLOBAL BANNER - CONTAINED STYLE */
+.global-banner {
+    background: #e8e2d3;
+    border-left: 5px solid #2f4f3e;
+    padding: 25px 30px;
+    margin: 0 0 40px 0;
+    border-radius: 4px;
+}
+
+.global-banner h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+}
+
+.global-banner p {
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.global-banner a {
+    display: inline-block;
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.global-banner a:hover {
+    border-bottom-color: #2f4f3e;
+}
+
 /* TIMELINE SECTION */
 .timeline-section {
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 .section-title {
@@ -199,32 +237,7 @@ nav {
     border: 1px solid #d8d2c3;
     padding: 18px;
     margin-top: 25px;
-}
-
-/* GLOBAL CONTEXT CARD */
-.global-card {
-    background: #faf8f3;
-    border: 1px solid #d8d2c3;
-    padding: 20px;
-    margin-top: 20px;
     border-radius: 4px;
-}
-
-.global-card h3 {
-    color: #2f4f3e;
-    margin-top: 0;
-}
-
-.global-card a {
-    color: #2f4f3e;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
-}
-
-.global-card a:hover {
-    border-bottom-color: #2f4f3e;
 }
 
 /* FOOTER */
@@ -287,6 +300,10 @@ footer a:hover {
     .timeline-year {
         font-size: 1.5em;
     }
+
+    .global-banner {
+        padding: 20px;
+    }
 }
 </style>
 </head>
@@ -313,6 +330,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         })
         .catch(error => console.error('Error loading menu:', error));
 </script>
+
 </header>
 
 <div class="container">
@@ -323,6 +341,13 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <p>
 Cholera first appeared in Belfast in 1832 and returned in three subsequent epidemics (1848–49, 1854, and 1866). Each outbreak exposed the vulnerabilities of a rapidly industrialising town and gradually reshaped public health thinking and civic governance in Belfast.
 </p>
+</div>
+
+<!-- GLOBAL BANNER - NOW AT THE TOP (CONTAINED STYLE) -->
+<div class="global-banner">
+    <h3>🌍 Global Pandemics (1817–1866)</h3>
+    <p>Belfast's cholera epidemics were part of four larger global pandemics that swept the world during the nineteenth century, transforming medical understanding and public health responses internationally.</p>
+    <a href="global-pandemics.html">Explore Global Pandemics →</a>
 </div>
 
 <!-- TIMELINE SECTION -->
@@ -368,13 +393,6 @@ Cholera first appeared in Belfast in 1832 and returned in three subsequent epide
 
 </div>
 
-<!-- GLOBAL CONTEXT -->
-<div class="global-card">
-    <h3>🌍 Global Pandemics (1817–1866)</h3>
-    <p>Belfast's cholera epidemics were part of four larger global pandemics that swept the world during the nineteenth century, transforming medical understanding and public health responses internationally.</p>
-    <a href="global-pandemics.html">Explore Global Pandemics →</a>
-</div>
-
 <!-- UNDERSTANDING CHOLERA -->
 <div class="info-box">
     <h3 style="color: #2f4f3e; margin-top: 0;">Understanding Cholera</h3>
@@ -388,22 +406,6 @@ Cholera first appeared in Belfast in 1832 and returned in three subsequent epide
 <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
 <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
-
-<script>
-// Mobile dropdown toggle
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
