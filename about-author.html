@@ -23,10 +23,18 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 2.2em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1em;
 }
 
 /* NAV */
-.main-nav {
+nav {
     margin-top: 25px;
 }
 
@@ -49,19 +57,25 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.95em;
+    transition: color 0.2s ease;
 }
 
-/* DROPDOWN */
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: #f4f1e8;
-    min-width: 220px;
     border: 1px solid #d8d2c3;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    min-width: 240px;
     z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .dropdown-content a {
@@ -69,13 +83,16 @@ h1 {
     padding: 8px 15px;
     color: #2f4f3e;
     text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
 }
 
 .dropdown-content a:hover {
     background: #e8e2d3;
+    color: #1f4f3e;
 }
 
-.dropdown:hover .dropdown-content {
+.menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
@@ -84,6 +101,16 @@ h1 {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
+}
+
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
 }
 
 /* IMAGE — slightly larger + better wrap */
@@ -97,13 +124,60 @@ h1 {
     width: 100%;
     height: auto;
     border: 1px solid #d8d2c3;
+    border-radius: 3px;
 }
 
-/* CLEARFIX (IMPORTANT FIX) */
+/* CLEARFIX */
 .container::after {
     content: "";
     display: block;
     clear: both;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+    clear: both;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
 }
 
 /* MOBILE */
@@ -112,13 +186,21 @@ h1 {
     .menu {
         flex-direction: column;
         align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
     }
 
     .dropdown-content {
         position: static;
         display: none;
-        box-shadow: none;
         border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
     }
 
     .dropdown:hover .dropdown-content {
@@ -135,6 +217,11 @@ h1 {
         margin: 0 auto 20px auto;
         display: block;
     }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
 }
 </style>
 </head>
@@ -142,15 +229,20 @@ h1 {
 <body>
 
 <header>
-<h1>About the Author</h1>
 
-<nav class="main-nav">
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<nav>
 <ul class="menu">
 
     <li><a href="index.html">Home</a></li>
 
     <li class="dropdown">
-        <a href="#">Cholera</a>
+        <a href="cholera.html">Cholera</a>
         <div class="dropdown-content">
             <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
             <a href="cholera-1832.html">Belfast 1832</a>
@@ -160,9 +252,29 @@ h1 {
         </div>
     </li>
 
-    <li><a href="public-health.html">Public Health</a></li>
-    <li><a href="People.html">People</a></li>
-    <li><a href="Stories.html">Stories</a></li>
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
 
     <li class="dropdown">
         <a href="Research.html">Research</a>
@@ -171,14 +283,18 @@ h1 {
             <a href="about-author.html">About the Author</a>
             <a href="thesis.html">PhD Thesis</a>
             <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
         </div>
     </li>
 
 </ul>
 </nav>
+
 </header>
 
 <div class="container">
+
+<h1 class="page-title">About the Author</h1>
 
 <!-- IMAGE -->
 <div class="author-image">
@@ -198,7 +314,32 @@ Since 2011, Nigel has taught widely across Irish, British, and European history,
 He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
 </p>
 
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
 </div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
