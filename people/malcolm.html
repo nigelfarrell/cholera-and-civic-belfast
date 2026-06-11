@@ -2,29 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dr Andrew George Malcolm (1818–1856)</title>
+<title>Dr Andrew George Malcolm (1818–1856) | People | Cholera & Civic Belfast</title>
 
 <style>
 body {
     font-family: Georgia, serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
     background-color: #f4f1e8;
+    margin: 0;
     color: #1f1f1f;
     line-height: 1.7;
 }
 
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
 h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1em;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 240px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.menu > li.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ARTICLE STYLES */
+.article-content h1 {
+    color: #2f4f3e;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.article-content h2 {
+    color: #4a6fa5;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.article-content h3 {
+    margin-top: 30px;
     color: #2f4f3e;
 }
 
-h2 {
-    color: #4a6fa5;
-    font-style: italic;
-}
-
-img {
+.article-content img {
     display: block;
     margin: 20px auto;
     width: 180px;
@@ -34,20 +131,173 @@ img {
     object-fit: cover;
 }
 
-a {
+.back-link {
+    margin-bottom: 30px;
+}
+
+.back-link a {
     color: #2f4f3e;
     text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
 }
-a:hover {
-    color: #4a6fa5;
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
-<p><a href="../People.html">← Back to People</a></p>
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="../index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="../cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="../global-pandemics.html">Global Pandemics 1817–1866</a>
+            <a href="../cholera-1832.html">Belfast 1832</a>
+            <a href="../cholera-1849.html">Belfast 1849</a>
+            <a href="../cholera-1854.html">Belfast 1854</a>
+            <a href="../cholera-1866.html">Belfast 1866</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="../Public-health.html">Public Health Overview</a>
+            <a href="../Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../People.html">People</a>
+        <div class="dropdown-content">
+            <a href="malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="../People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="../Stories.html">Stories Archive</a>
+            <a href="../Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="../about-project.html">About the Project</a>
+            <a href="../about-author.html">About the Author</a>
+            <a href="../thesis.html">PhD Thesis</a>
+            <a href="../sources.html">Sources</a>
+            <a href="../Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="back-link">
+    <a href="../People.html">← Back to People</a>
+</div>
+
+<div class="article-content">
 
 <h1>Dr Andrew George Malcolm (1818–1856)</h1>
 
@@ -64,15 +314,15 @@ Born in Newry, Co. Down, Malcolm was educated at the Belfast Academical Institut
 </p>
 
 <p>
-While he gained recognition as a skilled clinician and teacher, Malcolm’s talent also extended far beyond clinical practice. Deeply concerned by the links between poverty, overcrowding, poor sanitation, and disease, he developed a wider analytical and reforming perspective on urban disease and became a prominent figure in Belfast’s emerging sanitary reform movement. He examined mortality patterns in relation to water supply, drainage, housing, and street cleanliness with particular focus to their relationship to cholera, dysentery and fever. He argued that epidemic disease struck hardest where civic neglect was greatest and also drew attention to industrial health hazards such as flax dust in mills.
+While he gained recognition as a skilled clinician and teacher, Malcolm's talent also extended far beyond clinical practice. Deeply concerned by the links between poverty, overcrowding, poor sanitation, and disease, he developed a wider analytical and reforming perspective on urban disease and became a prominent figure in Belfast's emerging sanitary reform movement. He examined mortality patterns in relation to water supply, drainage, housing, and street cleanliness with particular focus to their relationship to cholera, dysentery and fever. He argued that epidemic disease struck hardest where civic neglect was greatest and also drew attention to industrial health hazards such as flax dust in mills.
 </p>
 
 <p>
-Malcolm pressed for structural reforms, efficient drainage, clean water, public baths and washhouses, regular street cleansing, improved ventilation and better building regulations, insisting that engineering solutions should be matched by sustained municipal responsibility and public commitment to improved hygienic standards. Overall, his work helped establish the principle that Belfast’s health crises were inseparable from its housing, labour conditions, and civic infrastructure issues.
+Malcolm pressed for structural reforms, efficient drainage, clean water, public baths and washhouses, regular street cleansing, improved ventilation and better building regulations, insisting that engineering solutions should be matched by sustained municipal responsibility and public commitment to improved hygienic standards. Overall, his work helped establish the principle that Belfast's health crises were inseparable from its housing, labour conditions, and civic infrastructure issues.
 </p>
 
 <p>
-As a historian, Malcolm authored <i>The History of the General Hospital, Belfast and the other Medical Institutions of the Town</i> (1851), a detailed chronological account valued for its record of Belfast’s medical development. Malcolm died of heart failure on 19 September 1856 at age 38, shortly after the birth of his only child. His work represented an important bridge between clinical medicine and emerging public health principles in industrial Belfast, combining empirical observation, statistical analysis, and civic advocacy. Though his life was brief, contemporaries recognised him as ‘the working man of the profession’ for his industry, philanthropy, and commitment to sanitary and social improvement.
+As a historian, Malcolm authored <i>The History of the General Hospital, Belfast and the other Medical Institutions of the Town</i> (1851), a detailed chronological account valued for its record of Belfast's medical development. Malcolm died of heart failure on 19 September 1856 at age 38, shortly after the birth of his only child. His work represented an important bridge between clinical medicine and emerging public health principles in industrial Belfast, combining empirical observation, statistical analysis, and civic advocacy. Though his life was brief, contemporaries recognised him as 'the working man of the profession' for his industry, philanthropy, and commitment to sanitary and social improvement.
 </p>
 
 <h3>Further Reading</h3>
@@ -88,19 +338,35 @@ As a historian, Malcolm authored <i>The History of the General Hospital, Belfast
 <p>Dictionary of Ulster Biography. “Dr Andrew George Malcolm (1818–1856): Physician; Teacher; Health Reformer; Historian.” https://www.newulsterbiography.co.uk/index.php/home/viewPerson/2079.</p>
 
 <p>Ulster Medical Society. “Andrew George Malcolm 1818–1856, The Working Man of the Profession.” https://www.ums.ac.uk/malcolm_ag.</p>
+
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
+</div>
+
+</div>
+
 <footer>
-
-    <p>
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
-            <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
-            alt="CC BY-NC-ND 4.0">
-        </a>
-    </p>
-
-    <p>
-        <a href="../licence.html">Copyright & Licence</a>
-    </p>
-
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>
