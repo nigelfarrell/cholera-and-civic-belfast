@@ -26,6 +26,13 @@ h1 {
     font-size: 2.4em;
 }
 
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1em;
+}
+
 /* NAV */
 nav {
     margin-top: 25px;
@@ -35,7 +42,6 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -51,20 +57,25 @@ nav {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.95em;
+    transition: color 0.2s ease;
 }
 
-/* DROPDOWN (STANDARDISED WITH INDEX) */
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: #f4f1e8;
-    min-width: 220px;
     border: 1px solid #d8d2c3;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    padding: 10px 0;
+    min-width: 260px;
     z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .dropdown-content a {
@@ -72,45 +83,46 @@ nav {
     padding: 8px 15px;
     color: #2f4f3e;
     text-decoration: none;
-    font-size: 0.9em;
+    font-weight: normal;
+    transition: background 0.2s ease;
 }
 
 .dropdown-content a:hover {
     background: #e8e2d3;
+    color: #1f4f3e;
 }
 
-/* STANDARD HOVER BEHAVIOUR */
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
 
-/* CONTENT (UNCHANGED STRUCTURE) */
+/* CONTENT */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
 
-.section-title {
-    font-size: 1.4em;
-    border-left: 4px solid #2f4f3e;
-    padding-left: 12px;
-    margin-top: 30px;
+.page-title {
     color: #2f4f3e;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
 }
 
-.card {
-    background: #faf8f3;
-    border: 1px solid #d8d2c3;
-    padding: 18px;
-    margin-top: 15px;
-}
-
-.info-box {
+.development-box {
     background: #ffffff;
     border: 1px solid #d8d2c3;
-    padding: 18px;
-    margin-top: 25px;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.development-box h2 {
+    color: #2f4f3e;
+    margin-top: 0;
 }
 
 /* FOOTER */
@@ -120,6 +132,18 @@ footer {
     border-top: 1px solid #d8d2c3;
     margin-top: 60px;
     color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
 }
 
 /* MOBILE */
@@ -128,13 +152,21 @@ footer {
     .menu {
         flex-direction: column;
         align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
     }
 
     .dropdown-content {
         position: static;
         display: none;
-        box-shadow: none;
         border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
     }
 
     .dropdown:hover .dropdown-content {
@@ -144,6 +176,11 @@ footer {
     .dropdown.open .dropdown-content {
         display: block;
     }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
 }
 </style>
 </head>
@@ -152,7 +189,11 @@ footer {
 
 <header>
 
-<h1>Public Health</h1>
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
 
 <nav>
 <ul class="menu">
@@ -160,7 +201,7 @@ footer {
     <li><a href="index.html">Home</a></li>
 
     <li class="dropdown">
-        <a href="#">Cholera</a>
+        <a href="cholera.html">Cholera</a>
         <div class="dropdown-content">
             <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
             <a href="cholera-1832.html">Belfast 1832</a>
@@ -171,9 +212,10 @@ footer {
     </li>
 
     <li class="dropdown">
-        <a href="public-health.html">Public Health</a>
+        <a href="Public-health.html">Public Health</a>
         <div class="dropdown-content">
-            <a href="public-health.html">About this section — evolving research space</a>
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
         </div>
     </li>
 
@@ -181,7 +223,7 @@ footer {
         <a href="People.html">People</a>
         <div class="dropdown-content">
             <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-            <a href="people/about.html">About this Section</a>
+            <a href="People.html" title="More biographies coming soon">About this Section →</a>
         </div>
     </li>
 
@@ -189,6 +231,7 @@ footer {
         <a href="Stories.html">Stories</a>
         <div class="dropdown-content">
             <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles added regularly">About this Section →</a>
         </div>
     </li>
 
@@ -199,6 +242,7 @@ footer {
             <a href="about-author.html">About the Author</a>
             <a href="thesis.html">PhD Thesis</a>
             <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis and research materials">About this Section →</a>
         </div>
     </li>
 
@@ -209,36 +253,19 @@ footer {
 
 <div class="container">
 
-<div class="section-title">Overview</div>
+<h1 class="page-title">Public Health</h1>
 
-<div class="card">
+<div class="development-box">
+    <h2>Section in Development</h2>
+
     <p>
-        This section explores the development of public health infrastructure in nineteenth-century Belfast,
-        including water supply, sanitation systems, and the emergence of civic health governance.
+        This section will expand as research progresses, focusing on sanitation reform,
+        civic administration, and the development of public health infrastructure in nineteenth-century Belfast.
     </p>
 
     <p>
-        It is currently under development and will expand alongside ongoing research into cholera epidemics
-        and urban reform.
+        Additional case studies, documents, and thematic essays will be added over time.
     </p>
-</div>
-
-<div class="section-title">About this section</div>
-
-<div class="info-box">
-    <p>
-        This section is intended as a developing research space.
-        Material relating to Belfast’s public health infrastructure, sanitation systems,
-        and civic health institutions will be added as the project expands.
-    </p>
-</div>
-
-<div class="section-title">Planned Themes</div>
-
-<div class="card">
-    <p><strong>Water Supply:</strong> Belfast’s evolving water infrastructure and access inequality.</p>
-    <p><strong>Sanitation:</strong> drainage, waste removal, and urban contamination.</p>
-    <p><strong>Civic Reform:</strong> institutional responses to epidemic disease and urban growth.</p>
 </div>
 
 </div>
@@ -247,6 +274,21 @@ footer {
 <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
 <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
