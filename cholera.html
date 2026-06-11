@@ -302,55 +302,17 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 </div>
 
 <nav>
-<ul class="menu">
-
-    <li><a href="index.html">Home</a></li>
-
-    <li class="dropdown">
-    <a href="cholera.html">Cholera</a>    
-    <div class="dropdown-content">
-        <a href="global-pandemics.html">Global Pandemics 1817–1866</a>  ← Dropdown item
-        <a href="cholera-1832.html">Belfast 1832</a>                   ← Dropdown item
-        <a href="cholera-1849.html">Belfast 1849</a>                   ← Dropdown item
-        <a href="cholera-1854.html">Belfast 1854</a>                   ← Dropdown item
-        <a href="cholera-1866.html">Belfast 1866</a>                   ← Dropdown item
-    </div>
-</li>
-
-    <li class="dropdown">
-        <a href="public-health.html">Public Health</a>
-        <div class="dropdown-content">
-            <a href="public-health.html">Public Health Overview</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="People.html">People</a>
-        <div class="dropdown-content">
-            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="Stories.html">Stories</a>
-        <div class="dropdown-content">
-            <a href="Stories.html">Stories Archive</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="Research.html">Research</a>
-        <div class="dropdown-content">
-            <a href="about-project.html">About the Project</a>
-            <a href="about-author.html">About the Author</a>
-            <a href="thesis.html">PhD Thesis</a>
-            <a href="sources.html">Sources</a>
-        </div>
-    </li>
-
-</ul>
+    <div id="menu-container"></div>
 </nav>
 
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
 </header>
 
 <div class="container">
