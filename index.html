@@ -46,6 +46,23 @@ h1 {
     color: #d8d2c3;
 }
 
+/* CONTACT EMAIL */
+.contact-email {
+    margin-top: 8px;
+    font-size: 0.8em;
+}
+
+.contact-email a {
+    color: #e8e2d3;
+    text-decoration: none;
+    border-bottom: 1px dotted #e8e2d3;
+}
+
+.contact-email a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
 /* NAV */
 nav {
     margin-top: 25px;
@@ -109,7 +126,7 @@ nav {
     display: block;
 }
 
-/* HERO BANNER - USING NEW CROPPED IMAGE */
+/* HERO BANNER - USING CROPPED IMAGE */
 .hero-banner {
     width: 100%;
     height: 350px;
@@ -122,7 +139,7 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 75%;
+    object-position: center 60%;
     display: block;
 }
 
@@ -277,6 +294,10 @@ footer a:hover {
     .dropdown.open .dropdown-content {
         display: block;
     }
+
+    .contact-email {
+        font-size: 0.75em;
+    }
 }
 </style>
 </head>
@@ -294,6 +315,10 @@ footer a:hover {
         Research and writing by Dr Nigel Farrell
     </div>
 
+    <div class="contact-email">
+        <a href="mailto:choleraandcivicbelfast@gmail.com">✉️ choleraandcivicbelfast@gmail.com</a>
+    </div>
+
     <nav>
         <div id="menu-container"></div>
     </nav>
@@ -308,7 +333,7 @@ footer a:hover {
     </script>
 </header>
 
-<!-- HERO BANNER - USING NEW CROPPED IMAGE -->
+<!-- HERO BANNER - USING CROPPED IMAGE -->
 <div class="hero-banner">
     <img src="images/Royal-Avenue-Belfast-crop.jpg" alt="Royal Avenue Belfast">
 </div>
@@ -325,30 +350,35 @@ footer a:hover {
 
 <div class="home-grid">
 
+    <!-- Cholera Card -->
     <div class="home-card">
         <h2>Cholera</h2>
         <p>Explore the four Belfast cholera epidemics (1832, 1848-49, 1854, 1866) within their global context. Includes detailed timelines, statistics, and key events.</p>
         <a href="cholera.html">Explore Cholera →</a>
     </div>
 
+    <!-- Public Health Card -->
     <div class="home-card">
         <h2>Public Health</h2>
         <p>Discover the development of public health infrastructure in nineteenth-century Belfast, including sanitation reform, water supply, and civic governance.</p>
         <a href="Public-health.html">Explore Public Health →</a>
     </div>
 
+    <!-- People Card -->
     <div class="home-card">
         <h2>People</h2>
         <p>Meet the key figures who shaped Belfast's response to epidemic disease, including physicians, reformers, and civic leaders.</p>
         <a href="People.html">Explore People →</a>
     </div>
 
+    <!-- Stories Card -->
     <div class="home-card">
         <h2>Stories</h2>
         <p>Read in-depth narrative case studies exploring cholera outbreaks and civic experience in nineteenth-century Belfast.</p>
         <a href="Stories.html">Read Stories →</a>
     </div>
 
+    <!-- Research Card -->
     <div class="home-card">
         <h2>Research</h2>
         <p>Access doctoral thesis material, primary sources, and scholarly resources underpinning this project.</p>
