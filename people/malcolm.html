@@ -23,7 +23,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 2.3em;
 }
 
 .subtitle {
@@ -103,36 +103,42 @@ nav {
     padding: 40px 20px;
 }
 
-/* ARTICLE STYLES */
-.article-content h1 {
+/* PAGE CONTENT STYLES */
+.page-title {
     color: #2f4f3e;
-    font-size: 2em;
+    font-size: 1.8em;
     margin-top: 0;
+    margin-bottom: 15px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
 }
 
-.article-content h2 {
-    color: #4a6fa5;
+.page-subtitle {
+    color: #555;
+    font-size: 1.1em;
     font-style: italic;
-    margin-top: 30px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    padding-left: 25px;
+    border-left: 5px solid #d8d2c3;
 }
 
-.article-content h3 {
-    margin-top: 30px;
-    color: #2f4f3e;
+.author-image {
+    float: left;
+    width: 200px;
+    margin: 0 25px 15px 0;
 }
 
-.article-content img {
-    display: block;
-    margin: 20px auto;
-    width: 180px;
-    height: 180px;
+.author-image img {
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     border: 2px solid #2f4f3e;
     object-fit: cover;
 }
 
 .back-link {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .back-link a {
@@ -146,6 +152,31 @@ nav {
     border-bottom: 1px solid #2f4f3e;
 }
 
+/* CLEARFIX */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* FURTHER READING SECTION */
+.further-reading {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #d8d2c3;
+}
+
+.further-reading h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.further-reading p {
+    margin: 8px 0;
+    font-size: 0.9em;
+}
+
 /* COPYRIGHT NOTICE BOX */
 .copyright-notice {
     background: #efe9dc;
@@ -154,6 +185,7 @@ nav {
     margin: 40px 0 20px 0;
     font-size: 0.85em;
     border-radius: 3px;
+    clear: both;
 }
 
 .copyright-notice p {
@@ -221,6 +253,23 @@ footer a:hover {
     .dropdown.open .dropdown-content {
         display: block;
     }
+
+    .author-image {
+        float: none;
+        width: 180px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
+
+    .page-subtitle {
+        font-size: 1em;
+        padding-left: 15px;
+    }
 }
 </style>
 </head>
@@ -235,7 +284,7 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
-<!-- HARDCODED MENU - RELIABLE NAVIGATION (using ../ paths) -->
+<!-- HARDCODED MENU - RELIABLE NAVIGATION -->
 <nav>
 <ul class="menu">
 
@@ -299,48 +348,35 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     <a href="../People.html">← Back to People</a>
 </div>
 
-<div class="article-content">
+<h1 class="page-title">Dr Andrew George Malcolm (1818–1856)</h1>
+<div class="page-subtitle">Cholera, Urban Disease, and the Making of Public Health in Belfast</div>
 
-<h1>Dr Andrew George Malcolm (1818–1856)</h1>
+<div class="clearfix">
 
-<h2>Cholera, Urban Disease, and the Making of Public Health in Belfast</h2>
+<div class="author-image">
+    <img src="../images/malcolm.png" alt="Dr Andrew George Malcolm">
+</div>
 
-<img src="../images/malcolm.png" alt="Dr Andrew George Malcolm">
+<p>Andrew George Malcolm was a physician, medical historian, and public health reformer whose brief career made a notable contribution to mid-nineteenth-century Belfast during a period of rapid industrial expansion, recurrent epidemics, and growing sanitary pressures.</p>
 
-<p>
-Andrew George Malcolm was a physician, medical historian, and public health reformer whose brief career made a notable contribution to mid-nineteenth-century Belfast during a period of rapid industrial expansion, recurrent epidemics, and growing sanitary pressures.
-</p>
+<p>Born in Newry, Co. Down, Malcolm was educated at the Belfast Academical Institution, where he also began his medical studies before continuing his training at the University of Edinburgh. He graduated in 1842 with a gold medal for his thesis on the pathology of continued fever. He returned to an increasingly industrialised Belfast shortly afterwards, taking up appointment as medical attendant to the General Dispensary in 1843 and later as attending physician to the Fever Hospital in 1845, placing him on the frontline of the response to epidemic disease.</p>
 
-<p>
-Born in Newry, Co. Down, Malcolm was educated at the Belfast Academical Institution, where he also began his medical studies before continuing his training at the University of Edinburgh. He graduated in 1842 with a gold medal for his thesis on the pathology of continued fever. He returned to an increasingly industrialised Belfast shortly afterwards, taking up appointment as medical attendant to the General Dispensary in 1843 and later as attending physician to the Fever Hospital in 1845, placing him on the frontline of the response to epidemic disease.
-</p>
+<p>While he gained recognition as a skilled clinician and teacher, Malcolm's talent also extended far beyond clinical practice. Deeply concerned by the links between poverty, overcrowding, poor sanitation, and disease, he developed a wider analytical and reforming perspective on urban disease and became a prominent figure in Belfast's emerging sanitary reform movement. He examined mortality patterns in relation to water supply, drainage, housing, and street cleanliness with particular focus to their relationship to cholera, dysentery and fever. He argued that epidemic disease struck hardest where civic neglect was greatest and also drew attention to industrial health hazards such as flax dust in mills.</p>
 
-<p>
-While he gained recognition as a skilled clinician and teacher, Malcolm's talent also extended far beyond clinical practice. Deeply concerned by the links between poverty, overcrowding, poor sanitation, and disease, he developed a wider analytical and reforming perspective on urban disease and became a prominent figure in Belfast's emerging sanitary reform movement. He examined mortality patterns in relation to water supply, drainage, housing, and street cleanliness with particular focus to their relationship to cholera, dysentery and fever. He argued that epidemic disease struck hardest where civic neglect was greatest and also drew attention to industrial health hazards such as flax dust in mills.
-</p>
+<p>Malcolm pressed for structural reforms, efficient drainage, clean water, public baths and washhouses, regular street cleansing, improved ventilation and better building regulations, insisting that engineering solutions should be matched by sustained municipal responsibility and public commitment to improved hygienic standards. Overall, his work helped establish the principle that Belfast's health crises were inseparable from its housing, labour conditions, and civic infrastructure issues.</p>
 
-<p>
-Malcolm pressed for structural reforms, efficient drainage, clean water, public baths and washhouses, regular street cleansing, improved ventilation and better building regulations, insisting that engineering solutions should be matched by sustained municipal responsibility and public commitment to improved hygienic standards. Overall, his work helped establish the principle that Belfast's health crises were inseparable from its housing, labour conditions, and civic infrastructure issues.
-</p>
+<p>As a historian, Malcolm authored <i>The History of the General Hospital, Belfast and the other Medical Institutions of the Town</i> (1851), a detailed chronological account valued for its record of Belfast's medical development. Malcolm died of heart failure on 19 September 1856 at age 38, shortly after the birth of his only child. His work represented an important bridge between clinical medicine and emerging public health principles in industrial Belfast, combining empirical observation, statistical analysis, and civic advocacy. Though his life was brief, contemporaries recognised him as 'the working man of the profession' for his industry, philanthropy, and commitment to sanitary and social improvement.</p>
 
-<p>
-As a historian, Malcolm authored <i>The History of the General Hospital, Belfast and the other Medical Institutions of the Town</i> (1851), a detailed chronological account valued for its record of Belfast's medical development. Malcolm died of heart failure on 19 September 1856 at age 38, shortly after the birth of his only child. His work represented an important bridge between clinical medicine and emerging public health principles in industrial Belfast, combining empirical observation, statistical analysis, and civic advocacy. Though his life was brief, contemporaries recognised him as 'the working man of the profession' for his industry, philanthropy, and commitment to sanitary and social improvement.
-</p>
+</div>
 
-<h3>Further Reading</h3>
-
-<p>Calwell, H. G. Andrew Malcolm of Belfast, 1818–1856: Physician and Historian. Belfast: Brough, Cox & Dunn, 1977.</p>
-
-<p>Malcolm, A. G. The History of the General Hospital, Belfast, and the Other Medical Institutions of the Town. Belfast: W. & G. Agnew, 1851.</p>
-
-<p>Malcolm, A. G. The Sanitary State of Belfast and Suggestions for Its Improvement: A Paper Read Before the Statistical Section of the British Association. Belfast: Henry Greer, 1852.</p>
-
-<p>Dictionary of Irish Biography. “Malcolm, Andrew George.” https://www.dib.ie/biography/malcolm-andrew-george-a5410.</p>
-
-<p>Dictionary of Ulster Biography. “Dr Andrew George Malcolm (1818–1856): Physician; Teacher; Health Reformer; Historian.” https://www.newulsterbiography.co.uk/index.php/home/viewPerson/2079.</p>
-
-<p>Ulster Medical Society. “Andrew George Malcolm 1818–1856, The Working Man of the Profession.” https://www.ums.ac.uk/malcolm_ag.</p>
-
+<div class="further-reading">
+    <h3>Further Reading</h3>
+    <p>Calwell, H. G. Andrew Malcolm of Belfast, 1818–1856: Physician and Historian. Belfast: Brough, Cox & Dunn, 1977.</p>
+    <p>Malcolm, A. G. The History of the General Hospital, Belfast, and the Other Medical Institutions of the Town. Belfast: W. & G. Agnew, 1851.</p>
+    <p>Malcolm, A. G. The Sanitary State of Belfast and Suggestions for Its Improvement: A Paper Read Before the Statistical Section of the British Association. Belfast: Henry Greer, 1852.</p>
+    <p>Dictionary of Irish Biography. “Malcolm, Andrew George.” https://www.dib.ie/biography/malcolm-andrew-george-a5410.</p>
+    <p>Dictionary of Ulster Biography. “Dr Andrew George Malcolm (1818–1856): Physician; Teacher; Health Reformer; Historian.” https://www.newulsterbiography.co.uk/index.php/home/viewPerson/2079.</p>
+    <p>Ulster Medical Society. “Andrew George Malcolm 1818–1856, The Working Man of the Profession.” https://www.ums.ac.uk/malcolm_ag.</p>
 </div>
 
 <!-- COPYRIGHT NOTICE BOX -->
