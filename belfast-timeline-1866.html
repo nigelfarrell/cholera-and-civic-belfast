@@ -119,6 +119,27 @@ nav {
     padding: 40px 20px;
 }
 
+/* BACK LINKS */
+.back-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.back-links a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-links a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
 /* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
@@ -231,3 +252,129 @@ footer a:hover {
 
     .hero-banner {
         max-height: 180px;
+    }
+
+    .hero-banner img {
+        height: 180px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<nav>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO BANNER IMAGE (REDUCED SIZE) -->
+<div class="hero-banner">
+    <img src="images/1832-blog-image.jpg" alt="Belfast 1866 Cholera Epidemic">
+</div>
+
+<div class="container">
+
+<div class="back-links">
+    <a href="cholera.html">← Back to Cholera</a>
+    <a href="belfast-timeline-1854.html">← Previous: 1854 Timeline</a>
+</div>
+
+<h1 class="page-title">1866 Cholera Epidemic Timeline</h1>
+
+<div class="placeholder-box">
+    <h2>📋 Content Coming Soon</h2>
+    <p>This timeline page is currently under development.</p>
+    <p>When complete, it will include detailed chronological information about the 1866 cholera epidemic in Belfast, including case statistics, key events, institutional responses, and notable individuals.</p>
+    <p><em>Please check back for updates.</em></p>
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
