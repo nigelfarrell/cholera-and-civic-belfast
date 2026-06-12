@@ -129,9 +129,18 @@ nav {
     border-bottom: 1px solid #2f4f3e;
 }
 
-/* IMAGE — slightly larger + better wrap */
+/* AUTHOR SECTION - FLEXBOX FOR VERTICAL CENTERING */
+.author-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
 .author-image {
     width: 260px;
+    flex-shrink: 0;
 }
 
 .author-image img {
@@ -141,37 +150,8 @@ nav {
     border-radius: 3px;
 }
 
-/* FLEX CONTAINER - VERTICALLY CENTERS TEXT WITH IMAGE */
-.flex-container {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-/* COPYRIGHT NOTICE BOX */
-.copyright-notice {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 40px 0 20px 0;
-    font-size: 0.85em;
-    border-radius: 3px;
-    clear: both;
-}
-
-.copyright-notice p {
-    margin: 0;
-}
-
-.copyright-notice a {
-    color: #2f4f3e;
-    text-decoration: none;
-    border-bottom: 1px dotted #2f4f3e;
-}
-
-.copyright-notice a:hover {
-    border-bottom: 1px solid #2f4f3e;
+.author-text {
+    flex: 1;
 }
 
 /* CONTACT NOTE */
@@ -201,6 +181,30 @@ nav {
 }
 
 .contact-note a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
     border-bottom: 1px solid #2f4f3e;
 }
 
@@ -256,7 +260,7 @@ footer a:hover {
         display: block;
     }
 
-    .flex-container {
+    .author-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -264,7 +268,6 @@ footer a:hover {
 
     .author-image {
         width: 240px;
-        margin: 0 auto;
     }
 
     .page-title {
@@ -351,26 +354,26 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <h1 class="page-title">About the Author</h1>
 
-<!-- FLEX CONTAINER - VERTICALLY CENTERS TEXT WITH IMAGE -->
-<div class="flex-container">
+<!-- FLEXBOX SECTION - VERTICALLY CENTERS TEXT WITH IMAGE -->
+<div class="author-section">
 
-<div class="author-image">
-    <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
-</div>
+    <div class="author-image">
+        <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
+    </div>
 
-<div class="author-text">
-<p>
-Dr Nigel Farrell is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts, with particular interests in cholera, urban development, and the emergence of modern public health institutions.
-</p>
+    <div class="author-text">
+        <p>
+        Dr Nigel Farrell is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts, with particular interests in cholera, urban development, and the emergence of modern public health institutions.
+        </p>
 
-<p>
-Since 2011, Nigel has taught widely across Irish, British, and European history, covering themes including medicine, conflict and politics, gender, and witchcraft. He has over a decade of experience in lecturing, historical research, and public speaking.
-</p>
+        <p>
+        Since 2011, Nigel has taught widely across Irish, British, and European history, covering themes including medicine, conflict and politics, gender, and witchcraft. He has over a decade of experience in lecturing, historical research, and public speaking.
+        </p>
 
-<p>
-He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
-</p>
-</div>
+        <p>
+        He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
+        </p>
+    </div>
 
 </div>
 
