@@ -95,6 +95,7 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
+
 /* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
@@ -110,6 +111,7 @@ nav {
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
 /* CONTENT */
 .container {
     max-width: 950px;
@@ -179,6 +181,29 @@ nav {
     font-size: 0.95em;
 }
 
+/* RESEARCH LINKS - TWO OPTIONS */
+.research-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.research-links a {
+    display: inline-block;
+    margin-top: 0;
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.research-links a:hover {
+    border-bottom-color: #2f4f3e;
+}
+
+/* SINGLE LINK (for cards without two options) */
 .research-card a {
     display: inline-block;
     margin-top: 12px;
@@ -256,6 +281,11 @@ footer a:hover {
 
     .research-card h3 {
         font-size: 1.2em;
+    }
+
+    .research-links {
+        flex-direction: column;
+        gap: 8px;
     }
 }
 </style>
@@ -343,24 +373,31 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="research-grid">
 
+    <!-- PhD Thesis Card - WITH BOTH LINKS -->
     <div class="research-card">
         <h3>PhD Thesis</h3>
         <p>Author-revised doctoral thesis (2014): <em>Cholera and the Development of Public Health in Belfast, 1832–1878</em></p>
-        <a href="thesis.html">Access Thesis →</a>
+        <div class="research-links">
+            <a href="thesis.html">📖 Read Online</a>
+            <a href="thesis/Farrell_PhD_Thesis.pdf" target="_blank">📄 Download PDF</a>
+        </div>
     </div>
 
+    <!-- Primary Sources Card -->
     <div class="research-card">
         <h3>Primary Sources</h3>
         <p>Archival collections, online repositories, and recommended websites for further research.</p>
         <a href="sources.html">Explore Sources →</a>
     </div>
 
+    <!-- About the Project Card -->
     <div class="research-card">
         <h3>About the Project</h3>
         <p>Background, aims, and scope of the Cholera & Civic Belfast public history project.</p>
         <a href="about-project.html">Read More →</a>
     </div>
 
+    <!-- About the Author Card -->
     <div class="research-card">
         <h3>About the Author</h3>
         <p>Dr Nigel Farrell: social historian specialising in public health and epidemic disease.</p>
