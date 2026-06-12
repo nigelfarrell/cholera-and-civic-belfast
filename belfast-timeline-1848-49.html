@@ -119,6 +119,27 @@ nav {
     padding: 40px 20px;
 }
 
+/* BACK LINKS */
+.back-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.back-links a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-links a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
 /* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
@@ -323,13 +344,10 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <a href="cholera.html">Cholera</a>
         <div class="dropdown-content">
             <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
-            <a href="cholera-1832.html">Belfast 1832</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
             <a href="belfast-timeline-1832.html">1832 Timeline</a>
-            <a href="cholera-1849.html">Belfast 1849</a>
             <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
-            <a href="cholera-1854.html">Belfast 1854</a>
             <a href="belfast-timeline-1854.html">1854 Timeline</a>
-            <a href="cholera-1866.html">Belfast 1866</a>
             <a href="belfast-timeline-1866.html">1866 Timeline</a>
         </div>
     </li>
@@ -381,16 +399,13 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="container">
 
-<div class="back-links" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-    <a href="cholera.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Back to Cholera</a>
+<div class="back-links">
+    <a href="cholera.html">← Back to Cholera</a>
     <div style="display: flex; gap: 15px;">
-        <a href="belfast-timeline-1832.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Previous: 1832</a>
-        <a href="belfast-timeline-1854.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">Next: 1854 →</a>
+        <a href="belfast-timeline-1832.html">← Previous: 1832</a>
+        <a href="belfast-timeline-1854.html">Next: 1854 →</a>
     </div>
 </div>
-
-<h1>Cholera in Nineteenth-Century Belfast</h1>
-
 
 <h1 class="page-title">Detailed Historical Timeline of the 1848–1849 Belfast Cholera Epidemic</h1>
 
@@ -416,8 +431,8 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
                 <td><strong>Initial Local Outbreak Site</strong></td>
                 <td>Belfast Lunatic Asylum (Grosvenor Road), 1 November 1848.<br>
                 Rea's Court, Millfield, 27 November 1848, John Keenan (unconfirmed case).<br>
-                First Official Case: Thomas Tiernan, Belfast Workhouse, 1-4 December 1848</td>
-            </tr>
+                First Official Case: Thomas Tiernan, Belfast Workhouse, 1-4 December 1848
+            </td>
             <tr>
                 <td><strong>Potential Transmission Vector & Environmental Risks</strong></td>
                 <td>Likely to have been transported by Thomas Tiernan who had been removed from an area of Edinburgh where cholera had been present. Local transmission was likely accelerated by environmental conditions including poor sanitation and overcrowding.</td>
@@ -513,21 +528,6 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
 <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
