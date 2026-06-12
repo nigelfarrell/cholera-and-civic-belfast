@@ -149,11 +149,7 @@ nav {
     display: block;
     clear: both;
 }
-/* Center first paragraph with author image */
-.clearfix p:first-of-type {
-    position: relative;
-    top: 30px; 
-}
+
 /* COPYRIGHT NOTICE BOX */
 .copyright-notice {
     background: #efe9dc;
@@ -177,27 +173,6 @@ nav {
 
 .copyright-notice a:hover {
     border-bottom: 1px solid #2f4f3e;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid #d8d2c3;
-    margin-top: 60px;
-    color: #555;
-    font-size: 0.9em;
-}
-
-footer a {
-    color: #555;
-    text-decoration: none;
-    border-bottom: 1px dotted #bbb;
-}
-
-footer a:hover {
-    color: #2f4f3e;
-    border-bottom-color: #2f4f3e;
 }
 
 /* CONTACT NOTE */
@@ -228,6 +203,27 @@ footer a:hover {
 
 .contact-note a:hover {
     border-bottom: 1px solid #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
 }
 
 /* MOBILE */
@@ -357,19 +353,9 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <div class="author-image">
     <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
 </div>
-  <div class="clearfix">
 
-<div class="author-image">
-    <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
-</div>
-
-<div class="author-text">
-    <p>First paragraph...</p>
-    <p>Second paragraph...</p>
-    <p>Third paragraph...</p>
-</div>
-
-</div>  
+<!-- TEXT WRAPPER WITH TOP MARGIN - MOVES ALL TEXT DOWN -->
+<div style="margin-top: 30px;">
 
 <p>
 Dr Nigel Farrell is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts, with particular interests in cholera, urban development, and the emergence of modern public health institutions.
@@ -382,6 +368,8 @@ Since 2011, Nigel has taught widely across Irish, British, and European history,
 <p>
 He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
 </p>
+
+</div>
 
 </div>
 
