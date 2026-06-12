@@ -136,6 +136,28 @@ nav {
     color: #2f4f3e;
 }
 
+/* PLACEHOLDER MESSAGE */
+.placeholder-message {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.placeholder-message p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.placeholder-message .note {
+    font-size: 0.85em;
+    font-style: italic;
+    color: #888;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -200,30 +222,82 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
+<!-- HARDCODED MENU - RELIABLE NAVIGATION -->
 <nav>
-    <div id="menu-container"></div>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
 </nav>
 
-<script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('menu-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading menu:', error));
-</script>
 </header>
 
 <div class="people-grid">
 
+<!-- EXISTING BIOGRAPHY - DR ANDREW GEORGE MALCOLM -->
 <a href="people/malcolm.html" class="person-card">
 <div class="person-img" style="background-image:url('images/malcolm.png')"></div>
 <div class="person-title">Dr Andrew George Malcolm</div>
 </a>
 
-<a href="#" class="person-card"><div class="person-img"></div></a>
-<a href="#" class="person-card"><div class="person-img"></div></a>
-<a href="#" class="person-card"><div class="person-img"></div></a>
+<!-- PLACEHOLDER FOR FUTURE BIOGRAPHIES -->
+<div class="placeholder-message">
+    <p><strong>📚 More Biographies Coming Soon</strong></p>
+    <p>Additional figures in Belfast's public health history will be added as research progresses.</p>
+    <p class="note">If you would like to suggest a figure for inclusion, please contact the author.</p>
+</div>
+
+<!-- Optional: Keep hidden placeholder cards ready for future use (commented out)
+<a href="#" class="person-card"><div class="person-img"></div><div class="person-title">Name</div></a>
+-->
 
 </div>
 
@@ -231,21 +305,6 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
 <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown > a");
-
-    dropdowns.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("open");
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
