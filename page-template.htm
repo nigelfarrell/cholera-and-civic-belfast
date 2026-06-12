@@ -10,7 +10,21 @@
 </style>
 </head>
 <body>
+/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
 
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
 <header>
     <h1>Cholera & Civic Belfast</h1>
     <div class="subtitle">
