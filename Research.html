@@ -98,36 +98,82 @@ nav {
 
 /* CONTENT */
 .container {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
     padding: 40px 20px;
 }
 
+/* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
     font-size: 2em;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-left: 5px solid #2f4f3e;
     padding-left: 20px;
 }
 
-.card {
+/* INTRO BOX */
+.intro {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 22px 25px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.intro p {
+    margin: 0;
+    font-size: 1.05em;
+    color: #333;
+}
+
+/* RESEARCH GRID */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.research-card {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
-    padding: 18px;
-    margin-top: 15px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 4px;
 }
 
-.card a {
-    font-weight: bold;
-    color: #2f4f3e;
-    text-decoration: none;
+.research-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
 
-.card a:hover {
-    text-decoration: underline;
+.research-card h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.research-card p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.research-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.research-card a:hover {
+    border-bottom-color: #2f4f3e;
 }
 
 /* FOOTER */
@@ -186,6 +232,10 @@ footer a:hover {
         font-size: 1.6em;
         padding-left: 15px;
     }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -201,17 +251,59 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 </div>
 
 <nav>
-    <div id="menu-container"></div>
-</nav>
+<ul class="menu">
 
-<script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('menu-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading menu:', error));
-</script>
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
 
 </header>
 
@@ -219,18 +311,41 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <h1 class="page-title">Research</h1>
 
-<div class="card">
+<div class="intro">
     <p>
         This section provides access to the doctoral research underpinning this project,
-        including thesis material, source bases and methodological approaches.
+        including thesis material, source bases, and methodological approaches. The research
+        explores the impact of repeated cholera epidemics on the development of public health
+        infrastructure and civic reform in nineteenth-century Belfast.
     </p>
 </div>
 
-<div class="card">
-    <p><a href="thesis.html">📖 PhD Thesis</a></p>
-    <p><a href="sources.html">📚 Primary Sources</a></p>
-    <p><a href="about-project.html">📋 About the Project</a></p>
-    <p><a href="about-author.html">👤 About the Author</a></p>
+<div class="research-grid">
+
+    <div class="research-card">
+        <h3>📖 PhD Thesis</h3>
+        <p>Author-revised doctoral thesis (2014): <em>Cholera and the Development of Public Health in Belfast, 1832–1878</em></p>
+        <a href="thesis.html">Access Thesis →</a>
+    </div>
+
+    <div class="research-card">
+        <h3>📚 Primary Sources</h3>
+        <p>Archival collections, online repositories, and recommended websites for further research.</p>
+        <a href="sources.html">Explore Sources →</a>
+    </div>
+
+    <div class="research-card">
+        <h3>📋 About the Project</h3>
+        <p>Background, aims, and scope of the Cholera & Civic Belfast public history project.</p>
+        <a href="about-project.html">Read More →</a>
+    </div>
+
+    <div class="research-card">
+        <h3>👤 About the Author</h3>
+        <p>Dr Nigel Farrell: social historian specialising in public health and epidemic disease.</p>
+        <a href="about-author.html">Learn More →</a>
+    </div>
+
 </div>
 
 </div>
