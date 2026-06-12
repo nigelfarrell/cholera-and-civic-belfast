@@ -96,22 +96,40 @@ nav {
     display: block;
 }
 
-/* CONTENT */
+/* HERO BANNER (REDUCED SIZE) */
+.hero-banner {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* CONTAINER */
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
 }
 
+/* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
     font-size: 1.8em;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-left: 5px solid #2f4f3e;
     padding-left: 20px;
 }
 
+/* PLACEHOLDER BOX */
 .placeholder-box {
     background: #ffffff;
     border: 1px solid #d8d2c3;
@@ -128,6 +146,30 @@ nav {
 
 .placeholder-box p {
     margin: 15px 0;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
 }
 
 /* FOOTER */
@@ -186,102 +228,6 @@ footer a:hover {
         font-size: 1.6em;
         padding-left: 15px;
     }
-}
-</style>
-</head>
 
-<body>
-
-<header>
-
-<h1>Cholera & Civic Belfast</h1>
-
-<div class="subtitle">
-Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
-</div>
-
-<!-- HARDCODED MENU - RELIABLE NAVIGATION (root paths, no ../ needed) -->
-<nav>
-<ul class="menu">
-
-    <li><a href="index.html">Home</a></li>
-
-    <li class="dropdown">
-        <a href="cholera.html">Cholera</a>
-        <div class="dropdown-content">
-            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
-            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
-            <a href="belfast-timeline-1832.html">1832 Timeline</a>
-            <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
-            <a href="belfast-timeline-1854.html">1854 Timeline</a>
-            <a href="belfast-timeline-1866.html">1866 Timeline</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="Public-health.html">Public Health</a>
-        <div class="dropdown-content">
-            <a href="Public-health.html">Public Health Overview</a>
-            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="People.html">People</a>
-        <div class="dropdown-content">
-            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="Stories.html">Stories</a>
-        <div class="dropdown-content">
-            <a href="Stories.html">Stories Archive</a>
-            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="Research.html">Research</a>
-        <div class="dropdown-content">
-            <a href="about-project.html">About the Project</a>
-            <a href="about-author.html">About the Author</a>
-            <a href="thesis.html">PhD Thesis</a>
-            <a href="sources.html">Sources</a>
-            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
-        </div>
-    </li>
-
-</ul>
-</nav>
-
-</header>
-
-<div class="container">
-
-<div class="back-links" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-    <a href="cholera.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Back to Cholera</a>
-    <a href="belfast-timeline-1854.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Previous: 1854 Timeline</a>
-</div>
-
-<h1>Cholera in Nineteenth-Century Belfast</h1>
-
-<h1 class="page-title">1866 Cholera Epidemic Timeline</h1>
-
-<div class="placeholder-box">
-    <h2>📋 Content Coming Soon</h2>
-    <p>This timeline page is currently under development.</p>
-    <p>When complete, it will include detailed chronological information about the 1866 cholera epidemic in Belfast, including case statistics, key events, institutional responses, and notable individuals.</p>
-    <p><em>Please check back for updates.</em></p>
-</div>
-
-</div>
-
-<footer>
-<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
-<p><a href="licence.html">Copyright & Licence</a></p>
-</footer>
-
-</body>
-</html>
+    .hero-banner {
+        max-height: 180px;
