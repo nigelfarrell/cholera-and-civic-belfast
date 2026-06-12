@@ -103,7 +103,7 @@ nav {
     display: block;
 }
 
-/* HERO */
+/* HERO BANNER */
 .hero-banner {
     width: 100%;
     height: 280px;
@@ -124,75 +124,80 @@ nav {
     padding: 40px 20px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-}
-
-/* CARDS (MAIN ENTRY POINTS) */
-.card {
-    background: #faf8f3;
-    padding: 18px;
-    border: 1px solid #d8d2c3;
-    transition: 0.2s ease;
-    border-radius: 4px;
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card a {
-    text-decoration: none;
+/* PAGE TITLE */
+.page-title {
     color: #2f4f3e;
-    font-weight: bold;
-    font-size: 1.05em;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
 }
 
-/* INFO BOX */
-.info-box {
+/* INTRO BOX */
+.intro {
     background: #ffffff;
     border: 1px solid #d8d2c3;
-    padding: 18px;
-    margin-top: 25px;
+    padding: 22px 25px;
+    margin-bottom: 40px;
     border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* SECTION HUB BLOCKS */
-.hub-section {
-    margin-top: 25px;
+.intro p {
+    margin: 0;
+    font-size: 1.05em;
+    color: #333;
+}
+
+/* HOME GRID */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.home-card {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
+    border-left: 5px solid #2f4f3e;
     padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 4px;
-    transition: box-shadow 0.2s ease;
 }
 
-.hub-section:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+.home-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
 
-.hub-section h2 {
+.home-card h2 {
+    color: #2f4f3e;
     margin-top: 0;
-    color: #2f4f3e;
+    margin-bottom: 12px;
+    font-size: 1.4em;
 }
 
-.hub-section a {
+.home-card p {
+    margin: 12px 0;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.home-card a {
     display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 12px;
     color: #2f4f3e;
+    font-weight: bold;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
 }
 
-.hub-section a:hover {
+.home-card a:hover {
     border-bottom-color: #2f4f3e;
-    text-decoration: none;
 }
 
 /* FOOTER */
@@ -249,6 +254,15 @@ footer a:hover {
     .hero-banner {
         height: 180px;
     }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -266,19 +280,60 @@ footer a:hover {
         Research and writing by Dr Nigel Farrell
     </div>
 
-    <!-- REPLACED hardcoded menu with JavaScript loader -->
     <nav>
-        <div id="menu-container"></div>
-    </nav>
+    <ul class="menu">
 
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading menu:', error));
-    </script>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="cholera.html">Cholera</a>
+            <div class="dropdown-content">
+                <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+                <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+                <a href="belfast-timeline-1832.html">1832 Timeline</a>
+                <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
+                <a href="belfast-timeline-1854.html">1854 Timeline</a>
+                <a href="belfast-timeline-1866.html">1866 Timeline</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="Public-health.html">Public Health</a>
+            <div class="dropdown-content">
+                <a href="Public-health.html">Public Health Overview</a>
+                <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="People.html">People</a>
+            <div class="dropdown-content">
+                <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+                <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="Stories.html">Stories</a>
+            <div class="dropdown-content">
+                <a href="Stories.html">Stories Archive</a>
+                <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="Research.html">Research</a>
+            <div class="dropdown-content">
+                <a href="about-project.html">About the Project</a>
+                <a href="about-author.html">About the Author</a>
+                <a href="thesis.html">PhD Thesis</a>
+                <a href="sources.html">Sources</a>
+                <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+            </div>
+        </li>
+
+    </ul>
+    </nav>
 </header>
 
 <div class="hero-banner">
@@ -287,48 +342,51 @@ footer a:hover {
 
 <div class="container">
 
-<!-- PRIMARY HUB ENTRY POINTS -->
-<div class="grid">
+<h1 class="page-title">Welcome</h1>
 
-    <div class="card">
-        <a href="cholera.html">Cholera</a>
-    </div>
-
-    <div class="card">
-        <a href="Public-health.html">Public Health</a>
-    </div>
-
-    <div class="card">
-        <a href="People.html">People</a>
-    </div>
-
-    <div class="card">
-        <a href="Stories.html">Stories</a>
-    </div>
-
-    <div class="card">
-        <a href="Research.html">Research</a>
-    </div>
-
+<div class="intro">
+    <p>
+        Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city. Use the cards below to explore the site.
+    </p>
 </div>
 
-<!-- STRUCTURED HUB CONTEXT -->
-<div class="hub-section">
-    <h2>Stories Archive</h2>
-    <p>Narrative case studies exploring cholera outbreaks and civic experience in nineteenth-century Belfast.</p>
-    <a href="Stories.html">Enter Stories Archive →</a>
-</div>
+<div class="home-grid">
 
-<div class="hub-section">
-    <h2>Public Health</h2>
-    <p>Exploring sanitation, civic reform, and the development of public health systems in Belfast.</p>
-    <a href="Public-health.html">Enter Public Health →</a>
-</div>
+    <!-- Cholera Card -->
+    <div class="home-card">
+        <h2>Cholera</h2>
+        <p>Explore the four Belfast cholera epidemics (1832, 1848-49, 1854, 1866) within their global context. Includes detailed timelines, statistics, and key events.</p>
+        <a href="cholera.html">Explore Cholera →</a>
+    </div>
 
-<div class="hub-section">
-    <h2>Research</h2>
-    <p>Project documentation, sources, thesis material, and scholarly context.</p>
-    <a href="Research.html">Enter Research →</a>
+    <!-- Public Health Card -->
+    <div class="home-card">
+        <h2>Public Health</h2>
+        <p>Discover the development of public health infrastructure in nineteenth-century Belfast, including sanitation reform, water supply, and civic governance.</p>
+        <a href="Public-health.html">Explore Public Health →</a>
+    </div>
+
+    <!-- People Card -->
+    <div class="home-card">
+        <h2>People</h2>
+        <p>Meet the key figures who shaped Belfast's response to epidemic disease, including physicians, reformers, and civic leaders.</p>
+        <a href="People.html">Explore People →</a>
+    </div>
+
+    <!-- Stories Card -->
+    <div class="home-card">
+        <h2>Stories</h2>
+        <p>Read in-depth narrative case studies exploring cholera outbreaks and civic experience in nineteenth-century Belfast.</p>
+        <a href="Stories.html">Read Stories →</a>
+    </div>
+
+    <!-- Research Card -->
+    <div class="home-card">
+        <h2>Research</h2>
+        <p>Access doctoral thesis material, primary sources, and scholarly resources underpinning this project.</p>
+        <a href="Research.html">Access Research →</a>
+    </div>
+
 </div>
 
 </div>
