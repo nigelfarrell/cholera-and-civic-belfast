@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Person Name | People | Cholera & Civic Belfast</title>
+
+<style>
+/* === COPY YOUR EXISTING CSS FROM people/malcolm.html HERE === */
+/* This includes all styles: header, nav, dropdowns, container, back-link, etc. */
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<!-- HARDCODED MENU - SAME AS MALCOLM.HTML -->
+<nav>
+<ul class="menu">
+
+    <li><a href="../index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="../cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="../global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="../belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="../belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="../belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="../belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="../Public-health.html">Public Health Overview</a>
+            <a href="../Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../People.html">People</a>
+        <div class="dropdown-content">
+            <a href="malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="../People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="../Stories.html">Stories Archive</a>
+            <a href="../Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="../about-project.html">About the Project</a>
+            <a href="../about-author.html">About the Author</a>
+            <a href="../thesis.html">PhD Thesis</a>
+            <a href="../sources.html">Sources</a>
+            <a href="../Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="back-link">
+    <a href="../People.html">← Back to People</a>
+</div>
+
+<div class="article-content">
+
+<h1>Person Name</h1>
+
+<h2>Subtitle / Role</h2>
+
+<img src="../images/person-image.jpg" alt="Person Name">
+
+<p>Biography content goes here...</p>
+
+<!-- Further reading section (optional) -->
+<h3>Further Reading</h3>
+<p>Bibliography entries...</p>
+
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
