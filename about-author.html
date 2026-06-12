@@ -113,6 +113,22 @@ nav {
     padding-left: 20px;
 }
 
+/* BACK LINK */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
 /* IMAGE — slightly larger + better wrap */
 .author-image {
     float: left;
@@ -128,7 +144,7 @@ nav {
 }
 
 /* CLEARFIX */
-.container::after {
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
@@ -236,21 +252,65 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
-<!-- REPLACED hardcoded menu with JavaScript loader -->
+<!-- HARDCODED MENU - RELIABLE NAVIGATION -->
 <nav>
-    <div id="menu-container"></div>
+<ul class="menu">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="Public-health.html">Public Health Overview</a>
+            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="People.html">People</a>
+        <div class="dropdown-content">
+            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="Stories.html">Stories Archive</a>
+            <a href="Stories.html" title="New articles and case studies added regularly">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="about-project.html">About the Project</a>
+            <a href="about-author.html">About the Author</a>
+            <a href="thesis.html">PhD Thesis</a>
+            <a href="sources.html">Sources</a>
+            <a href="Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
+        </div>
+    </li>
+
+</ul>
 </nav>
 
-<script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('menu-container').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading menu:', error));
-</script>
-
 </header>
+
+<div class="container">
 
 <div class="back-link">
     <a href="Research.html">← Back to Research</a>
@@ -258,12 +318,12 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <h1 class="page-title">About the Author</h1>
 
-<!-- IMAGE -->
+<div class="clearfix">
+
 <div class="author-image">
     <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
 </div>
 
-<!-- TEXT -->
 <p>
 Dr Nigel Farrell is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts, with particular interests in cholera, urban development, and the emergence of modern public health institutions.
 </p>
@@ -275,6 +335,8 @@ Since 2011, Nigel has taught widely across Irish, British, and European history,
 <p>
 He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
 </p>
+
+</div>
 
 <!-- COPYRIGHT NOTICE BOX -->
 <div class="copyright-notice">
