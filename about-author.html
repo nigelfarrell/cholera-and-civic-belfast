@@ -131,9 +131,7 @@ nav {
 
 /* IMAGE — slightly larger + better wrap */
 .author-image {
-    float: left;
     width: 260px;
-    margin: 0 24px 12px 0;
 }
 
 .author-image img {
@@ -143,11 +141,12 @@ nav {
     border-radius: 3px;
 }
 
-/* CLEARFIX */
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+/* FLEX CONTAINER - VERTICALLY CENTERS TEXT WITH IMAGE */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 /* COPYRIGHT NOTICE BOX */
@@ -257,11 +256,15 @@ footer a:hover {
         display: block;
     }
 
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .author-image {
-        float: none;
         width: 240px;
-        margin: 0 auto 20px auto;
-        display: block;
+        margin: 0 auto;
     }
 
     .page-title {
@@ -348,15 +351,14 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <h1 class="page-title">About the Author</h1>
 
-<div class="clearfix">
+<!-- FLEX CONTAINER - VERTICALLY CENTERS TEXT WITH IMAGE -->
+<div class="flex-container">
 
 <div class="author-image">
     <img src="images/Nigel-Farrell.jpg" alt="Dr Nigel Farrell">
 </div>
 
-<!-- TEXT WRAPPER WITH TOP MARGIN - MOVES ALL TEXT DOWN -->
-<div style="margin-top: 30px;">
-
+<div class="author-text">
 <p>
 Dr Nigel Farrell is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts, with particular interests in cholera, urban development, and the emergence of modern public health institutions.
 </p>
@@ -368,7 +370,6 @@ Since 2011, Nigel has taught widely across Irish, British, and European history,
 <p>
 He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the Development of Public Health in Belfast, 1832–1878</em>, and in the same year was awarded the Centre for the History of Medicine in Ireland (CHOMI) History of Medicine in Ireland Essay Prize.
 </p>
-
 </div>
 
 </div>
