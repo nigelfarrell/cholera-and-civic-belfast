@@ -95,7 +95,22 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
+/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
 
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+/* Keep dropdown open when focusing inside */
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
 /* CONTAINER */
 .container {
     max-width: 900px;
