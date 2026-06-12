@@ -5,12 +5,19 @@
 <title>Cholera & Civic Belfast</title>
 
 <style>
+/* RESET - REMOVE ALL DEFAULT SPACING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Georgia, serif;
     background-color: #f4f1e8;
     color: #1f1f1f;
-    margin: 0;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -103,12 +110,16 @@ nav {
     display: block;
 }
 
-/* HERO BANNER - FULL WIDTH, LARGER HEIGHT */
+/* HERO BANNER - TRUE FULL WIDTH */
 .hero-banner {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     height: 350px;
     overflow: hidden;
-    margin: 0;
 }
 
 .hero-banner img {
@@ -122,7 +133,7 @@ nav {
 /* CONTAINER */
 .container {
     max-width: 950px;
-    margin: auto;
+    margin: 0 auto;
     padding: 40px 20px;
 }
 
@@ -226,6 +237,23 @@ footer a:hover {
 
 /* MOBILE */
 @media (max-width: 768px) {
+    .hero-banner {
+        height: 220px;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-card h2 {
+        font-size: 1.3em;
+    }
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -252,23 +280,6 @@ footer a:hover {
 
     .dropdown.open .dropdown-content {
         display: block;
-    }
-
-    .hero-banner {
-        height: 220px;
-    }
-
-    .page-title {
-        font-size: 1.6em;
-        padding-left: 15px;
-    }
-
-    .home-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .home-card h2 {
-        font-size: 1.3em;
     }
 }
 </style>
@@ -302,7 +313,7 @@ footer a:hover {
     </script>
 </header>
 
-<!-- HERO BANNER - FULL WIDTH, AFTER HEADER, BEFORE CONTENT -->
+<!-- HERO BANNER - TRUE FULL WIDTH -->
 <div class="hero-banner">
     <img src="images/Royal_Avenue_Belfast.jpg" alt="Royal Avenue Belfast">
 </div>
