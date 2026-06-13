@@ -158,6 +158,8 @@ nav {
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
 }
 
 .research-card:hover {
@@ -178,9 +180,10 @@ nav {
     margin: 10px 0;
     color: #555;
     font-size: 0.95em;
+    flex-grow: 1;
 }
 
-/* RESEARCH LINKS - TWO OPTIONS SIDE BY SIDE */
+/* RESEARCH LINKS - THREE OPTIONS */
 .research-links {
     display: flex;
     gap: 15px;
@@ -224,6 +227,7 @@ nav {
     font-weight: bold;
     border-radius: 3px;
     transition: background 0.2s ease;
+    align-self: flex-start;
 }
 
 .research-card > a:focus {
@@ -309,6 +313,11 @@ footer a:hover {
     .research-links a {
         text-align: center;
     }
+    
+    .research-card > a {
+        align-self: stretch;
+        text-align: center;
+    }
 }
 </style>
 </head>
@@ -353,19 +362,20 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="research-grid">
 
-    <!-- PhD Thesis Card - WITH BOTH OPTIONS (Summary + PDF) -->
+    <!-- PhD Thesis Card - THREE LINKS -->
     <div class="research-card">
         <h3>PhD Thesis</h3>
-        <p>Author-revised doctoral thesis (2014): <em>Cholera and the Development of Public Health in Belfast, 1832–1878</em></p>
+        <p>Doctoral thesis (2014; author-revised 2026): <em>Cholera and the Development of Public Health in Belfast, 1832–1878</em></p>
         <div class="research-links">
-            <a href="thesis/phd-summary.html"> Read Summary</a>
+            <a href="thesis/phd-summary.html">📖 Read Summary</a>
+            <a href="thesis/cholera-thesis-full-document.html">📖 Read Online (Full)</a>
             <a href="thesis/Farrell_PhD_Thesis.pdf" target="_blank">📄 Download PDF</a>
         </div>
     </div>
 
-    <!-- Sources Card -->
+    <!-- Primary Sources Card -->
     <div class="research-card">
-        <h3> Sources</h3>
+        <h3>Primary Sources</h3>
         <p>Archival collections, online repositories, and recommended websites for further research.</p>
         <a href="sources.html">Explore Sources →</a>
     </div>
