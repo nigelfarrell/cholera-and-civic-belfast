@@ -146,7 +146,7 @@ nav {
     color: #333;
 }
 
-/* ARTICLE CARD - COMPACT */
+/* ARTICLE CARD */
 .article-card {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
@@ -155,7 +155,9 @@ nav {
     overflow: hidden;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .article-card:hover {
@@ -163,21 +165,18 @@ nav {
     transform: translateY(-2px);
 }
 
-/* CLICKABLE AREA - IMAGE + TITLE + TEXT */
+/* CLICKABLE AREA - IMAGE + TITLE + TEXT (takes most of the space) */
 .clickable-area {
-    display: block;
-    text-decoration: none;
-    padding: 15px 20px;
-}
-
-.article-flex {
     display: flex;
     gap: 20px;
     align-items: flex-start;
+    text-decoration: none;
+    flex: 1;
+    padding: 15px 0 15px 20px;
 }
 
 /* Article 1 thumbnail */
-.article-flex img {
+.clickable-area img {
     width: 220px;
     height: auto;
     border: 1px solid #d8d2c3;
@@ -186,7 +185,7 @@ nav {
 }
 
 /* Article 2 thumbnail - smaller */
-.article-flex img.original-size {
+.clickable-area img.small {
     width: 180px;
 }
 
@@ -208,9 +207,10 @@ nav {
     font-size: 0.95em;
 }
 
-/* PDF BUTTON - BENEATH TEXT (not aligned with thumbnail) */
+/* PDF BUTTON - aligned to far right */
 .pdf-button-container {
-    padding: 0 20px 15px 20px;
+    padding: 0 20px 0 0;
+    flex-shrink: 0;
 }
 
 .pdf-button {
@@ -219,10 +219,11 @@ nav {
     color: #f4f1e8;
     text-decoration: none;
     font-weight: bold;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 4px;
     transition: background 0.2s ease;
     font-size: 0.85em;
+    white-space: nowrap;
 }
 
 .pdf-button:hover {
@@ -264,13 +265,20 @@ footer a:hover {
         text-align: center;
     }
 
-    .article-flex {
+    .article-card {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
-    .article-flex img,
-    .article-flex img.original-size {
+    .clickable-area {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .clickable-area img,
+    .clickable-area img.small {
         width: 100%;
         max-width: 250px;
     }
@@ -283,6 +291,11 @@ footer a:hover {
     .pdf-button-container {
         text-align: center;
         padding: 0 15px 15px 15px;
+    }
+
+    .pdf-button {
+        white-space: normal;
+        width: auto;
     }
 
     .dropdown-content {
@@ -305,10 +318,6 @@ footer a:hover {
     .page-title {
         font-size: 1.6em;
         padding-left: 15px;
-    }
-
-    .clickable-area {
-        padding: 12px 15px;
     }
 }
 </style>
@@ -353,12 +362,10 @@ This section contains research-based case studies and narrative explorations of 
 <!-- ARTICLE 1 -->
 <div class="article-card">
     <a href="blog/cholera-belfast-1832-1849.html" class="clickable-area">
-        <div class="article-flex">
-            <img src="images/High-Street-Belfast-1831.png" alt="High Street Belfast 1831">
-            <div class="article-text">
-                <h2>Cholera in Belfast in 1832 and 1848-49</h2>
-                <p>The story of Belfast's cholera epidemics in 1832 and 1849, examining disease transmission, mortality, urban environment, and early municipal public health responses.</p>
-            </div>
+        <img src="images/High-Street-Belfast-1831.png" alt="High Street Belfast 1831">
+        <div class="article-text">
+            <h2>Cholera in Belfast in 1832 and 1848-49</h2>
+            <p>The story of Belfast's cholera epidemics in 1832 and 1849, examining disease transmission, mortality, urban environment, and early municipal public health responses.</p>
         </div>
     </a>
     <div class="pdf-button-container">
@@ -369,12 +376,10 @@ This section contains research-based case studies and narrative explorations of 
 <!-- ARTICLE 2 -->
 <div class="article-card">
     <a href="blog/cholera-in-nineteenth-century-belfast.html" class="clickable-area">
-        <div class="article-flex">
-            <img src="images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832" class="original-size">
-            <div class="article-text">
-                <h2>Cholera in Nineteenth-Century Belfast</h2>
-                <p>A comprehensive historical overview of cholera and the evolving public health response in nineteenth-century Belfast, covering the epidemics of 1832, 1848-49, 1854, and 1866.</p>
-            </div>
+        <img src="images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832" class="small">
+        <div class="article-text">
+            <h2>Cholera in Nineteenth-Century Belfast</h2>
+            <p>A comprehensive historical overview of cholera and the evolving public health response in nineteenth-century Belfast, covering the epidemics of 1832, 1848-49, 1854, and 1866.</p>
         </div>
     </a>
     <div class="pdf-button-container">
