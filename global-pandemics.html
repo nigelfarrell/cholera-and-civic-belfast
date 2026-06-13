@@ -95,6 +95,7 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
+
 /* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
@@ -110,6 +111,44 @@ nav {
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
+/* HERO BANNER - MATCHES TIMELINE PAGES */
+.hero-banner {
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* BACK LINKS */
+.back-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.back-links a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-links a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
 /* CONTENT */
 .container {
     max-width: 1000px;
@@ -134,6 +173,12 @@ nav {
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pandemic:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .pandemic h2 {
@@ -225,6 +270,20 @@ footer a:hover {
     .meta {
         grid-template-columns: 1fr;
     }
+
+    .hero-banner {
+        max-height: 180px;
+    }
+
+    .hero-banner img {
+        height: 180px;
+    }
+
+    .back-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 </style>
 </head>
@@ -294,12 +353,17 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 </header>
 
+<!-- HERO BANNER - MATCHES TIMELINE PAGES -->
+<div class="hero-banner">
+    <img src="images/1832-blog-image.jpg" alt="Global Cholera Pandemics">
+</div>
+
 <div class="container">
 
-   <div class="back-links" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-    <a href="cholera.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Back to Cholera</a>
-    <a href="belfast-timeline-1832.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">Explore Belfast Epidemics →</a>
-</div> 
+<div class="back-links">
+    <a href="cholera.html">← Back to Cholera</a>
+    <a href="belfast-timeline-1832.html">Explore Belfast Epidemics →</a>
+</div>
 
 <h1 class="page-title">Global Cholera Pandemics 1817–1866</h1>
 
