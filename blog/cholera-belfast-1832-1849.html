@@ -11,11 +11,6 @@ body {
     margin: 0;
     color: #1f1f1f;
     line-height: 1.7;
-    /* DISABLE TEXT SELECTION */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 /* HEADER */
@@ -38,7 +33,7 @@ h1 {
     font-size: 1.1em;
 }
 
-/* GREEN NOTE BANNER - 2 points smaller, centred */
+/* GREEN NOTE BANNER */
 .note-banner {
     margin-top: 15px;
     font-size: 0.85em;
@@ -94,7 +89,8 @@ nav {
     padding: 10px 0;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
-/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+
+/* KEYBOARD NAVIGATION */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -106,10 +102,10 @@ nav {
     outline: none;
 }
 
-/* Keep dropdown open when focusing inside */
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
@@ -135,7 +131,46 @@ nav {
     padding: 40px 20px;
 }
 
-/* HEADINGS AND SUBHEADINGS - ALL BOLD */
+/* BACK LINK */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ARTICLE HERO BANNER */
+.article-hero {
+    background: linear-gradient(135deg, #2f4f3e 0%, #4a6f5e 100%);
+    color: #f4f1e8;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px 0 40px 0;
+    border-radius: 8px;
+}
+
+.article-hero h2 {
+    color: #f4f1e8;
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.article-hero p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* HEADINGS */
 h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
@@ -145,29 +180,73 @@ h2 {
     color: #2f4f3e;
 }
 
-/* IMAGE CAPTIONS - 2 points smaller than body, bold, single spaced, with space between image and caption */
-.caption {
-    text-align: center;
-    font-size: 0.85em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: 8px;
-    margin-bottom: 25px;
+/* FACT BOX */
+.fact-box {
+    background: #e8e2d3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    float: right;
+    width: 40%;
+    margin-left: 20px;
 }
 
-/* IMAGES */
+.fact-box h3 {
+    margin-top: 0;
+    color: #2f4f3e;
+    font-size: 1.1em;
+}
+
+.fact-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.fact-box li {
+    margin: 5px 0;
+}
+
+/* AUTHOR BIO BOX - TEXT ONLY */
+.author-bio {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px 0 20px 0;
+}
+
+.author-bio p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.author-bio strong {
+    color: #2f4f3e;
+}
+
+/* IMAGES - LARGER (90%) */
 .figure {
     text-align: center;
     margin: 30px 0 0 0;
 }
 
 .figure img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
     border: 1px solid #d8d2c3;
-    /* Prevent image dragging */
-    -webkit-user-drag: none;
-    user-drag: none;
+    border-radius: 4px;
+}
+
+/* CAPTIONS - ITALIC */
+.caption {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.3;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: #666;
 }
 
 /* COPYRIGHT NOTICE BOX */
@@ -245,98 +324,26 @@ footer a:hover {
     .dropdown.open .dropdown-content {
         display: block;
     }
+
+    .fact-box {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .article-hero {
+        padding: 25px 15px;
+    }
+
+    .article-hero h2 {
+        font-size: 1.4em;
+    }
+
+    .figure img {
+        max-width: 100%;
+    }
 }
 </style>
-
-<!-- ANTI-COPY JAVASCRIPT - SILENT -->
-<script>
-(function() {
-    'use strict';
-    
-    // Disable right-click (context menu)
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable keyboard shortcuts for copying
-    document.addEventListener('keydown', function(e) {
-        // Check for Ctrl key (or Cmd on Mac)
-        if (e.ctrlKey || e.metaKey) {
-            // Keys to block: C (copy), X (cut), A (select all), V (paste), P (print), S (save)
-            if (e.key === 'c' || e.key === 'C' || 
-                e.key === 'x' || e.key === 'X' || 
-                e.key === 'a' || e.key === 'A' ||
-                e.key === 'v' || e.key === 'V' ||
-                e.key === 'p' || e.key === 'P' ||
-                e.key === 's' || e.key === 'S') {
-                e.preventDefault();
-                return false;
-            }
-        }
-        
-        // Also block F12 (DevTools) and Ctrl+Shift+I, Ctrl+Shift+J
-        if (e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j'))) {
-            e.preventDefault();
-            return false;
-        }
-        
-        // Block Ctrl+U (view source)
-        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    // Disable drag and drop of images and text
-    document.addEventListener('dragstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable text selection via mouse (reinforce CSS)
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable copy event
-    document.addEventListener('copy', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable cut event
-    document.addEventListener('cut', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable paste event
-    document.addEventListener('paste', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable Print Screen key detection (limited effect but helps)
-    document.addEventListener('keyup', function(e) {
-        if (e.key === 'PrintScreen') {
-            navigator.clipboard.writeText('');
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    // Prevent printing
-    window.addEventListener('beforeprint', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-})();
-</script>
-
 </head>
 
 <body>
@@ -411,8 +418,14 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="container">
 
-    <div class="back-link">
+<div class="back-link">
     <a href="../Stories.html">← Back to Stories</a>
+</div>
+
+<!-- ARTICLE HERO BANNER -->
+<div class="article-hero">
+    <h2>The 1832 & 1848-49 Cholera Epidemics</h2>
+    <p>Examining disease transmission, mortality, and the early public health response in Belfast</p>
 </div>
 
 <h1>Cholera in Belfast in 1832 and 1848-49</h1>
@@ -431,6 +444,15 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <p>The disease is now understood to be caused by the microorganism, Vibrio Cholerae usually transmitted through the ingestion of water contaminated by the excreta of infected individuals, particularly in urban environments where infected sewage was able to contaminate the public water supply. In the towns and cities of nineteenth century Ireland, where sanitary practices and sewerage infrastructure were often rudimentary, this particular mode of transmission made cholera a particularly deadly hazard.</p>
 
 <h2>Cholera Mortality in Ireland</h2>
+
+<!-- FACT BOX -->
+<div class="fact-box">
+    <h3>Belfast Mortality Rates</h3>
+    <ul>
+        <li><strong>1832:</strong> 2,831 cases / 418 deaths<br><em>Mortality: 14.8%</em></li>
+        <li><strong>1848-49:</strong> 3,538 cases / 1,163 deaths<br><em>Mortality: 33%</em></li>
+    </ul>
+</div>
 
 <p>Across Ireland, around forty per cent of those who contracted cholera between 1832 and 1833 died, with mortality rates in some localised outbreaks reaching as high as seventy-six per cent. In the second epidemic, which occurred between 1848 and 1849, mortality rates in many areas were even higher, as the disease spread through a population which had been severely weakened by the Great Famine and its associated illnesses. In 1832, however, Belfast's mortality rate stood at 14.8 per cent, considerably lower than the national average and significantly better than the rates recorded in Dublin and Cork, both of which exceeded forty per cent. Those most vulnerable, however, were more immediately affected by the underlying deficiencies of Belfast's urban environment.</p>
 
@@ -463,6 +485,11 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <p>Yet, despite these preparations, mortality by the end of the 1849 epidemic was almost three times higher than it had been in 1832. Although Belfast had two hospitals capable of receiving cholera patients, the Union Fever Hospital and the General Hospital, the willingness of the sick to seek admission had declined markedly since the previous decade. The committee of the General Hospital attributed this reluctance to widespread prejudices and to the apathy and hopelessness that typically accompanied the disease and expressed regret that the advantages offered by the hospital were not more widely appreciated by the poor.</p>
 
 <p>The 1848–49 epidemic resulted in approximately 3,538 cases and 1,163 deaths in Belfast. This represented a significant increase in both cases and fatalities compared with the 1832 outbreak; however, the mortality rate of thirty-three per cent was again lower than that recorded in many other comparable Irish towns. In Belfast's worst-affected districts, poverty and persistent deficiencies in sanitation and hygiene clearly played a central role in the spread of the disease. While the town's municipal authorities had carried out considerable civic improvements, major sanitary works had still not been implemented in the areas where they were most urgently needed. Some lasting lessons were nevertheless learned. When cholera returned in 1853 and 1866, case numbers fell markedly, yet, because medical understanding remained limited and treatment practices largely unchanged, mortality remained high, demonstrating that sanitary reform alone was insufficient to overcome the constraints of nineteenth-century medicine.</p>
+
+<!-- AUTHOR BIO BOX - TEXT ONLY -->
+<div class="author-bio">
+    <p><strong>Dr Nigel Farrell</strong> is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts.</p>
+</div>
 
 <!-- COPYRIGHT NOTICE BOX -->
 <div class="copyright-notice">
