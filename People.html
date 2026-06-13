@@ -95,6 +95,7 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
+
 /* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
@@ -110,6 +111,7 @@ nav {
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
 /* PEOPLE GRID */
 .people-grid {
     max-width: 600px;
@@ -151,7 +153,7 @@ nav {
 }
 
 /* PLACEHOLDER MESSAGE */
-.placeholder-message {
+#about-section {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
     border-radius: 8px;
@@ -159,14 +161,15 @@ nav {
     text-align: center;
     margin: 20px 0;
     width: 100%;
+    scroll-margin-top: 100px;
 }
 
-.placeholder-message p {
+#about-section p {
     margin: 5px 0;
     color: #555;
 }
 
-.placeholder-message .note {
+#about-section .note {
     font-size: 0.85em;
     font-style: italic;
     color: #888;
@@ -266,7 +269,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <a href="People.html">People</a>
         <div class="dropdown-content">
             <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-            <a href="People.html" title="More biographies will be added as research progresses">About this Section →</a>
+            <a href="People.html#about-section" title="More biographies will be added as research progresses">About this Section →</a>
         </div>
     </li>
 
@@ -282,7 +285,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <div class="dropdown-content">
             <a href="about-project.html">About the Project</a>
             <a href="about-author.html">About the Author</a>
-            <a href="thesis.html">PhD Thesis</a>
+            <a href="thesis/phd-summary.html">PhD Thesis</a>
             <a href="sources.html">Sources</a>
         </div>
     </li>
@@ -301,15 +304,11 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 </a>
 
 <!-- PLACEHOLDER FOR FUTURE BIOGRAPHIES -->
-<div class="placeholder-message">
-    <p><strong> More Biographies Coming Soon</strong></p>
+<div id="about-section">
+    <p><strong>📚 More Biographies Coming Soon</strong></p>
     <p>Additional figures in Belfast's public health history will be added as research progresses.</p>
     <p class="note">If you would like to suggest a figure for inclusion, please contact the author.</p>
 </div>
-
-<!-- Hidden placeholder cards ready for future use (commented out)
-<a href="#" class="person-card"><div class="person-img"></div><div class="person-title">Name</div></a>
--->
 
 </div>
 
