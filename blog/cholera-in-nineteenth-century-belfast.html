@@ -11,17 +11,6 @@ body {
     margin: 0;
     color: #1f1f1f;
     line-height: 1.7;
-    /* DISABLE TEXT SELECTION FOR ANTI-COPY */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Prevent image dragging */
-img {
-    -webkit-user-drag: none;
-    user-drag: none;
 }
 
 /* HEADER */
@@ -44,7 +33,7 @@ h1 {
     font-size: 1.1em;
 }
 
-/* GREEN NOTE BANNER - 2 points smaller, centred */
+/* GREEN NOTE BANNER */
 .note-banner {
     margin-top: 15px;
     font-size: 0.85em;
@@ -100,7 +89,8 @@ nav {
     padding: 10px 0;
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
-/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+
+/* KEYBOARD NAVIGATION */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -112,10 +102,10 @@ nav {
     outline: none;
 }
 
-/* Keep dropdown open when focusing inside */
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
 .dropdown-content a {
     display: block;
     padding: 8px 15px;
@@ -156,7 +146,30 @@ nav {
     border-bottom: 1px solid #2f4f3e;
 }
 
-/* HEADINGS AND SUBHEADINGS - ALL BOLD */
+/* ARTICLE HERO BANNER */
+.article-hero {
+    background: linear-gradient(135deg, #2f4f3e 0%, #4a6f5e 100%);
+    color: #f4f1e8;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px 0 40px 0;
+    border-radius: 8px;
+}
+
+.article-hero h2 {
+    color: #f4f1e8;
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.article-hero p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* HEADINGS */
 h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
@@ -166,7 +179,7 @@ h2 {
     color: #2f4f3e;
 }
 
-/* QUOTE - centred, single spaced */
+/* QUOTE */
 .quote {
     text-align: center;
     font-style: italic;
@@ -174,7 +187,6 @@ h2 {
     line-height: 1.2;
 }
 
-/* CAPTION BENEATH QUOTE - single spaced with space above */
 .quote-caption {
     text-align: center;
     font-size: 0.75em;
@@ -184,17 +196,52 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* IMAGE CAPTIONS - 2 points smaller than body, bold, single spaced, with space between image and caption */
-.caption {
-    text-align: center;
-    font-size: 0.85em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: 8px;
-    margin-bottom: 25px;
+/* FACT BOX */
+.fact-box {
+    background: #e8e2d3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    float: right;
+    width: 40%;
+    margin-left: 20px;
 }
 
-/* IMAGES */
+.fact-box h3 {
+    margin-top: 0;
+    color: #2f4f3e;
+    font-size: 1.1em;
+}
+
+.fact-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.fact-box li {
+    margin: 5px 0;
+}
+
+/* AUTHOR BIO BOX - TEXT ONLY */
+.author-bio {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px 0 20px 0;
+}
+
+.author-bio p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.author-bio strong {
+    color: #2f4f3e;
+}
+
+/* IMAGES - FULL WIDTH */
 .figure {
     text-align: center;
     margin: 30px 0 0 0;
@@ -204,6 +251,18 @@ h2 {
     max-width: 100%;
     height: auto;
     border: 1px solid #d8d2c3;
+    border-radius: 4px;
+}
+
+/* CAPTIONS */
+.caption {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.3;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: #666;
 }
 
 /* COPYRIGHT NOTICE BOX */
@@ -281,82 +340,24 @@ footer a:hover {
     .dropdown.open .dropdown-content {
         display: block;
     }
+
+    .fact-box {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .article-hero {
+        padding: 25px 15px;
+    }
+
+    .article-hero h2 {
+        font-size: 1.4em;
+    }
 }
 </style>
-
-<!-- ANTI-COPY JAVASCRIPT - SILENT -->
-<script>
-(function() {
-    'use strict';
-    
-    // Disable right-click (context menu)
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable keyboard shortcuts for copying
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey || e.metaKey) {
-            if (e.key === 'c' || e.key === 'C' || 
-                e.key === 'x' || e.key === 'X' || 
-                e.key === 'a' || e.key === 'A' ||
-                e.key === 'v' || e.key === 'V' ||
-                e.key === 'p' || e.key === 'P' ||
-                e.key === 's' || e.key === 'S') {
-                e.preventDefault();
-                return false;
-            }
-        }
-        
-        if (e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j'))) {
-            e.preventDefault();
-            return false;
-        }
-        
-        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    // Disable drag and drop
-    document.addEventListener('dragstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable text selection
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable copy, cut, paste events
-    document.addEventListener('copy', function(e) { e.preventDefault(); return false; });
-    document.addEventListener('cut', function(e) { e.preventDefault(); return false; });
-    document.addEventListener('paste', function(e) { e.preventDefault(); return false; });
-    
-    // Disable Print Screen
-    document.addEventListener('keyup', function(e) {
-        if (e.key === 'PrintScreen') {
-            navigator.clipboard.writeText('');
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    // Prevent printing
-    window.addEventListener('beforeprint', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-})();
-</script>
-
 </head>
+
 <body>
 
 <header>
@@ -409,7 +410,6 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <a href="../Stories.html">Stories</a>
         <div class="dropdown-content">
             <a href="../Stories.html">Stories Archive</a>
-            <a href="../Stories.html" title="New articles and case studies added regularly">About this Section →</a>
         </div>
     </li>
 
@@ -420,7 +420,6 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
             <a href="../about-author.html">About the Author</a>
             <a href="../thesis.html">PhD Thesis</a>
             <a href="../sources.html">Sources</a>
-            <a href="../Research.html" title="Thesis, sources and methodological framework">About this Section →</a>
         </div>
     </li>
 
@@ -433,7 +432,13 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="back-link">
     <a href="../Stories.html">← Back to Stories</a>
-</div>    
+</div>
+
+<!-- ARTICLE HERO BANNER -->
+<div class="article-hero">
+    <h2>Cholera in Nineteenth-Century Belfast</h2>
+    <p>Examining disease transmission, mortality, and the evolving public health response</p>
+</div>
 
 <h1>Cholera in Nineteenth-Century Belfast</h1>
 
@@ -478,6 +483,17 @@ Adjoining many of its main thoroughfares was a network of confined backstreets, 
 
 <h2>Public Health Reform and the 1848–49 Cholera Epidemic</h2>
 
+<!-- FACT BOX -->
+<div class="fact-box">
+    <h3>Belfast Mortality Rates</h3>
+    <ul>
+        <li><strong>1832:</strong> 2,831 cases / 418 deaths<br><em>Mortality: 14.8%</em></li>
+        <li><strong>1848-49:</strong> 3,538 cases / 1,163 deaths<br><em>Mortality: 33%</em></li>
+        <li><strong>1854:</strong> 1,871 cases / 677 deaths<br><em>Mortality: 36%</em></li>
+        <li><strong>1866:</strong> 28 cases / 15 deaths<br><em>Mortality: 54%</em></li>
+    </ul>
+</div>
+
 <p>After 1832, new cases were relatively rare; consequently, cholera and ongoing preventative public health provision seemed to pass quickly from both civic and public consciousness. In the interim, few medical advances had been made in the bacteriological understanding of epidemic disease, so when cholera re-emerged in the West after 1847, practically nothing had changed in the way it was fought. However, in Britain and Ireland, public health administration had begun to evolve. Thus, the response to Belfast's public health emergencies was increasingly shaped by the efforts of the new Belfast Board of Guardians, the physician and sanitary reformer Dr Andrew Malcolm, and the additional sanitary and housing powers granted to the Corporation through town improvement legislation. The Guardians, for example, acted in defiance of the Poor Law Commissioners when they opened the Belfast Workhouse in 1841 with ten beds reserved for the reception of the sick, rapidly increasing this number to one hundred. They also provided assistance to the town's medical dispensaries, reached an agreement with the General Hospital for the admission of cholera patients, and issued an open letter urging local mill and factory owners to release employees displaying symptoms of cholera. The importance of such measures became evident in early February 1849 when thirty-three cases and nine deaths occurred among workers at Ewart's Mill on the Crumlin Road.</p>
 
 <p>The driving force behind Belfast's response was undoubtedly Dr Andrew Malcolm. In March 1848, for example, he used a public meeting to draw attention to numerous sanitary deficiencies throughout the town and to propose the formation of the Belfast Sanitary Committee. This body, headed by Malcolm and comprised of prominent community representatives, clergy and local doctors was specifically aimed at dealing with cholera in the first instance. Among its initiatives was the revival of the Contagious Diseases (Ireland) Act (1819), which had remained in abeyance in Belfast since 1822. Under its provisions, Officers of Health were once again appointed, although their powers were limited largely to the cleansing of drains, the removal of accumulations of manure, and the prevention of vagrancy. In Malcolm's words, they could only 'touch the surface of sanitary evils' in the town. The committee also published and distributed reports advising the public on the prevention of cholera and the importance of improved hygienic practices. Magistrates' orders were routinely issued for the removal of nuisances, poor families were provided with straw bedding, houses were whitewashed, and new sewers were constructed in some parts of the town.</p>
@@ -505,6 +521,11 @@ Adjoining many of its main thoroughfares was a network of confined backstreets, 
 <img src="Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832">
 </div>
 <div class="caption">Image: Cholera Poster, Belfast, 1832. Royal College of Physicians of Ireland, BMS/19.</div>
+
+<!-- AUTHOR BIO BOX - TEXT ONLY -->
+<div class="author-bio">
+    <p><strong>Dr Nigel Farrell</strong> is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts.</p>
+</div>
 
 <!-- COPYRIGHT NOTICE BOX -->
 <div class="copyright-notice">
