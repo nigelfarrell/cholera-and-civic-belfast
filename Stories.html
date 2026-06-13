@@ -154,6 +154,8 @@ nav {
     border-radius: 4px;
     overflow: hidden;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-card:hover {
@@ -161,12 +163,12 @@ nav {
     transform: translateY(-2px);
 }
 
-/* CLICKABLE AREA (entire card except PDF button) */
+/* CLICKABLE AREA (image + title + text) */
 .clickable-area {
     display: block;
     text-decoration: none;
     padding: 25px;
-    cursor: pointer;
+    flex: 1;
 }
 
 .article-flex {
@@ -206,10 +208,10 @@ nav {
     line-height: 1.6;
 }
 
-/* GREEN PDF BUTTON - inside card, separate from clickable area */
+/* GREEN PDF BUTTON - fixed at bottom of card */
 .pdf-button-container {
     padding: 0 25px 25px 25px;
-    border-top: none;
+    margin-top: auto;
 }
 
 .pdf-button {
