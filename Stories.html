@@ -96,6 +96,7 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
+
 /* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
@@ -111,6 +112,7 @@ nav {
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
 /* CONTENT */
 .container {
     max-width: 950px;
@@ -144,18 +146,22 @@ nav {
     color: #333;
 }
 
-/* ARTICLES */
+/* ARTICLES - CLICKABLE CARD */
 .article {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
     margin-bottom: 35px;
     padding: 25px;
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
     border-radius: 4px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
 }
 
 .article:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
 }
 
 .article-flex {
@@ -164,12 +170,18 @@ nav {
     align-items: flex-start;
 }
 
+/* Article 1 thumbnail - enlarged */
 .article-flex img {
-    width: 200px;
+    width: 250px;
     height: auto;
     border: 1px solid #d8d2c3;
     object-fit: cover;
     border-radius: 3px;
+}
+
+/* Article 2 thumbnail - keep original size (option to enlarge later by removing this class) */
+.article-flex img.original-size {
+    width: 200px;
 }
 
 .article-text {
@@ -189,15 +201,13 @@ nav {
     line-height: 1.6;
 }
 
-/* LINK BUTTON STYLES */
-.article-links {
+/* PDF LINK ONLY */
+.pdf-link {
     margin-top: 15px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: inline-block;
 }
 
-.article-links a {
+.pdf-link a {
     color: #2f4f3e;
     font-weight: bold;
     text-decoration: none;
@@ -209,7 +219,7 @@ nav {
     transition: border-color 0.2s ease;
 }
 
-.article-links a:hover {
+.pdf-link a:hover {
     border-bottom-color: #2f4f3e;
     text-decoration: none;
 }
@@ -254,7 +264,8 @@ footer a:hover {
         align-items: center;
     }
 
-    .article-flex img {
+    .article-flex img,
+    .article-flex img.original-size {
         width: 100%;
         max-width: 280px;
     }
@@ -264,8 +275,8 @@ footer a:hover {
         text-align: center;
     }
 
-    .article-links {
-        justify-content: center;
+    .pdf-link {
+        text-align: center;
     }
 
     .dropdown-content {
@@ -303,7 +314,7 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
-<!-- REPLACED hardcoded menu with JavaScript loader -->
+<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
 <nav>
     <div id="menu-container"></div>
 </nav>
@@ -329,8 +340,8 @@ This section contains research-based case studies and narrative explorations of 
 </p>
 </div>
 
-<!-- ARTICLE 1 - Cholera in Belfast in 1832 and 1848-49 -->
-<div class="article">
+<!-- ARTICLE 1 - ENTIRE CARD CLICKABLE (ENLARGED THUMBNAIL) -->
+<a href="blog/cholera-belfast-1832-1849.html" class="article">
 <div class="article-flex">
 <img src="images/High-Street-Belfast-1831.png" alt="High Street Belfast 1831">
 
@@ -339,31 +350,29 @@ This section contains research-based case studies and narrative explorations of 
 <p>
 The story of Belfast's cholera epidemics in 1832 and 1849, examining disease transmission, mortality, urban environment, and early municipal public health responses.
 </p>
-<div class="article-links">
-<a href="blog/cholera-belfast-1832-1849.html">📖 Read HTML Article</a>
+<div class="pdf-link">
 <a href="blog/Cholera-in-Belfast-in-1832-and-1848.pdf" target="_blank">📄 Download PDF</a>
 </div>
 </div>
 </div>
-</div>
+</a>
 
-<!-- ARTICLE 2 - Cholera in Nineteenth-Century Belfast -->
-<div class="article">
+<!-- ARTICLE 2 - ENTIRE CARD CLICKABLE (ORIGINAL SIZE THUMBNAIL - KEPT FOR UNIFORMITY OPTION) -->
+<a href="blog/cholera-in-nineteenth-century-belfast.html" class="article">
 <div class="article-flex">
-<img src="images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832">
+<img src="images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832" class="original-size">
 
 <div class="article-text">
 <h2>Cholera in Nineteenth-Century Belfast</h2>
 <p>
 A comprehensive historical overview of cholera and the evolving public health response in nineteenth-century Belfast, covering the epidemics of 1832, 1848-49, 1854, and 1866.
 </p>
-<div class="article-links">
-<a href="blog/cholera-in-nineteenth-century-belfast.html">📖 Read HTML Article</a>
+<div class="pdf-link">
 <a href="blog/Cholera-in-Nineteenth-Century-Belfast.pdf" target="_blank">📄 Download PDF</a>
 </div>
 </div>
 </div>
-</div>
+</a>
 
 </div>
 
