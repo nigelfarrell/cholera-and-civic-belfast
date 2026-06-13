@@ -64,6 +64,7 @@ nav {
     color: #e8e2d3;
 }
 
+/* DROPDOWNS CORE */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -95,6 +96,7 @@ nav {
     display: block;
 }
 
+/* KEYBOARD NAVIGATION */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -117,6 +119,7 @@ nav {
     padding: 40px 20px;
 }
 
+/* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
     font-size: 2em;
@@ -126,6 +129,7 @@ nav {
     padding-left: 20px;
 }
 
+/* INTRO BOX */
 .intro {
     background: #ffffff;
     border: 1px solid #d8d2c3;
@@ -141,6 +145,7 @@ nav {
     color: #333;
 }
 
+/* RESEARCH GRID */
 .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -148,6 +153,59 @@ nav {
     margin-bottom: 40px;
 }
 
+/* CLICKABLE CARD (for Primary Sources, About the Project, About the Author) */
+.clickable-card {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.clickable-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.clickable-card h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    border-left: 3px solid #2f4f3e;
+    padding-left: 12px;
+}
+
+.clickable-card p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95em;
+    flex-grow: 1;
+}
+
+/* Card link button (retained) */
+.card-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+    align-self: flex-start;
+}
+
+.card-link:hover {
+    background: #3f6a52;
+}
+
+/* Non-clickable card (PhD Thesis - keeps separate links) */
 .research-card {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
@@ -179,6 +237,7 @@ nav {
     flex-grow: 1;
 }
 
+/* RESEARCH LINKS - TWO OPTIONS SIDE BY SIDE */
 .research-links {
     display: flex;
     gap: 15px;
@@ -201,23 +260,7 @@ nav {
     background: #3f6a52;
 }
 
-.research-card > a {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 8px 16px;
-    background: #2f4f3e;
-    color: #f4f1e8;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 3px;
-    transition: background 0.2s ease;
-    align-self: flex-start;
-}
-
-.research-card > a:hover {
-    background: #3f6a52;
-}
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 50px 20px;
@@ -238,6 +281,7 @@ footer a:hover {
     border-bottom-color: #2f4f3e;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
 
     .menu {
@@ -277,7 +321,8 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
-    .research-card h3 {
+    .research-card h3,
+    .clickable-card h3 {
         font-size: 1.2em;
     }
 
@@ -289,8 +334,8 @@ footer a:hover {
     .research-links a {
         text-align: center;
     }
-    
-    .research-card > a {
+
+    .card-link {
         align-self: stretch;
         text-align: center;
     }
@@ -338,7 +383,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="research-grid">
 
-    <!-- PhD Thesis Card - Read Online (Full HTML) + Download PDF -->
+    <!-- PhD Thesis Card - NOT CLICKABLE (keeps separate links) -->
     <div class="research-card">
         <h3>PhD Thesis</h3>
         <p>Doctoral thesis (2014; author-revised 2026): <em>Cholera and the Development of Public Health in Belfast, 1832–1878</em></p>
@@ -348,33 +393,26 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         </div>
     </div>
 
-    <!-- Thesis Summary Card - Separate card -->
-    <div class="research-card">
-        <h3>Thesis Summary</h3>
-        <p>A concise overview of the doctoral thesis, outlining key arguments, chapter structure, and main findings.</p>
-        <a href="thesis/phd-summary.html">Read Summary →</a>
-    </div>
-
-    <!-- Primary Sources Card -->
-    <div class="research-card">
+    <!-- Primary Sources Card - CLICKABLE (retains button) -->
+    <a href="sources.html" class="clickable-card">
         <h3>Primary Sources</h3>
         <p>Archival collections, online repositories, and recommended websites for further research.</p>
-        <a href="sources.html">Explore Sources →</a>
-    </div>
+        <span class="card-link">Explore Sources →</span>
+    </a>
 
-    <!-- About the Project Card -->
-    <div class="research-card">
+    <!-- About the Project Card - CLICKABLE (retains button) -->
+    <a href="about-project.html" class="clickable-card">
         <h3>About the Project</h3>
         <p>Background, aims, and scope of the Cholera & Civic Belfast public history project.</p>
-        <a href="about-project.html">Read More →</a>
-    </div>
+        <span class="card-link">Read More →</span>
+    </a>
 
-    <!-- About the Author Card -->
-    <div class="research-card">
+    <!-- About the Author Card - CLICKABLE (retains button) -->
+    <a href="about-author.html" class="clickable-card">
         <h3>About the Author</h3>
         <p>Dr Nigel Farrell: social historian specialising in public health and epidemic disease.</p>
-        <a href="about-author.html">Learn More →</a>
-    </div>
+        <span class="card-link">Learn More →</span>
+    </a>
 
 </div>
 
