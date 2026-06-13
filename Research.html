@@ -33,12 +33,11 @@ h1 {
     font-size: 1.1em;
 }
 
-/* NAV CONTAINER */
+/* NAV */
 nav {
     margin-top: 25px;
 }
 
-/* DROPDOWN STYLES (needed for nav.html content) */
 .menu {
     list-style: none;
     padding: 0;
@@ -118,7 +117,6 @@ nav {
     padding: 40px 20px;
 }
 
-/* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
     font-size: 2em;
@@ -128,7 +126,6 @@ nav {
     padding-left: 20px;
 }
 
-/* INTRO BOX */
 .intro {
     background: #ffffff;
     border: 1px solid #d8d2c3;
@@ -144,7 +141,6 @@ nav {
     color: #333;
 }
 
-/* RESEARCH GRID */
 .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -183,7 +179,6 @@ nav {
     flex-grow: 1;
 }
 
-/* RESEARCH LINKS - THREE OPTIONS */
 .research-links {
     display: flex;
     gap: 15px;
@@ -199,24 +194,13 @@ nav {
     text-decoration: none;
     font-weight: bold;
     border-radius: 3px;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.research-links a:focus {
-    outline: 3px solid #2f4f3e;
-    outline-offset: 3px;
-    background: #3f6a52;
+    transition: background 0.2s ease;
 }
 
 .research-links a:hover {
     background: #3f6a52;
 }
 
-.research-links a:active {
-    transform: translateY(1px);
-}
-
-/* For single link cards */
 .research-card > a {
     display: inline-block;
     margin-top: 12px;
@@ -230,17 +214,10 @@ nav {
     align-self: flex-start;
 }
 
-.research-card > a:focus {
-    outline: 3px solid #2f4f3e;
-    outline-offset: 3px;
-    background: #3f6a52;
-}
-
 .research-card > a:hover {
     background: #3f6a52;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 50px 20px;
@@ -261,7 +238,6 @@ footer a:hover {
     border-bottom-color: #2f4f3e;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
 
     .menu {
@@ -362,15 +338,21 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="research-grid">
 
-    <!-- PhD Thesis Card - THREE LINKS -->
+    <!-- PhD Thesis Card - Read Online (Full HTML) + Download PDF -->
     <div class="research-card">
         <h3>PhD Thesis</h3>
         <p>Doctoral thesis (2014; author-revised 2026): <em>Cholera and the Development of Public Health in Belfast, 1832–1878</em></p>
         <div class="research-links">
-            <a href="thesis/phd-summary.html">📖 Read Summary</a>
-            <a href="thesis/cholera-thesis-full-document.html">📖 Read Online (Full)</a>
+            <a href="thesis/farrell-thesis-full-document.html">📖 Read Online</a>
             <a href="thesis/Farrell_PhD_Thesis.pdf" target="_blank">📄 Download PDF</a>
         </div>
+    </div>
+
+    <!-- Thesis Summary Card - Separate card -->
+    <div class="research-card">
+        <h3>Thesis Summary</h3>
+        <p>A concise overview of the doctoral thesis, outlining key arguments, chapter structure, and main findings.</p>
+        <a href="thesis/phd-summary.html">Read Summary →</a>
     </div>
 
     <!-- Primary Sources Card -->
