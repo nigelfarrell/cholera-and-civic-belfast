@@ -139,6 +139,7 @@ nav {
 .back-link a {
     color: #2f4f3e;
     text-decoration: none;
+    font-weight: bold;
     border-bottom: 1px dotted #2f4f3e;
 }
 
@@ -224,16 +225,18 @@ h2 {
     color: #2f4f3e;
 }
 
-/* IMAGES - ORIGINAL SIZE (NO ENLARGEMENT) */
+/* IMAGES - BIGGER THAN ORIGINAL (FULL BLEED) */
 .figure {
     text-align: center;
-    margin: 30px 0 0 0;
+    margin: 30px -20px 0 -20px;
 }
 
 .figure img {
-    max-width: 100%;
+    width: calc(100% + 40px);
     height: auto;
     border: 1px solid #d8d2c3;
+    border-radius: 4px;
+    display: block;
 }
 
 /* CAPTIONS */
@@ -335,6 +338,14 @@ footer a:hover {
 
     .article-hero h2 {
         font-size: 1.4em;
+    }
+
+    .figure {
+        margin: 30px -15px 0 -15px;
+    }
+    
+    .figure img {
+        width: calc(100% + 30px);
     }
 }
 </style>
