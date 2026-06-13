@@ -24,11 +24,6 @@
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
-      /* DISABLE TEXT SELECTION FOR ANTI-COPY */
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
     }
     @media (max-width: 600px) {
       body {
@@ -67,9 +62,6 @@
     }
     img {
       max-width: 100%;
-      /* Prevent image dragging */
-      -webkit-user-drag: none;
-      user-drag: none;
     }
     svg {
       height: auto;
@@ -182,98 +174,9 @@
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-
-<!-- ANTI-COPY JAVASCRIPT - SILENT -->
-<script>
-(function() {
-    'use strict';
-    
-    // Disable right-click (context menu)
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable keyboard shortcuts for copying
-    document.addEventListener('keydown', function(e) {
-        // Check for Ctrl key (or Cmd on Mac)
-        if (e.ctrlKey || e.metaKey) {
-            // Keys to block: C (copy), X (cut), A (select all), V (paste), P (print), S (save)
-            if (e.key === 'c' || e.key === 'C' || 
-                e.key === 'x' || e.key === 'X' || 
-                e.key === 'a' || e.key === 'A' ||
-                e.key === 'v' || e.key === 'V' ||
-                e.key === 'p' || e.key === 'P' ||
-                e.key === 's' || e.key === 'S') {
-                e.preventDefault();
-                return false;
-            }
-        }
-        
-        // Also block F12 (DevTools) and Ctrl+Shift+I, Ctrl+Shift+J
-        if (e.key === 'F12' || 
-            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j'))) {
-            e.preventDefault();
-            return false;
-        }
-        
-        // Block Ctrl+U (view source)
-        if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    // Disable drag and drop of images and text
-    document.addEventListener('dragstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable text selection via mouse (reinforce CSS)
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable copy event
-    document.addEventListener('copy', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable cut event
-    document.addEventListener('cut', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable paste event
-    document.addEventListener('paste', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Disable Print Screen key detection (limited effect but helps)
-    document.addEventListener('keyup', function(e) {
-        if (e.key === 'PrintScreen') {
-            navigator.clipboard.writeText('');
-            e.preventDefault();
-            return false;
-        }
-    });
-    
-    // Prevent printing
-    window.addEventListener('beforeprint', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-})();
-</script>
-
 </head>
-<body><p><strong>Asiatic Cholera and the Development of Public Health in
+<body>
+<p><strong>Asiatic Cholera and the Development of Public Health in
 Belfast 1832-1878</strong></p>
 <p><strong>By</strong></p>
 <p><strong>Nigel Sean Farrell BA (Hons.), MRes.</strong></p>
@@ -301,7 +204,9 @@ edition is presented as an author's revised text for ease of reading and
 reference.</p>
 <p>Nigel Farrell</p>
 <p>[June 2026]</p>
-<p><img src="robert-cruikshank-1832-cholera-patient.png" alt="Robert Cruikshank etching of cholera patient, 1832" style="max-width:100%; margin:20px 0;" /><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><colgroup>
+<p><img src="PHD Images/robert-cruikshank-1832-cholera-patient.png" alt="Robert Cruikshank etching of cholera patient, 1832" style="max-width:100%; margin:20px 0;" /><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<table>
+<colgroup>
 <col style="width: 1%" />
 <col style="width: 20%" />
 <col style="width: 68%" />
@@ -4905,7 +4810,7 @@ Bates’ influence ensured that subsequent corporation elections were
 overwhelmingly dominated by Conservative candidates.</p>
 <p><strong>Map of the Municipal Boundaries of Belfast
 (1837).</strong></p>
-<img src="municipal-boundaries-belfast-map.png" alt="Map of municipal boundaries of Belfast" style="max-width:100%; margin:20px 0;" /><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+<img src="PHD Images/municipal-boundaries-belfast-map.png" alt="Map of municipal boundaries of Belfast" style="max-width:100%; margin:20px 0;" /><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
 <p>Map reproduced from, <em>Report on Municipal Corporation
 boundaries</em> (1837), p. 22.<a href="#fn572" class="footnote-ref"
 id="fnref572" role="doc-noteref"><sup>572</sup></a></p>
@@ -16091,17 +15996,8 @@ Belfast is second from the top.</td>
 </tr>
 </tbody>
 </table>
-<p><img src="belfast-boh-poster-epidemic-cholera.png" style="width:5.83333in;height:8.61389in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-notice-kidley.png" style="width:5.89375in;height:4.96042in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-poster-wakes-and-funerals.png" style="width:5.86736in;height:9.68056in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-poster-slaughter-houses.png" style="width:5.89375in;height:7.02083in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-notice-medical-districts-part-one.png" style="width:5.90694in;height:7.64097in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-notice-medical-districts-part-two.png" style="width:5.89375in;height:7.43403in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-poster-division-of-town.png" style="width:5.89375in;height:8.70764in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-notice-directions-to-friends.png" style="width:5.81389in;height:9.6875in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-notice-appointment-as-visitor.png" style="width:5.90694in;height:5.34722in; margin-bottom:40px;" /></p>
-<p><img src="belfast-boh-notice-medical-appointments.png" style="width:5.89375in;height:7.52708in; margin-bottom:40px;" /></p>
-<p><img src="return-of-cholera-cases-and-deaths-1832.png" style="width:5.90694in;height:9.32778in; margin-bottom:40px;" /></p><p><strong>Appendix 3</strong></p>
+<p><img src="PHD Images/belfast-boh-poster-epidemic-cholera.png" style="width:5.83333in;height:8.61389in" /><img src="PHD Images/belfast-boh-notice-kidley.png" style="width:5.89375in;height:4.96042in" /><img src="PHD Images/belfast-boh-poster-wakes-and-funerals.png" style="width:5.86736in;height:9.68056in" /><img src="PHD Images/belfast-boh-poster-slaughter-houses.png" style="width:5.89375in;height:7.02083in" /><img src="PHD Images/belfast-boh-notice-medical-districts-part-one.png" style="width:5.90694in;height:7.64097in" /><img src="PHD Images/belfast-boh-notice-medical-districts-part-two.png" style="width:5.89375in;height:7.43403in" /><img src="PHD Images/belfast-boh-poster-division-of-town.png" style="width:5.89375in;height:8.70764in" /><img src="PHD Images/belfast-boh-notice-directions-to-friends.png" style="width:5.81389in;height:9.6875in" /><img src="PHD Images/belfast-boh-notice-appointment-as-visitor.png" style="width:5.90694in;height:5.34722in" /><img src="PHD Images/belfast-boh-notice-medical-appointments.png" style="width:5.89375in;height:7.52708in" /><img src="PHD Images/return-of-cholera-cases-and-deaths-1832.png" style="width:5.90694in;height:9.32778in" /></p>
+<p><strong>Appendix 3</strong></p>
 <p><strong>Maps</strong></p>
 <table>
 <colgroup>
@@ -16133,15 +16029,16 @@ Belfast is second from the top.</td>
 </tr>
 </tbody>
 </table>
-<p><img src="map-of-blackstaff-1832.png" style="width:9.70208in;height:5.7442in; margin-bottom:40px;" /></p>
-<p><img src="map-of-blackstaff-1858.png" style="width:9.43257in;height:5.66562in; margin-bottom:40px;" /></p>
-<p><img src="malcolm-map-of-blackstaff-nuisance.png" style="width:5.67847in;height:9.5in; margin-bottom:40px;" /></p>
-<p><img src="malcolm-map-of-cholera-locations.png" style="width:5.73702in;height:9.19507in; margin-bottom:40px;" /></p>
-<p><img src="malcolm-map-of-overcrowded-localities-1849.png" style="width:5.67777in;height:9.17857in; margin-bottom:40px;" /></p>
+<p><img src="PHD Images/map-of-blackstaff-1832.png" style="width:9.70208in;height:5.7442in" /></p>
+<p><img src="PHD Images/map-of-blackstaff-1858.png" style="width:9.43257in;height:5.66562in" /></p>
+<p><img src="PHD Images/malcolm-map-of-blackstaff-nuisance.png" style="width:5.67847in;height:9.5in" /></p>
+<p><img src="PHD Images/malcolm-map-of-cholera-locations.png" style="width:5.73702in;height:9.19507in" /></p>
+<p><img src="PHD Images/malcolm-map-of-overcrowded-localities-1849.png" style="width:5.67777in;height:9.17857in" /></p>
 <p><strong>Appendix 4</strong></p>
 <p><strong>Medical Officers’ Report of Cholera in Belfast’s Dispensary
 Districts 1866</strong></p>
-<p><img src="medical-officers-report-of-cholera-1866.jpg" style="width:5.87121in;height:8.39375in; margin-bottom:40px;" /></p><section id="footnotes" class="footnotes footnotes-end-of-document"
+<p><img src="PHD Images/medical-officers-report-of-cholera-1866.jpg" style="width:5.87121in;height:8.39375in" /></p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
