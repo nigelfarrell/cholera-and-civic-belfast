@@ -178,31 +178,16 @@ nav {
     flex-shrink: 0;
 }
 
-/* Article 1 image - 30% larger (250px → 325px) */
+/* Article 1 image - width unchanged (250px), height increased by 30% */
 .article-img {
-    width: 325px;
-    height: auto;
+    width: 250px;
+    height: 260px;
     border: 1px solid #d8d2c3;
     object-fit: cover;
     border-radius: 3px;
 }
 
-/* For Article 1, make image stretch to full height */
-.article-card:first-child .clickable-content {
-    align-items: stretch;
-}
-
-.article-card:first-child .article-img-container {
-    display: flex;
-    flex-shrink: 0;
-}
-
-.article-card:first-child .article-img {
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Article 2 image - original size (180px) */
+/* Article 2 image - original size (180px width, auto height) */
 .article-img.small {
     width: 180px;
     height: auto;
@@ -300,7 +285,6 @@ footer a:hover {
     }
 
     .article-img,
-    .article-card:first-child .article-img,
     .article-img.small {
         width: 100%;
         height: auto;
@@ -377,7 +361,7 @@ This section contains research-based case studies and narrative explorations of 
 </p>
 </div>
 
-<!-- ARTICLE 1 - 30% larger thumbnail (325px) stretching to full card height -->
+<!-- ARTICLE 1 - Height increased by 30% (200px → 260px), width unchanged (250px) -->
 <div class="article-card">
     <a href="blog/cholera-belfast-1832-1849.html" class="clickable-content">
         <div class="article-img-container">
@@ -393,7 +377,7 @@ This section contains research-based case studies and narrative explorations of 
     </div>
 </div>
 
-<!-- ARTICLE 2 - Original size (180px) -->
+<!-- ARTICLE 2 - Original size -->
 <div class="article-card">
     <a href="blog/cholera-in-nineteenth-century-belfast.html" class="clickable-content">
         <img src="images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832" class="article-img small">
