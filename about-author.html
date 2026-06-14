@@ -96,7 +96,7 @@ nav {
     display: block;
 }
 
-/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+/* KEYBOARD NAVIGATION */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -119,16 +119,6 @@ nav {
     padding: 40px 20px;
 }
 
-/* PAGE TITLE */
-.page-title {
-    color: #2f4f3e;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-left: 5px solid #2f4f3e;
-    padding-left: 20px;
-}
-
 /* BACK LINK */
 .back-link {
     margin-bottom: 20px;
@@ -145,6 +135,16 @@ nav {
     border-bottom: 1px solid #2f4f3e;
 }
 
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
+}
+
 /* IMAGE */
 .author-image {
     float: left;
@@ -159,43 +159,18 @@ nav {
     border-radius: 3px;
 }
 
-/* CLEARFIX - KEPT INTACT */
+/* CLEARFIX */
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
 
-/* ADD THIS ONE LINE - Centers text vertically with image */
+/* Flex alignment for author section */
 .clearfix {
     display: flex;
     align-items: center;
     gap: 25px;
-}
-
-/* COPYRIGHT NOTICE BOX */
-.copyright-notice {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 40px 0 20px 0;
-    font-size: 0.85em;
-    border-radius: 3px;
-    clear: both;
-}
-
-.copyright-notice p {
-    margin: 0;
-}
-
-.copyright-notice a {
-    color: #2f4f3e;
-    text-decoration: none;
-    border-bottom: 1px dotted #2f4f3e;
-}
-
-.copyright-notice a:hover {
-    border-bottom: 1px solid #2f4f3e;
 }
 
 /* CONTACT NOTE */
@@ -225,6 +200,31 @@ nav {
 }
 
 .contact-note a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+    clear: both;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
     border-bottom: 1px solid #2f4f3e;
 }
 
@@ -293,7 +293,6 @@ footer a:hover {
         padding-left: 15px;
     }
 
-    /* Mobile fix for flex */
     .clearfix {
         flex-direction: column;
         text-align: center;
@@ -312,7 +311,6 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
-<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
 <nav>
     <div id="menu-container"></div>
 </nav>
@@ -331,7 +329,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <div class="container">
 
 <div class="back-link">
-    <a href="Research.html">← Back to Research</a>
+    <a href="about.html">← Back to About</a>
 </div>
 
 <h1 class="page-title">About the Author</h1>
@@ -358,14 +356,12 @@ He completed his PhD in 2014 with a thesis entitled <em>Asiatic Cholera and the 
 
 </div>
 
-<!-- CONTACT NOTE -->
 <div class="contact-note">
     <p><strong>Project Inquiries</strong><br>
     For questions or further information, please contact:<br>
     <a href="mailto:choleraandcivicbelfast@gmail.com">choleraandcivicbelfast@gmail.com</a></p>
 </div>
 
-<!-- COPYRIGHT NOTICE BOX -->
 <div class="copyright-notice">
     <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
 </div>
