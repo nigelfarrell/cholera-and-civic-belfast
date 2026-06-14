@@ -170,6 +170,44 @@ nav {
     opacity: 0.9;
 }
 
+/* PDF BUTTON STYLES */
+.pdf-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 15px;
+}
+
+.pdf-button-container h1 {
+    margin: 0;
+    font-size: 2.2em;
+    flex: 1;
+}
+
+.pdf-button {
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9em;
+    transition: background 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.pdf-button:hover {
+    background: #3f6a52;
+    transform: translateY(-1px);
+}
+
 /* HEADINGS */
 h2, h3, h4, h5, h6 {
     font-weight: bold;
@@ -344,6 +382,15 @@ footer a:hover {
     .figure img {
         width: 95%;
     }
+
+    .pdf-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-button {
+        align-self: flex-start;
+    }
 }
 </style>
 </head>
@@ -430,7 +477,13 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     <p>Examining disease transmission, mortality, and the early public health response in Belfast</p>
 </div>
 
-<h1>Cholera in Belfast in 1832 and 1848-49</h1>
+<!-- TITLE WITH PDF BUTTON (TOP RIGHT) -->
+<div class="pdf-button-container">
+    <h1>Cholera in Belfast in 1832 and 1848-49</h1>
+    <a href="Cholera-in-Belfast-in-1832-and-1848.pdf" target="_blank" class="pdf-button">
+        📄 Download PDF
+    </a>
+</div>
 
 <h2>Arrival and medical understanding of cholera</h2>
 
