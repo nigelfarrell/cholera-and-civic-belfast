@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact & Collaboration | Cholera & Civic Belfast</title>
+
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.3em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1.1em;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 240px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.menu > li.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* KEYBOARD NAVIGATION */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* CONTENT */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
+}
+
+/* CONTACT BOXES */
+.contact-card {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    color: #2f4f3e;
+    font-size: 1.4em;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 10px;
+}
+
+.contact-card h3 {
+    color: #2f4f3e;
+    font-size: 1.1em;
+    margin: 20px 0 10px 0;
+}
+
+.contact-card ul, .contact-card p {
+    margin: 10px 0;
+}
+
+.contact-card li {
+    margin: 8px 0;
+}
+
+/* EMAIL HIGHLIGHT */
+.email-highlight {
+    background: #e8e2d3;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2f4f3e;
+    margin: 15px 0;
+}
+
+.email-highlight a {
+    color: #2f4f3e;
+    text-decoration: none;
+}
+
+.email-highlight a:hover {
+    text-decoration: underline;
+}
+
+/* GUIDELINES BOX */
+.guidelines {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.guidelines p {
+    margin: 5px 0;
+}
+
+.guidelines strong {
+    color: #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #d8d2c3;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .page-title {
+        font-size: 1.6em;
+        padding-left: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
+<nav>
+    <div id="menu-container"></div>
+</nav>
+
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
+
+</header>
+
+<div class="container">
+
+<h1 class="page-title">Contact & Collaboration</h1>
+
+<div class="contact-card">
+    <h2>Get in Touch</h2>
+    <p>Cholera & Civic Belfast welcomes inquiries from researchers, students, journalists, local historians, and anyone with an interest in the history of public health, epidemic disease, or nineteenth-century Belfast.</p>
+    
+    <div class="email-highlight">
+        📧 <a href="mailto:choleraandcivicbelfast@gmail.com">choleraandcivicbelfast@gmail.com</a>
+    </div>
+    
+    <p>Please allow 3–5 days for a response.</p>
+</div>
+
+<div class="contact-card">
+    <h2>Collaboration & Research</h2>
+    <p>This project is particularly focused on <strong>Belfast</strong> and its experience of cholera and public health reform. However, related stories from across <strong>Ireland and Britain</strong> will also be considered.</p>
+    
+    <p>Areas of interest include:</p>
+    <ul>
+        <li>History of public health in Belfast, Ireland, and Britain</li>
+        <li>Nineteenth-century urban history</li>
+        <li>History of epidemic disease (cholera, typhus, fever, dysentery)</li>
+        <li>Sanitary reform, housing, and water supply</li>
+        <li>Digital humanities and public history</li>
+    </ul>
+    <p>If you are a student or researcher working on a related topic, or would like to submit a story for consideration, please feel free to reach out.</p>
+</div>
+
+<div class="contact-card">
+    <h2>📖 Share Your Story</h2>
+    <p>This project is built on the belief that history is not just found in archives—it lives in families, communities, and local knowledge.</p>
+    
+    <p>If you have:</p>
+    <ul>
+        <li>A family story about cholera or public health in <strong>Belfast</strong></li>
+        <li>Historical documents, letters, or photographs related to epidemic disease in <strong>Ireland or Britain</strong></li>
+        <li>Knowledge of a local figure or event connected to this history</li>
+        <li>A suggested source or archive I should consult</li>
+    </ul>
+    
+    <p><strong>I would love to hear from you.</strong></p>
+    
+    <div class="guidelines">
+        <strong>Guidelines for submissions:</strong>
+        <p>• All submissions are reviewed before publication</p>
+        <p>• Please provide sources or citations for factual claims where possible</p>
+        <p>• Submissions must be original or properly attributed to their source</p>
+        <p>• Images (photographs, documents, maps) are welcome — please include source and permission details where known</p>
+        <p>• I reserve the right to edit for clarity or length, and to decline publication</p>
+        <p>• Full credit will be given to contributors</p>
+    </div>
+    
+    <p>Email your story, query, or suggested resource to: <strong>choleraandcivicbelfast@gmail.com</strong></p>
+</div>
+
+<div class="contact-card">
+    <h2>Academic & Professional Inquiries</h2>
+    <p>Cholera & Civic Belfast is created and maintained by Dr Nigel Farrell, who holds a PhD from the University of Ulster and specialises in the history of public health and epidemic disease in nineteenth-century Belfast. For any academic or professional inquiries, please use the email above.</p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
