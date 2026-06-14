@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Page Title | Cholera & Civic Belfast</title>
+<title>Article Title | Stories | Cholera & Civic Belfast</title>
 
 <style>
-/* ===== COPY YOUR EXISTING CSS FROM index.html OR Research.html HERE ===== */
-/* Include all styles: body, header, nav, dropdowns, keyboard navigation, etc. */
-
 body {
     font-family: Georgia, serif;
     background-color: #f4f1e8;
@@ -26,13 +23,13 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.3em;
+    font-size: 2.2em;
 }
 
 .subtitle {
     font-style: italic;
-    margin-top: 10px;
     color: #e8e2d3;
+    margin-top: 10px;
     font-size: 1.1em;
 }
 
@@ -99,7 +96,7 @@ nav {
     display: block;
 }
 
-/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+/* KEYBOARD NAVIGATION */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -117,19 +114,163 @@ nav {
 
 /* CONTAINER */
 .container {
-    max-width: 950px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* PAGE TITLE */
-.page-title {
-    color: #2f4f3e;
-    font-size: 2em;
-    margin-top: 0;
+/* BACK LINK */
+.back-link {
     margin-bottom: 20px;
-    border-left: 5px solid #2f4f3e;
-    padding-left: 20px;
+}
+
+.back-link a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ARTICLE HERO BANNER */
+.article-hero {
+    background: linear-gradient(135deg, #2f4f3e 0%, #4a6f5e 100%);
+    color: #f4f1e8;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px 0 40px 0;
+    border-radius: 8px;
+}
+
+.article-hero h2 {
+    color: #f4f1e8;
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.article-hero p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* PDF BUTTON STYLES */
+.pdf-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 15px;
+}
+
+.pdf-button-container h1 {
+    margin: 0;
+    font-size: 2.2em;
+    flex: 1;
+}
+
+.pdf-button {
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9em;
+    transition: background 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.pdf-button:hover {
+    background: #3f6a52;
+    transform: translateY(-1px);
+}
+
+/* HEADINGS */
+h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #2f4f3e;
+}
+
+/* FIGURES AND IMAGES */
+.figure {
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.figure img {
+    width: 80%;
+    height: auto;
+    border: 1px solid #d8d2c3;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+    line-height: 1.3;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* AUTHOR BIO BOX */
+.author-bio {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px 0 20px 0;
+}
+
+.author-bio p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.author-bio strong {
+    color: #2f4f3e;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
 }
 
 /* FOOTER */
@@ -155,6 +296,7 @@ footer a:hover {
 
 /* MOBILE */
 @media (max-width: 768px) {
+
     .menu {
         flex-direction: column;
         align-items: center;
@@ -183,9 +325,25 @@ footer a:hover {
         display: block;
     }
 
-    .page-title {
-        font-size: 1.6em;
-        padding-left: 15px;
+    .figure img {
+        width: 95%;
+    }
+
+    .pdf-button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pdf-button {
+        align-self: flex-start;
+    }
+
+    .article-hero {
+        padding: 25px 15px;
+    }
+
+    .article-hero h2 {
+        font-size: 1.4em;
     }
 }
 </style>
@@ -194,36 +352,147 @@ footer a:hover {
 <body>
 
 <header>
-    <h1>Cholera & Civic Belfast</h1>
-    <div class="subtitle">
-        Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
-    </div>
 
-    <!-- JAVASCRIPT MENU LOADER (for root pages) -->
-    <nav>
-        <div id="menu-container"></div>
-    </nav>
+<h1>Cholera & Civic Belfast</h1>
 
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-container').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading menu:', error));
-    </script>
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<!-- HARDCODED MENU FOR BLOG SUBFOLDER -->
+<nav>
+<ul class="menu">
+
+    <li><a href="../index.html">Home</a></li>
+
+    <!-- CHOLERA DROPDOWN -->
+    <li class="dropdown">
+        <a href="../cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="../global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="../belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="../belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="../belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="../belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <!-- PUBLIC HEALTH -->
+    <li class="dropdown">
+        <a href="../Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="../Public-health.html">Public Health Overview</a>
+            <a href="../Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <!-- PEOPLE -->
+    <li class="dropdown">
+        <a href="../People.html">People</a>
+        <div class="dropdown-content">
+            <a href="../people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="../People.html#about-section" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <!-- STORIES -->
+    <li class="dropdown">
+        <a href="../Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="../Stories.html">Stories Archive</a>
+        </div>
+    </li>
+
+    <!-- RESEARCH -->
+    <li class="dropdown">
+        <a href="../Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="../thesis.html">PhD Thesis</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+    </li>
+
+    <!-- ABOUT -->
+    <li class="dropdown">
+        <a href="#">About</a>
+        <div class="dropdown-content">
+            <a href="../about-project.html">About the Project</a>
+            <a href="../about-author.html">About the Author</a>
+            <a href="../contact.html">Contact & Collaboration</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
 </header>
 
 <div class="container">
-    <!-- YOUR PAGE'S UNIQUE CONTENT GOES HERE -->
-    <h1 class="page-title">Page Title</h1>
-    <p>Your content...</p>
+
+<div class="back-link">
+    <a href="../Stories.html">← Back to Stories</a>
+</div>
+
+<!-- ARTICLE HERO BANNER -->
+<div class="article-hero">
+    <h2>Article Hero Title</h2>
+    <p>Article hero subtitle or description</p>
+</div>
+
+<!-- TITLE WITH PDF BUTTON (TOP RIGHT) -->
+<div class="pdf-button-container">
+    <h1>Article Title</h1>
+    <a href="article-filename.pdf" target="_blank" class="pdf-button">
+        📄 Download PDF
+    </a>
+</div>
+
+<!-- ===== YOUR ARTICLE CONTENT GOES HERE ===== -->
+
+<h2>First Section Heading</h2>
+
+<p>Your article content goes here. Replace this with your research, narrative, and analysis.</p>
+
+<div class="figure">
+    <img src="image-filename.png" alt="Image description">
+</div>
+<div class="caption">Figure 1: Image caption and source credit.</div>
+
+<!-- ===== END ARTICLE CONTENT ===== -->
+
+<!-- AUTHOR BIO BOX -->
+<div class="author-bio">
+    <p><strong>Dr Nigel Farrell</strong> is a social historian specialising in the history of public health and epidemic disease in nineteenth-century Belfast. His research explores the social history of medicine within wider Irish, British, and European contexts.</p>
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
+</div>
+
 </div>
 
 <footer>
-    <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
-    <p><a href="licence.html">Copyright & Licence</a></p>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
 </footer>
+
+<!-- Mobile dropdown toggle script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".dropdown > a");
+
+    dropdowns.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle("open");
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
