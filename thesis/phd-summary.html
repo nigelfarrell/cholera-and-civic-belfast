@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>PhD Thesis Summary | Cholera & Civic Belfast</title>
+<title>Stories | Cholera & Civic Belfast</title>
 
 <style>
 body {
@@ -24,6 +24,7 @@ header {
 h1 {
     margin: 0;
     font-size: 2.3em;
+    letter-spacing: 0.5px;
 }
 
 .subtitle {
@@ -96,7 +97,7 @@ nav {
     display: block;
 }
 
-/* KEYBOARD NAVIGATION */
+/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -114,91 +115,124 @@ nav {
 
 /* CONTENT */
 .container {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* BACK LINK */
-.back-link {
-    margin-bottom: 20px;
-}
-
-.back-link a {
+/* PAGE TITLE */
+.page-title {
     color: #2f4f3e;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 1px dotted #2f4f3e;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
 }
 
-.back-link a:hover {
-    border-bottom: 1px solid #2f4f3e;
+/* INTRO BOX */
+.intro {
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 22px 25px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* THESIS SUMMARY STYLES */
-.thesis-title {
-    font-size: 2.2em;
-    font-weight: bold;
-    color: #2f4f3e;
-    margin: 20px 0 10px 0;
-    text-align: center;
-    line-height: 1.2;
+.intro p {
+    margin: 0;
+    font-size: 1.05em;
+    color: #333;
 }
 
-.thesis-subtitle {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #4a6fa5;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #d8d2c3;
-    padding-bottom: 10px;
-}
-
-.thesis-summary p {
-    margin: 1.2em 0;
-    text-align: justify;
-}
-
-.thesis-summary strong {
-    color: #2f4f3e;
-}
-
-/* DOWNLOAD NOTE */
-.download-note {
+/* ARTICLE CARD */
+.article-card {
     background: #faf8f3;
     border: 1px solid #d8d2c3;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 30px 0 20px 0;
+    margin-bottom: 25px;
     border-radius: 4px;
-    text-align: center;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.download-note p {
-    margin: 0 0 10px 0;
+.article-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
 }
 
-.download-note p:last-child {
-    margin-bottom: 0;
-}
-
-.download-note a {
-    color: #2f4f3e;
-    font-weight: bold;
+/* CLICKABLE CONTENT (image + title + text + read more) */
+.clickable-content {
+    display: flex;
+    gap: 20px;
     text-decoration: none;
-    border-bottom: 1px dotted #2f4f3e;
+    padding: 20px;
 }
 
-.download-note a:hover {
-    border-bottom: 1px solid #2f4f3e;
+/* Article 1 image */
+.article-img {
+    width: 190px;
+    height: 210px;
+    border: 1px solid #d8d2c3;
+    object-fit: cover;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* Article 2 image */
+.article-img.small {
+    width: 180px;
+    height: auto;
+    border: 1px solid #d8d2c3;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.article-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-text h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #2f4f3e;
+    font-size: 1.3em;
+}
+
+.article-text p {
+    margin: 0 0 12px 0;
+    color: #444;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+/* READ MORE BUTTON */
+.read-more {
+    display: inline-block;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    font-size: 0.85em;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.read-more:hover {
+    background: #3f6a52;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 50px 20px;
+    margin-top: 40px;
     border-top: 1px solid #d8d2c3;
-    margin-top: 60px;
     color: #555;
     font-size: 0.9em;
 }
@@ -214,7 +248,7 @@ footer a:hover {
     border-bottom-color: #2f4f3e;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
     .menu {
@@ -226,6 +260,28 @@ footer a:hover {
     .menu > li {
         width: 100%;
         text-align: center;
+    }
+
+    .clickable-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .article-img,
+    .article-img.small {
+        width: 100%;
+        height: auto;
+        max-width: 280px;
+    }
+
+    .article-text {
+        width: 100%;
+    }
+
+    .read-more {
+        align-self: center;
     }
 
     .dropdown-content {
@@ -245,8 +301,9 @@ footer a:hover {
         display: block;
     }
 
-    .thesis-title {
+    .page-title {
         font-size: 1.6em;
+        padding-left: 15px;
     }
 }
 </style>
@@ -262,106 +319,61 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
-<!-- HARDCODED MENU FOR THESIS FOLDER (using ../ paths) -->
+<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
 <nav>
-<ul class="menu">
-
-    <li><a href="../index.html">Home</a></li>
-
-    <li class="dropdown">
-        <a href="../cholera.html">Cholera</a>
-        <div class="dropdown-content">
-            <a href="../global-pandemics.html">Global Pandemics 1817–1866</a>
-            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
-            <a href="../belfast-timeline-1832.html">1832 Timeline</a>
-            <a href="../belfast-timeline-1848-49.html">1848-49 Timeline</a>
-            <a href="../belfast-timeline-1854.html">1854 Timeline</a>
-            <a href="../belfast-timeline-1866.html">1866 Timeline</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="../Public-health.html">Public Health</a>
-        <div class="dropdown-content">
-            <a href="../Public-health.html">Public Health Overview</a>
-            <a href="../Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="../People.html">People</a>
-        <div class="dropdown-content">
-            <a href="../people/malcolm.html">Dr Andrew G. Malcolm</a>
-            <a href="../People.html#about-section" title="More biographies will be added as research progresses">About this Section →</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="../Stories.html">Stories</a>
-        <div class="dropdown-content">
-            <a href="../Stories.html">Stories Archive</a>
-        </div>
-    </li>
-
-    <li class="dropdown">
-        <a href="../Research.html">Research</a>
-        <div class="dropdown-content">
-            <a href="../about-project.html">About the Project</a>
-            <a href="../about-author.html">About the Author</a>
-            <a href="../thesis.html">PhD Thesis</a>
-            <a href="../sources.html">Sources</a>
-        </div>
-    </li>
-
-</ul>
+    <div id="menu-container"></div>
 </nav>
+
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
 
 </header>
 
 <div class="container">
 
-<div class="back-link">
-    <a href="../Research.html">← Back to Research</a>
+<h1 class="page-title">Stories Archive</h1>
+
+<div class="intro">
+<p>
+This section contains research-based case studies and narrative explorations of nineteenth-century Belfast and its cholera epidemics. Each article is available as an HTML webpage and as a downloadable PDF.
+</p>
 </div>
 
-<div class="thesis-summary">
-
-<div class="thesis-title">Asiatic Cholera and the Development of Public Health in Belfast 1832-1878</div>
-
-<p><strong>Thesis Summary</strong></p>
-
-<p>The four major Asiatic cholera epidemics that struck Ireland between 1832 and 1878 had a significant, though often underappreciated, influence on the development of public health. While Belfast, the country's only major industrialised town, frequently suffered lower mortality than many comparable urban centres, its repeated encounters with the disease offer valuable insights into the relationship between epidemic crises, the evolution of public health systems, and the environmental, social, and infrastructural weaknesses generated by rapid industrial and urban expansion.</p>
-
-<p>Drawing on a wide range of archival sources, including municipal minutes, newspapers, Poor Law records, medical reports, and government publications, this study traces how cholera was experienced, managed, and interpreted in Belfast over time. Each outbreak brought renewed attention to the city's sanitary conditions and the capacity of its institutions to respond to epidemic disease, often exposing long-standing structural weaknesses in urban infrastructure and governance.</p>
-
-<p>A key argument is that cholera repeatedly revealed the pressures created by Belfast's rapid industrial growth. Overcrowding, inadequate drainage, contaminated water supplies, and ineffective waste disposal systems all contributed to conditions in which cholera could spread rapidly. Although not the only disease influencing public health reform, cholera's sudden and disruptive impact meant that it frequently acted as a catalyst for debate and intervention in ways that more persistent illnesses did not.</p>
-
-<p>Belfast's responses to cholera were, in comparative terms, relatively effective when measured against many other towns in Britain and Ireland. During the first outbreak in 1832, measures including the early establishment of a Local Board of Health and efforts to promote sanitation and hygiene appear to have helped limit mortality. In later decades, successive epidemics contributed to the expansion of Poor Law medical provision, dispensary services, and sanitary legislation, gradually strengthening the administrative framework for public health. While these developments were uneven and often reactive, they nonetheless marked a gradual shift towards more structured forms of public health administration.</p>
-
-<p>Throughout much of the period, the relationship between cholera, medical ideas, and civic action was complex and evolving. Contagionist and miasmatic explanations coexisted and shaped interpretations of outbreaks in different ways. Sanitary improvements were at times driven by concerns about environmental pollution and "bad air," while in other cases containment measures reflected assumptions about person-to-person transmission.</p>
-
-<p>From the later nineteenth century, emerging bacteriological ideas increasingly influenced thinking, although older explanatory models persisted in both policy and practice. Responses to cholera therefore reflected a pragmatic and overlapping engagement with medical theory rather than a linear progression.</p>
-
-<p>Overall, cholera emerges as an important but not exclusive factor in the evolution of public health provision in Belfast between 1832 and 1878. Alongside other diseases and wider urban pressures, repeated outbreaks helped sustain attention on sanitation and contributed to the gradual development of a more structured and professional public health system by the end of the period. In doing so, Belfast's experience of cholera offered a compelling case study of how epidemic crisis could accelerate long-term institutional change.</p>
-
+<!-- ARTICLE 1 -->
+<div class="article-card">
+    <a href="blog/cholera-belfast-1832-1849.html" class="clickable-content">
+        <img src="images/High-Street-Belfast-1831.png" alt="High Street Belfast 1831" class="article-img">
+        <div class="article-text">
+            <h2>Cholera in Belfast in 1832 and 1848-49</h2>
+            <p>The story of Belfast's cholera epidemics in 1832 and 1849, examining disease transmission, mortality, urban environment, and early municipal public health responses.</p>
+            <span class="read-more">Read More →</span>
+        </div>
+    </a>
 </div>
 
-<!-- DOWNLOAD NOTE -->
-<div class="download-note">
-    <p><strong>📖 Read Online</strong><br>
-    The complete thesis is available to read online:<br>
-    <a href="farrell-thesis-full-document.html">Read Full Thesis Online →</a></p>
-    
-    <p><strong>📄 Download PDF</strong><br>
-    Alternatively, download the PDF version:<br>
-    <a href="Farrell_PhD_Thesis.pdf">Download Full Thesis (PDF) →</a></p>
+<!-- ARTICLE 2 -->
+<div class="article-card">
+    <a href="blog/cholera-in-nineteenth-century-belfast.html" class="clickable-content">
+        <img src="images/Cholera-Poster-Belfast-1832.jpg" alt="Cholera Poster Belfast 1832" class="article-img small">
+        <div class="article-text">
+            <h2>Cholera in Nineteenth-Century Belfast</h2>
+            <p>A comprehensive historical overview of cholera and the evolving public health response in nineteenth-century Belfast, covering the epidemics of 1832, 1848-49, 1854, and 1866.</p>
+            <span class="read-more">Read More →</span>
+        </div>
+    </a>
 </div>
 
 </div>
 
 <footer>
 <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
-<p><a href="../licence.html">Copyright & Licence</a></p>
+<p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
 
 </body>
