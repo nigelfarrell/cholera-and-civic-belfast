@@ -1,1 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PhD Thesis Summary | Cholera & Civic Belfast</title>
 
+<style>
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    margin: 0;
+    color: #1f1f1f;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.3em;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1.1em;
+}
+
+/* NAV */
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 240px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.menu > li.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* KEYBOARD NAVIGATION */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* CONTENT */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* BACK LINK */
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* THESIS SUMMARY STYLES */
+.thesis-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #2f4f3e;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.thesis-subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4a6fa5;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 10px;
+}
+
+.thesis-summary p {
+    margin: 1.2em 0;
+    text-align: justify;
+}
+
+.thesis-summary strong {
+    color: #2f4f3e;
+}
+
+/* DOWNLOAD NOTE */
+.download-note {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 30px 0 20px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.download-note p {
+    margin: 0 0 10px 0;
+}
+
+.download-note p:last-child {
+    margin-bottom: 0;
+}
+
+.download-note a {
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.download-note a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    .thesis-title {
+        font-size: 1.6em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<!-- HARDCODED MENU FOR THESIS FOLDER (using ../ paths) -->
+<nav>
+<ul class="menu">
+
+    <li><a href="../index.html">Home</a></li>
+
+    <li class="dropdown">
+        <a href="../cholera.html">Cholera</a>
+        <div class="dropdown-content">
+            <a href="../global-pandemics.html">Global Pandemics 1817–1866</a>
+            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
+            <a href="../belfast-timeline-1832.html">1832 Timeline</a>
+            <a href="../belfast-timeline-1848-49.html">1848-49 Timeline</a>
+            <a href="../belfast-timeline-1854.html">1854 Timeline</a>
+            <a href="../belfast-timeline-1866.html">1866 Timeline</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Public-health.html">Public Health</a>
+        <div class="dropdown-content">
+            <a href="../Public-health.html">Public Health Overview</a>
+            <a href="../Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../People.html">People</a>
+        <div class="dropdown-content">
+            <a href="../people/malcolm.html">Dr Andrew G. Malcolm</a>
+            <a href="../People.html#about-section" title="More biographies will be added as research progresses">About this Section →</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Stories.html">Stories</a>
+        <div class="dropdown-content">
+            <a href="../Stories.html">Stories Archive</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <a href="../Research.html">Research</a>
+        <div class="dropdown-content">
+            <a href="../about-project.html">About the Project</a>
+            <a href="../about-author.html">About the Author</a>
+            <a href="../thesis.html">PhD Thesis</a>
+            <a href="../sources.html">Sources</a>
+        </div>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="back-link">
+    <a href="../Research.html">← Back to Research</a>
+</div>
+
+<div class="thesis-summary">
+
+<div class="thesis-title">Asiatic Cholera and the Development of Public Health in Belfast 1832-1878</div>
+
+<p><strong>Thesis Summary</strong></p>
+
+<p>The four major Asiatic cholera epidemics that struck Ireland between 1832 and 1878 had a significant, though often underappreciated, influence on the development of public health. While Belfast, the country's only major industrialised town, frequently suffered lower mortality than many comparable urban centres, its repeated encounters with the disease offer valuable insights into the relationship between epidemic crises, the evolution of public health systems, and the environmental, social, and infrastructural weaknesses generated by rapid industrial and urban expansion.</p>
+
+<p>Drawing on a wide range of archival sources, including municipal minutes, newspapers, Poor Law records, medical reports, and government publications, this study traces how cholera was experienced, managed, and interpreted in Belfast over time. Each outbreak brought renewed attention to the city's sanitary conditions and the capacity of its institutions to respond to epidemic disease, often exposing long-standing structural weaknesses in urban infrastructure and governance.</p>
+
+<p>A key argument is that cholera repeatedly revealed the pressures created by Belfast's rapid industrial growth. Overcrowding, inadequate drainage, contaminated water supplies, and ineffective waste disposal systems all contributed to conditions in which cholera could spread rapidly. Although not the only disease influencing public health reform, cholera's sudden and disruptive impact meant that it frequently acted as a catalyst for debate and intervention in ways that more persistent illnesses did not.</p>
+
+<p>Belfast's responses to cholera were, in comparative terms, relatively effective when measured against many other towns in Britain and Ireland. During the first outbreak in 1832, measures including the early establishment of a Local Board of Health and efforts to promote sanitation and hygiene appear to have helped limit mortality. In later decades, successive epidemics contributed to the expansion of Poor Law medical provision, dispensary services, and sanitary legislation, gradually strengthening the administrative framework for public health. While these developments were uneven and often reactive, they nonetheless marked a gradual shift towards more structured forms of public health administration.</p>
+
+<p>Throughout much of the period, the relationship between cholera, medical ideas, and civic action was complex and evolving. Contagionist and miasmatic explanations coexisted and shaped interpretations of outbreaks in different ways. Sanitary improvements were at times driven by concerns about environmental pollution and "bad air," while in other cases containment measures reflected assumptions about person-to-person transmission.</p>
+
+<p>From the later nineteenth century, emerging bacteriological ideas increasingly influenced thinking, although older explanatory models persisted in both policy and practice. Responses to cholera therefore reflected a pragmatic and overlapping engagement with medical theory rather than a linear progression.</p>
+
+<p>Overall, cholera emerges as an important but not exclusive factor in the evolution of public health provision in Belfast between 1832 and 1878. Alongside other diseases and wider urban pressures, repeated outbreaks helped sustain attention on sanitation and contributed to the gradual development of a more structured and professional public health system by the end of the period. In doing so, Belfast's experience of cholera offered a compelling case study of how epidemic crisis could accelerate long-term institutional change.</p>
+
+</div>
+
+<!-- DOWNLOAD NOTE -->
+<div class="download-note">
+    <p><strong>📖 Read Online</strong><br>
+    The complete thesis is available to read online:<br>
+    <a href="farrell-thesis-full-document.html">Read Full Thesis Online →</a></p>
+    
+    <p><strong>📄 Download PDF</strong><br>
+    Alternatively, download the PDF version:<br>
+    <a href="Farrell_PhD_Thesis.pdf">Download Full Thesis (PDF) →</a></p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
