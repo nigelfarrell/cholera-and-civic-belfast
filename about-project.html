@@ -96,7 +96,7 @@ nav {
     display: block;
 }
 
-/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+/* KEYBOARD NAVIGATION */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
     outline-offset: 4px;
@@ -119,16 +119,6 @@ nav {
     padding: 40px 20px;
 }
 
-/* PAGE TITLE */
-.page-title {
-    color: #2f4f3e;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-left: 5px solid #2f4f3e;
-    padding-left: 20px;
-}
-
 /* BACK LINK */
 .back-link {
     margin-bottom: 20px;
@@ -145,11 +135,21 @@ nav {
     border-bottom: 1px solid #2f4f3e;
 }
 
-/* IMAGE FLOAT */
+/* PAGE TITLE */
+.page-title {
+    color: #2f4f3e;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 5px solid #2f4f3e;
+    padding-left: 20px;
+}
+
+/* IMAGE */
 .project-image {
     float: left;
-    width: 320px;
-    margin: 10px 22px 12px 0;
+    width: 400px;
+    margin: 10px 25px 15px 0;
 }
 
 .project-image img {
@@ -164,31 +164,6 @@ nav {
     content: "";
     display: block;
     clear: both;
-}
-
-/* COPYRIGHT NOTICE BOX */
-.copyright-notice {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 40px 0 20px 0;
-    font-size: 0.85em;
-    border-radius: 3px;
-    clear: both;
-}
-
-.copyright-notice p {
-    margin: 0;
-}
-
-.copyright-notice a {
-    color: #2f4f3e;
-    text-decoration: none;
-    border-bottom: 1px dotted #2f4f3e;
-}
-
-.copyright-notice a:hover {
-    border-bottom: 1px solid #2f4f3e;
 }
 
 /* CONTACT NOTE */
@@ -218,6 +193,31 @@ nav {
 }
 
 .contact-note a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* COPYRIGHT NOTICE BOX */
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+    clear: both;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
     border-bottom: 1px solid #2f4f3e;
 }
 
@@ -275,8 +275,9 @@ footer a:hover {
 
     .project-image {
         float: none;
-        width: 260px;
-        margin: 0 auto 20px auto;
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto;
         display: block;
     }
 
@@ -298,7 +299,6 @@ footer a:hover {
 Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
 </div>
 
-<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
 <nav>
     <div id="menu-container"></div>
 </nav>
@@ -317,7 +317,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <div class="container">
 
 <div class="back-link">
-    <a href="Research.html">← Back to Research</a>
+    <a href="about.html">← Back to About</a>
 </div>
 
 <h1 class="page-title">About the Project</h1>
@@ -325,35 +325,29 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 <div class="clearfix">
 
 <div class="project-image">
-    <img src="images/cholera-poster.jpg" alt="Cholera poster">
+    <img src="images/Royal-Avenue-Belfast-crop.jpg" alt="Royal Avenue Belfast">
 </div>
 
 <p>
-Cholera & Civic Belfast is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the city.
+<strong>Cholera & Civic Belfast</strong> is a public history project exploring the impact of cholera epidemics on nineteenth-century Belfast and the development of public health responses within the town. It examines how repeated outbreaks of Asiatic cholera between 1832 and 1866 shaped medical practice, urban governance, and sanitary reform in Ireland's only major industrialised town.
 </p>
 
 <p>
-The project is based on doctoral research into cholera in Belfast between 1832 and 1878, and draws on a wide range of historical sources including official reports, newspapers, medical accounts, and civic records. It examines how repeated epidemic outbreaks shaped urban infrastructure, medical practice, and civic reform.
+The project draws on a wide range of primary sources, including municipal minutes, medical reports, Poor Law records, newspapers, and government publications. It situates Belfast within wider Irish, British, and European responses to epidemic disease, offering a detailed case study of how epidemic crises could accelerate long-term institutional and infrastructural change.
 </p>
 
 <p>
-The site is organised around cholera epidemics, public health developments, biographical studies, and narrative research essays. Together, these sections provide a structured account of how disease and reform shaped nineteenth-century Belfast.
-</p>
-
-<p>
-The aim is to present research in an accessible format that bridges academic scholarship and public history, allowing wider audiences to engage with the social and medical history of nineteenth-century Belfast.
+This website is designed for researchers, students, local historians, and anyone interested in the history of public health, urban development, and epidemic disease in nineteenth-century Ireland and Britain.
 </p>
 
 </div>
 
-<!-- CONTACT NOTE -->
 <div class="contact-note">
     <p><strong>Project Inquiries</strong><br>
     For questions or further information, please contact:<br>
     <a href="mailto:choleraandcivicbelfast@gmail.com">choleraandcivicbelfast@gmail.com</a></p>
 </div>
 
-<!-- COPYRIGHT NOTICE BOX -->
 <div class="copyright-notice">
     <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
 </div>
