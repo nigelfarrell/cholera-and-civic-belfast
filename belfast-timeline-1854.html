@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>1854 Cholera Timeline | Cholera & Civic Belfast</title>
+<title>Belfast Cholera Timeline 1854-55 | Cholera & Civic Belfast</title>
 
 <style>
 body {
@@ -144,23 +144,83 @@ nav {
     padding-left: 20px;
 }
 
-/* PLACEHOLDER BOX */
-.placeholder-box {
+/* INTRO TEXT */
+.intro-text {
+    margin: 20px 0 30px 0;
+    line-height: 1.7;
+}
+
+/* TABLE CONTAINER - SCROLLABLE ON MOBILE */
+.table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+/* TIMELINE TABLE */
+.timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #faf8f3;
+    font-size: 0.95em;
+    min-width: 600px;
+}
+
+.timeline-table th {
+    background: #2f4f3e;
+    color: #f4f1e8;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #4a6f5e;
+}
+
+.timeline-table td {
+    padding: 12px 15px;
+    border: 1px solid #d8d2c3;
+    vertical-align: top;
+}
+
+.timeline-table tr:nth-child(even) {
+    background: #f4f1e8;
+}
+
+.timeline-table tr:hover {
+    background: #e8e2d3;
+}
+
+/* SECTION BOXES */
+.info-section {
     background: #ffffff;
     border: 1px solid #d8d2c3;
-    padding: 30px;
+    padding: 20px;
+    margin: 30px 0;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    text-align: center;
 }
 
-.placeholder-box h2 {
+.info-section h3 {
     color: #2f4f3e;
     margin-top: 0;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 8px;
 }
 
-.placeholder-box p {
-    margin: 15px 0;
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.info-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #d8d2c3;
+}
+
+.info-list li strong {
+    color: #2f4f3e;
 }
 
 /* COPYRIGHT NOTICE BOX */
@@ -251,6 +311,10 @@ footer a:hover {
     .hero-banner img {
         height: 180px;
     }
+
+    .info-list {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -319,9 +383,8 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     </li>
 
     <!-- ABOUT (NEW) - After Research -->
-    <!-- ABOUT (NEW) - After Research -->
     <li class="dropdown">
-        <a href="about.html">About</a>
+        <a href="#">About</a>
         <div class="dropdown-content">
             <a href="about-project.html">About the Project</a>
             <a href="about-author.html">About the Author</a>
@@ -336,7 +399,7 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <!-- HERO BANNER IMAGE (REDUCED SIZE) -->
 <div class="hero-banner">
-    <img src="images/1832-blog-image.jpg" alt="Belfast 1854 Cholera Epidemic">
+    <img src="images/1832-blog-image.jpg" alt="Belfast 1854-55 Cholera Epidemic">
 </div>
 
 <div class="container">
@@ -349,13 +412,81 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     </div>
 </div>
 
-<h1 class="page-title">1854 Cholera Epidemic Timeline</h1>
+<h1 class="page-title">Detailed Historical Timeline of the 1854–1855 Belfast Cholera Epidemic</h1>
 
-<div class="placeholder-box">
-    <h2>📋 Content Coming Soon</h2>
-    <p>This timeline page is currently under development.</p>
-    <p>When complete, it will include detailed chronological information about the 1854 cholera epidemic in Belfast, including case statistics, key events, institutional responses, and notable individuals.</p>
-    <p><em>Please check back for updates.</em></p>
+<div class="intro-text">
+    <p>When cholera returned in 1854, Belfast's municipal authorities made a determined effort to lessen its impact. Even so, it remained one of the worst affected large Irish towns, with a mortality rate of 36 per cent, revealing the continued vulnerability of Belfast to serious public health crises.</p>
+</div>
+
+<!-- SCROLLABLE TABLE -->
+<div class="table-container">
+    <table class="timeline-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Official Chronology</strong></td>
+                <td>Onset: First cases Sept/Nov 1853. Cases reported in Carrickfergus 15 March 1854. Cases reported in Ballymacarrett 17 March 1854. Peak transmission: mid–late 1854; residual cases: 1855.‹
+            </tr>
+            <tr>
+                <td><strong>Initial Local Outbreak Site</strong></td>
+                <td>First official case – Belfast – 20 September 1853 (reported recovering 26 Sept 1853). First confirmed cases: Belfast and Queenstown early November 1853. Belfast, 5 Nov 1853. The Guiding Star (560 passengers); by 9 Nov, 56 people had been admitted to the Union Hospital and there had been 22 deaths. Reported 3 April 1854: Smithfield Court (six cases and three deaths). Washington Street (two cases). Three or four more cases were also reported in other localities.‹
+            </tr>
+            <tr>
+                <td><strong>Potential Transmission Vector & Environmental Risks</strong>‹
+                <td>Maritime (emigrant ships: Kossuth in Queenstown; Guiding Star in Belfast). Local transmission was accelerated by persistent issues, including environmental conditions, poor sanitation and overcrowded housing.‹
+            </tr>
+            <tr>
+                <td><strong>Institutional Response</strong>‹
+                <td>The Belfast Board of Guardians became the main body responsible for dealing with preparations for an epidemic of cholera, working alongside the Dispensary Committee, Town Corporation and the Committee of the General Hospital. The Committee on Police Affairs remained responsible for nuisance removal. October 1852: Samuel Browne appointed medical officer and undertook an extensive inspection of the town's streets and houses, reporting back to the Belfast Board of Health. September 1853: Public urged to take personal precautions and the clergy encouraged to promote sanitary awareness. Guardians and corporation distributed cholera pamphlets and issued advice in the press. Also enforces powers granted under the Diseases Prevention and Nuisance Removal Acts. Hospital accommodation organised. Wards prepared at Union Hospital, additional accommodation offered by committee of the General Hospital.‹
+            </tr>
+            <tr>
+                <td><strong>Statistics</strong>‹
+                <td>Peak Period Spring–Autumn 1854 – Approximately 1,877 cases – 677 deaths. Mortality 36.2%‹
+            </tr>
+            <tr>
+                <td><strong>Key Events</strong>‹
+                <td>
+                    • 1851: Medical Charities Act introduced – placed responsibility for medical relief on the dispensary system. By May 1852 there were 723 dispensary districts in Ireland (215 in Ulster). Managed by Poor Law Commissioners, Boards of Guardians and Committees of Management.<br>
+                    • Sept 1853: Cholera epidemic begins in Britain striking Newcastle (1,533 deaths in nine weeks) and Gateshead (433 cases by November).<br>
+                    • 20 Sept 1853: First case in Belfast.<br>
+                    • Nov 1853: Guiding Star (emigrant ship from Liverpool) docks in Belfast with cholera cases on board and nine deaths having occurred. Results in 56 hospital admissions and 22 deaths. However, no subsequent spread to the town.<br>
+                    • Nov 1853: Cases in Queenstown, Cork – attributed to passengers from emigrant ship the Kossuth (38 deaths), several cases also reported in local area, but not all related to the vessel.<br>
+                    • July 1854: Dr John Snow began investigations of the London epidemic. In Soho, he attributed the spread of cholera to a pump on Broad Street and requested the removal of the pump handle. Later, the accepted narrative became that this event stopped the epidemic. More recently, however, this has been disproven.<br>
+                    • October 1854: Cases in Dublin – outbreak results in approximately 1,206 cases and 452 deaths (38% mortality).<br>
+                    • April 1854: Belfast outbreak begins in earnest. Epidemic subsides in May but reemerges in July. August–mid-September epidemic peaks (cases average 100 per week). October 1854 epidemic ends. Official statistics: 1,877 cases, 677 deaths (36.2% mortality).
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- KEY INDIVIDUALS SECTION -->
+<div class="info-section">
+    <h3>Key Individuals</h3>
+    <ul class="info-list">
+        <li><strong>Dr Samuel Browne:</strong> Attending surgeon to the Belfast General Hospital, Inspecting Officer (Belfast Corporation). Helped shape official sanitary policy.</li>
+        <li><strong>Dr Andrew Malcolm:</strong> Physician and public health reformer who significantly drove forward public health initiatives.</li>
+        <li><strong>Rev. Anthony McIntyre:</strong> Unitarian Presbyterian minister and missionary. His diaries documented the conditions of the town's poorest communities and provided an important contemporary record of urban poverty, social conditions, and religious outreach.</li>
+        <li><strong>Rev. William Murphy O'Hanlon:</strong> Author of <em>Walks among the poor of Belfast and suggestions for their improvement</em>. One of the most important social documents of the period that describes the social conditions endured by people whose lives would have otherwise remained unrecorded.</li>
+    </ul>
+</div>
+
+<!-- KEY LOCATIONS SECTION -->
+<div class="info-section">
+    <h3>Key Locations</h3>
+    <ul class="info-list">
+        <li>Washington Street</li>
+        <li>Smithfield Court</li>
+        <li>Richie's Place</li>
+        <li>Lynas's Lane, off Great Patrick Street</li>
+        <li>Smithfield and Dock Wards</li>
+        <li>Union Hospital</li>
+    </ul>
 </div>
 
 <!-- COPYRIGHT NOTICE BOX -->
