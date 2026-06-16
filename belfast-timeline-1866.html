@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>1866 Cholera Timeline | Cholera & Civic Belfast</title>
+<title>Belfast Cholera Timeline 1866 | Cholera & Civic Belfast</title>
 
 <style>
 body {
@@ -95,6 +95,7 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
+
 /* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
@@ -111,6 +112,7 @@ nav {
 .dropdown:focus-within .dropdown-content {
     display: block;
 }
+
 /* HERO BANNER (REDUCED SIZE) */
 .hero-banner {
     width: 100%;
@@ -134,27 +136,6 @@ nav {
     padding: 40px 20px;
 }
 
-/* BACK LINKS */
-.back-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.back-links a {
-    color: #2f4f3e;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 1px dotted #2f4f3e;
-}
-
-.back-links a:hover {
-    border-bottom: 1px solid #2f4f3e;
-}
-
 /* PAGE TITLE */
 .page-title {
     color: #2f4f3e;
@@ -165,23 +146,109 @@ nav {
     padding-left: 20px;
 }
 
-/* PLACEHOLDER BOX */
-.placeholder-box {
+/* INTRO TEXT */
+.intro-text {
+    margin: 20px 0 30px 0;
+    line-height: 1.7;
+}
+
+/* TABLE CONTAINER - SCROLLABLE ON MOBILE */
+.table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+/* TIMELINE TABLE */
+.timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #faf8f3;
+    font-size: 0.95em;
+    min-width: 600px;
+}
+
+.timeline-table th {
+    background: #2f4f3e;
+    color: #f4f1e8;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #4a6f5e;
+}
+
+.timeline-table td {
+    padding: 12px 15px;
+    border: 1px solid #d8d2c3;
+    vertical-align: top;
+}
+
+.timeline-table tr:nth-child(even) {
+    background: #f4f1e8;
+}
+
+.timeline-table tr:hover {
+    background: #e8e2d3;
+}
+
+/* SECTION BOXES */
+.info-section {
     background: #ffffff;
     border: 1px solid #d8d2c3;
-    padding: 30px;
+    padding: 20px;
+    margin: 30px 0;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    text-align: center;
 }
 
-.placeholder-box h2 {
+.info-section h3 {
     color: #2f4f3e;
     margin-top: 0;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 8px;
 }
 
-.placeholder-box p {
-    margin: 15px 0;
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.info-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #d8d2c3;
+}
+
+.info-list li strong {
+    color: #2f4f3e;
+}
+
+/* SCIENTIFIC CONTEXT BOX */
+.scientific-context {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+    border-left: 4px solid #4a6fa5;
+}
+
+.scientific-context h3 {
+    color: #2f4f3e;
+    margin-top: 0;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 8px;
+}
+
+.scientific-context p {
+    margin: 12px 0;
+    font-size: 0.95em;
+}
+
+.scientific-context em {
+    font-style: italic;
 }
 
 /* COPYRIGHT NOTICE BOX */
@@ -272,6 +339,10 @@ footer a:hover {
     .hero-banner img {
         height: 180px;
     }
+
+    .info-list {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -340,9 +411,8 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     </li>
 
     <!-- ABOUT (NEW) - After Research -->
-       <!-- ABOUT (NEW) - After Research -->
     <li class="dropdown">
-        <a href="about.html">About</a>
+        <a href="#">About</a>
         <div class="dropdown-content">
             <a href="about-project.html">About the Project</a>
             <a href="about-author.html">About the Author</a>
@@ -362,18 +432,128 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <div class="container">
 
-<div class="back-links">
-    <a href="cholera.html">← Back to Cholera</a>
-    <a href="belfast-timeline-1854.html">← Previous: 1854 Timeline</a>
+<div class="back-links" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+    <a href="cholera.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Back to Cholera</a>
+    <div style="display: flex; gap: 15px;">
+        <a href="belfast-timeline-1854.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Previous: 1854</a>
+    </div>
 </div>
 
-<h1 class="page-title">1866 Cholera Epidemic Timeline</h1>
+<h1 class="page-title">Detailed Historical Timeline of the 1866 Belfast Cholera Epidemic</h1>
 
-<div class="placeholder-box">
-    <h2>📋 Content Coming Soon</h2>
-    <p>This timeline page is currently under development.</p>
-    <p>When complete, it will include detailed chronological information about the 1866 cholera epidemic in Belfast, including case statistics, key events, institutional responses, and notable individuals.</p>
-    <p><em>Please check back for updates.</em></p>
+<div class="intro-text">
+    <p>This timeline details the final appearance of Asiatic cholera in Belfast. Only a small number of cases were recorded in the city during 1866, yet the outbreak exposed continuing weaknesses in sanitary infrastructure, administrative coordination, and diagnostic certainty within the public health system.</p>
+</div>
+
+<!-- SCROLLABLE TABLE -->
+<div class="table-container">
+    <table class="timeline-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Official Chronology</strong></td>
+                <td>Pre-epidemic context: Summer 1865: Water famine grips Belfast; reservoirs extremely low or empty; water often green and unfit for consumption. Fever epidemic with over 450 cases and 334 deaths recorded during 1865, making it the third highest cause of mortality in Belfast that year. Official onset: 8 August 1866. Peak transmission: August–November 1866. Last reported cases: November 1866.</td>
+            </tr>
+            <tr>
+                <td><strong>Initial Local Outbreak Site</strong></td>
+                <td>8 August 1866: McGivern's lodging house, Bridge End, Ballymacarrett. Victim Thomas O'Neill traced to Liverpool. Entry points into Ireland: Dublin and Wexford, both associated with maritime arrivals from infected British ports (particularly Liverpool), prior to Belfast emergence.</td>
+            </tr>
+            <tr>
+                <td><strong>Potential Transmission Vector & Environmental Risks</strong></td>
+                <td>Liverpool-linked maritime traffic was the principal route of entry, with the first confirmed victim, Thomas O'Neill, traced directly to Liverpool. Local dissemination was strongly associated with overcrowding, inadequate drainage, polluted waterways, and insanitary housing conditions.</td>
+            </tr>
+            <tr>
+                <td><strong>Civic and Institutional Response</strong></td>
+                <td>
+                    • Legislative framework: The Sanitary Act (1866) designates dispensary committees as sanitary authorities. Boards of guardians can implement regulations without central approval. Powers under 1848/49 acts rescinded and transferred to 1855 Diseases Prevention Act and new Sanitary Act.<br>
+                    • August 1866: Belfast Corporation and Board of Guardians coordinate emergency measures. Sanitary surveillance, daily reporting, and house-to-house inspection introduced. Expanded use of inspectors, labourers and disinfecting teams. Hugh Norwood authorised to appoint extra inspectors and labourers.<br>
+                    • Officials inspect 210 streets, abate 653 nuisances, clear 133 stopped sewers, arrange ashpits for 60 houses, construct sewers for 193 houses, and whitewash 617 houses.<br>
+                    • Hospital accommodation prepared but General Hospital concludes cholera cases cannot be admitted. Responsibility for patients and treatment rests with guardians.<br>
+                    • 12 September 1866: Dispensary committee orders all agencies responsible for street cleansing to ensure frequent and effective action. All insanitary dwellings (defective drains, privies, ash pits, keeping of pigs) to be subject to immediate abatement. Guardians to be granted extended powers and to assume responsibility for managing any subsequent cholera outbreak.<br>
+                    • 9 November 1866: Sanitary Committee discharged; replaced with Nuisance Committee.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Statistics</strong></td>
+                <td>
+                    • Official medical returns (Dr Reid): 28 cases and 15 deaths. Mortality: 53.6%.<br>
+                    • Sanitary Committee returns: 26 cases and 16 deaths.<br>
+                    • Alternative evidence (Belfast Newsletter): At least 43 documented cases through named reports (but likely to be more). Dr Browne, for example, admitted that he believed there were more than 26 cases.<br>
+                    • Ireland, 1866: 4,309 cases, 2,308 deaths.<br>
+                    • Provincial mortality: Leinster: 1,371; Munster: 198; Ulster: 82; Connaught: 20.<br>
+                    • Reliability: Returns compromised by disputes over diagnosis and classification; official figures likely underestimate true incidence.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Notable Deaths</strong></td>
+                <td>
+                    • 9 August 1866: Thomas O'Neill, Bridge End, first confirmed fatality. Dies approximately eighteen hours after becoming ill.<br>
+                    • 12 September 1866: Patrick Wilson, Bow Street, Falls Road, dies after refusing hospital admission. Friends drove the inspector from the house.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Key Events</strong></td>
+                <td>
+                    • Summer 1865: Water famine grips Belfast. Reservoirs very low or empty; water often green and unfit for consumption. Joseph Watt reports fever rise "directly related to the shortage of water."<br>
+                    • September 1865: Fever epidemic with over 450 cases. Registrar General records 334 fever deaths during 1865, the third highest cause of mortality in Belfast that year.<br>
+                    • August 1865: Poor Law Commissioners issue cholera circular. Belfast guardians discuss preparations. Charles Ward reports open sewers and residents without water for a fortnight.<br>
+                    • 27 July 1866: Cholera re-enters Ireland through Dublin and Wexford, associated with Liverpool maritime traffic.<br>
+                    • 7 August 1866: Sanitary Act confers new powers on dispensary committees to act as sanitary authorities. Boards of guardians can implement regulations without central approval.<br>
+                    • 8 August 1866: First confirmed Belfast case at McGivern's lodging house, Bridge End, Ballymacarrett.<br>
+                    • 11 August 1866: Special corporation meeting; Joseph Lee (in absence) urges sanitary improvements regardless of expense. Henry McCormac publishes cholera advice in the Belfast Newsletter.<br>
+                    • 14 August 1866: Corporation delegates full sanitary powers to Sanitary Committee. Hugh Norwood authorised to appoint extra inspectors and labourers.<br>
+                    • 11 September 1866: Dispensary committee resolves guardians must address Blackstaff and Pound Burn. 2,000 copies of cholera regulations to be printed and distributed throughout the town. Patrick Wilson dies at Bow Street after refusing hospital admission.<br>
+                    • December 1866: Cholera outbreak over.<br>
+                    • January 1867: Tierney calls workhouse cholera reports "fabrications," claiming they were "drawn up by a boy that was not qualified to give an opinion." Gaffikin complains exaggerated accounts created public alarm.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- KEY INDIVIDUALS SECTION -->
+<div class="info-section">
+    <h3>Key Individuals</h3>
+    <ul class="info-list">
+        <li><strong>Dr Samuel Browne:</strong> Central medical authority. Former Medical Officer of Health.</li>
+        <li><strong>Dr Henry McCormac:</strong> Leading cholera physician.</li>
+        <li><strong>Dr Seaton Reid:</strong> Physician to Union Hospital. Compiles official statistics.</li>
+        <li><strong>Joseph Watt:</strong> Relieving Officer for Board of Guardians. Raises concerns regarding water shortages.</li>
+        <li><strong>Samuel Tierney:</strong> Guardian and civic agitator. Consistently denies Asiatic cholera exists.</li>
+        <li><strong>Thomas Gaffikin:</strong> Guardian and staunch critic of medical officers' returns.</li>
+        <li><strong>Hugh Norwood:</strong> Sanitary inspector.</li>
+        <li><strong>James Montgomery:</strong> Borough surveyor. During 1866 collaborates with Joseph Bazalgette on borough drainage scheme.</li>
+        <li><strong>David Taylor:</strong> Incoming mayor, praises predecessor's actions in December 1866.</li>
+    </ul>
+</div>
+
+<!-- KEY LOCATIONS SECTION -->
+<div class="info-section">
+    <h3>Key Locations</h3>
+    <ul class="info-list">
+        <li>Bridge End (McGivern's lodging house), Ballymacarrett</li>
+        <li>Bow Street (Falls Road)</li>
+        <li>Torrens Row (Hercules Street)</li>
+        <li>Hercules Street</li>
+        <li>Carrick Hill</li>
+        <li>Smithfield Court</li>
+        <li>Cullingtree Road</li>
+        <li>Shields Court</li>
+        <li>Killen Street</li>
+        <li>Blackstaff River corridor</li>
+    </ul>
+</div>
+
+<!-- SCIENTIFIC CONTEXT SECTION -->
+<div class="scientific-context">
+    <h3>Scientific Context: Discovery of the Cholera Pathogen</h3>
+    <p>• Although later credited to Robert Koch, the cholera bacillus had been identified decades earlier by Filippo Pacini of Florence, who described <em>"miriadi di vibrioni"</em> in cholera cases from the 1850s onward.</p>
+    <p>• His work was largely ignored until the twentieth century, when its priority over Koch's discovery was recognised.</p>
 </div>
 
 <!-- COPYRIGHT NOTICE BOX -->
