@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Public Health Timeline: Belfast, 1800–1878 | Cholera & Civic Belfast</title>
+<title>Public Health Timeline | Cholera & Civic Belfast</title>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMHEBKG15E"></script>
 <script>
@@ -11,558 +11,64 @@
   gtag('js', new Date());
   gtag('config', 'G-VMHEBKG15E');
 </script>
+<!-- Include same CSS as your other pages -->
 <style>
-body {
-    font-family: Georgia, serif;
-    background-color: #f4f1e8;
-    margin: 0;
-    color: #1f1f1f;
-    line-height: 1.7;
-}
-
-/* HEADER */
-header {
-    text-align: center;
-    padding: 50px 20px 20px;
-    background: #2f4f3e;
-    color: #f4f1e8;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.3em;
-}
-
-.subtitle {
-    font-style: italic;
-    margin-top: 10px;
-    color: #e8e2d3;
-    font-size: 1.1em;
-}
-
-/* NAV */
-nav {
-    margin-top: 25px;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.menu > li {
-    position: relative;
-}
-
-.menu a {
-    color: #f4f1e8;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.95em;
-    transition: color 0.2s ease;
-}
-
-.menu a:hover {
-    color: #e8e2d3;
-}
-
-/* DROPDOWNS CORE */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #f4f1e8;
-    border: 1px solid #d8d2c3;
-    min-width: 240px;
-    z-index: 999;
-    padding: 10px 0;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 8px 15px;
-    color: #2f4f3e;
-    text-decoration: none;
-    font-weight: normal;
-    transition: background 0.2s ease;
-}
-
-.dropdown-content a:hover {
-    background: #e8e2d3;
-    color: #1f4f3e;
-}
-
-.menu > li.dropdown:hover > .dropdown-content {
-    display: block;
-}
-
-/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
-.dropdown > a:focus {
-    outline: 2px solid #e8e2d3;
-    outline-offset: 4px;
-    border-radius: 2px;
-}
-
-.dropdown-content a:focus {
-    background: #e8e2d3;
-    outline: none;
-}
-
-/* Keep dropdown open when focusing inside */
-.dropdown:focus-within .dropdown-content {
-    display: block;
-}
-
-/* HERO BANNER (REDUCED SIZE) */
-.hero-banner {
-    width: 100%;
-    max-height: 250px;
-    overflow: hidden;
-    margin: 0;
-}
-
-.hero-banner img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-/* PAGE TITLE */
-.page-title {
-    color: #2f4f3e;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    border-left: 5px solid #2f4f3e;
-    padding-left: 20px;
-}
-
-/* INTRO TEXT */
-.intro-text {
-    margin: 20px 0 30px 0;
-    line-height: 1.7;
-}
-
-/* TABLE CONTAINER - SCROLLABLE ON MOBILE */
-.table-container {
-    overflow-x: auto;
-    margin: 30px 0;
-    border-radius: 4px;
-}
-
-/* TIMELINE TABLE */
-.timeline-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #faf8f3;
-    font-size: 0.95em;
-    min-width: 600px;
-}
-
-.timeline-table th {
-    background: #2f4f3e;
-    color: #f4f1e8;
-    padding: 12px 15px;
-    text-align: left;
-    font-weight: bold;
-    border: 1px solid #4a6f5e;
-}
-
-.timeline-table td {
-    padding: 12px 15px;
-    border: 1px solid #d8d2c3;
-    vertical-align: top;
-}
-
-.timeline-table tr:nth-child(even) {
-    background: #f4f1e8;
-}
-
-.timeline-table tr:hover {
-    background: #e8e2d3;
-}
-
-/* SECTION BOXES */
-.info-section {
-    background: #ffffff;
-    border: 1px solid #d8d2c3;
-    padding: 20px;
-    margin: 30px 0;
-    border-radius: 4px;
-}
-
-.info-section h3 {
-    color: #2f4f3e;
-    margin-top: 0;
-    border-bottom: 1px solid #d8d2c3;
-    padding-bottom: 8px;
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 12px;
-}
-
-.info-list li {
-    padding: 5px 0;
-    border-bottom: 1px dotted #d8d2c3;
-}
-
-.info-list li strong {
-    color: #2f4f3e;
-}
-
-/* COPYRIGHT NOTICE BOX */
-.copyright-notice {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 40px 0 20px 0;
-    font-size: 0.85em;
-    border-radius: 3px;
-}
-
-.copyright-notice p {
-    margin: 0;
-}
-
-.copyright-notice a {
-    color: #2f4f3e;
-    text-decoration: none;
-    border-bottom: 1px dotted #2f4f3e;
-}
-
-.copyright-notice a:hover {
-    border-bottom: 1px solid #2f4f3e;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid #d8d2c3;
-    margin-top: 60px;
-    color: #555;
-    font-size: 0.9em;
-}
-
-footer a {
-    color: #555;
-    text-decoration: none;
-    border-bottom: 1px dotted #bbb;
-}
-
-footer a:hover {
-    color: #2f4f3e;
-    border-bottom-color: #2f4f3e;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
-
-    .menu > li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown-content {
-        position: static;
-        display: none;
-        border: none;
-        box-shadow: none;
-        background: #e8e2d3;
-        margin-top: 5px;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
-
-    .dropdown.open .dropdown-content {
-        display: block;
-    }
-
-    .page-title {
-        font-size: 1.6em;
-        padding-left: 15px;
-    }
-
-    .hero-banner {
-        max-height: 180px;
-    }
-
-    .hero-banner img {
-        height: 180px;
-    }
-
-    .info-list {
-        grid-template-columns: 1fr;
-    }
-}
+/* Add your existing styles here */
 </style>
 </head>
 
 <body>
 
 <header>
-
-<h1>Cholera & Civic Belfast</h1>
-
-<div class="subtitle">
-Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
-</div>
-
-<nav>
-<ul class="menu">
-
-    <li><a href="index.html">Home</a></li>
-
-    <!-- CHOLERA DROPDOWN -->
-    <li class="dropdown">
-        <a href="cholera.html">Cholera</a>
-        <div class="dropdown-content">
-            <a href="global-pandemics.html">Global Pandemics 1817–1866</a>
-            <span style="display: block; padding: 8px 15px 4px 15px; color: #8a9b8f; font-size: 0.85em; font-weight: bold; letter-spacing: 0.5px;">BELFAST EPIDEMICS</span>
-            <a href="belfast-timeline-1832.html">1832 Timeline</a>
-            <a href="belfast-timeline-1848-49.html">1848-49 Timeline</a>
-            <a href="belfast-timeline-1854.html">1854 Timeline</a>
-            <a href="belfast-timeline-1866.html">1866 Timeline</a>
-        </div>
-    </li>
-
-    <!-- PUBLIC HEALTH -->
-    <li class="dropdown">
-        <a href="Public-health.html">Public Health</a>
-        <div class="dropdown-content">
-            <a href="public-health-timeline.html">Public Health Timeline</a>
-            <a href="Public-health.html" title="Material on water supply, sanitation and civic reform will be expanded over time.">About this Section →</a>
-        </div>
-    </li>
-
-    <!-- PEOPLE -->
-    <li class="dropdown">
-        <a href="People.html">People</a>
-        <div class="dropdown-content">
-            <a href="people/malcolm.html">Dr Andrew G. Malcolm</a>
-            <a href="People.html#about-section" title="More biographies will be added as research progresses">About this Section →</a>
-        </div>
-    </li>
-
-    <!-- STORIES -->
-    <li class="dropdown">
-        <a href="Stories.html">Stories</a>
-        <div class="dropdown-content">
-            <a href="Stories.html">Stories Archive</a>
-        </div>
-    </li>
-
-    <!-- RESEARCH -->
-    <li class="dropdown">
-        <a href="Research.html">Research</a>
-        <div class="dropdown-content">
-            <a href="thesis.html">PhD Thesis</a>
-            <a href="sources.html">Sources</a>
-        </div>
-    </li>
-
-    <!-- ABOUT -->
-    <li class="dropdown">
-        <a href="about.html">About</a>
-        <div class="dropdown-content">
-            <a href="about-project.html">About the Resource</a>
-            <a href="about-author.html">About the Author</a>
-            <a href="contact.html">Contact & Collaboration</a>
-        </div>
-    </li>
-
-</ul>
-</nav>
-
+    <h1>Cholera & Civic Belfast</h1>
+    <div class="subtitle">Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast</div>
+    <nav>
+        <div id="menu-container"></div>
+    </nav>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading menu:', error));
+    </script>
 </header>
-
-<!-- HERO BANNER IMAGE -->
-<div class="hero-banner">
-    <img src="images/public-health-banner.jpg" alt="Public Health in Nineteenth-Century Belfast">
-</div>
 
 <div class="container">
 
+<!-- BACK TO PUBLIC HEALTH BUTTON -->
 <div class="back-links" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
-    <a href="Public-health.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Back to Public Health</a>
+    <a href="public-health.html" style="color: #2f4f3e; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #2f4f3e;">← Back to Public Health</a>
 </div>
 
 <h1 class="page-title">Public Health Timeline: Belfast, 1800–1878</h1>
 
+<!-- INTRO TEXT -->
 <div class="intro-text">
-    <p>This timeline traces the development of public health in nineteenth-century Belfast and the efforts made to combat disease, poor sanitation, and urban overcrowding. It follows the journey from early philanthropic efforts and piecemeal responses to poor sanitation, through recurring fever epidemics and the devastating impact of cholera, to the arrival of the Poor Law and the eventual consolidation of sanitary powers under the 1878 Public Health Act. Progress was slow and often driven by crisis. Yet each emergency pushed Belfast towards a more systematic and coordinated approach to public health.</div>
+    <p>This timeline traces some of the key developments in Belfast's public health history across the nineteenth century. It follows the journey from early philanthropic efforts and piecemeal responses to poor sanitation, through recurring fever epidemics and the devastating impact of cholera, to the arrival of the Poor Law and the eventual consolidation of sanitary powers under the 1878 Public Health Act. Progress was slow and often driven by crisis. Yet each emergency pushed Belfast towards a more systematic and coordinated approach to public health.</p>
+</div>
 
-<!-- SCROLLABLE TABLE -->
+<!-- TIMELINE TABLE -->
 <div class="table-container">
     <table class="timeline-table">
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Official Chronology</strong></td>
-                <td>
-                    <strong>1774–1800:</strong> Early philanthropic provision; Poorhouse (1774) and Dispensary (1792).<br>
-                    <strong>1800–1820s:</strong> Piecemeal by-laws; fever epidemics; Blackstaff pollution emerges.<br>
-                    <strong>1831–1834:</strong> First cholera epidemic; Board of Health formed pre-emptively.<br>
-                    <strong>1838–1841:</strong> Irish Poor Law; Workhouse opens with beds for sick.<br>
-                    <strong>1845–1849:</strong> Famine fevers and second cholera; Sanitary Committee formed.<br>
-                    <strong>1851–1855:</strong> Medical Charities Act; third cholera epidemic.<br>
-                    <strong>1855–1865:</strong> Chancery Suit paralyses reform.<br>
-                    <strong>1865–1866:</strong> Water famine and final cholera epidemic.<br>
-                    <strong>1874–1878:</strong> Public Health Acts consolidate sanitary powers.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Early Philanthropic and Civic Provision (1774–1820s)</strong></td>
-                <td>
-                    <strong>1774</strong> – Belfast Poorhouse opens; Belfast Charitable Society oversees operation.<br>
-                    <strong>1792</strong> – Belfast Dispensary founded, offering free medical care to the poor.<br>
-                    <strong>1800</strong> – Belfast Police Act creates Commissioners of Police for street cleaning and nuisance removal. Overlapping jurisdictions limit effective sanitary progress.<br>
-                    <strong>1800–1820s</strong> – Rapid population growth driven by industrialisation creates overcrowding, inadequate housing, and worsening sanitation.<br>
-                    <strong>1816–1819</strong> – Severe fever epidemics affect an estimated 7,400 people. Fever Hospital opens in Frederick Street (1817).<br>
-                    <strong>1818–1819</strong> – Fever Hospital (Ireland) Act and Contagious Diseases (Ireland) Act establish early state intervention in Irish public health.<br>
-                    <strong>1820s</strong> – Blackstaff River becomes increasingly polluted with industrial and domestic waste, emerging as a major public health hazard.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Fever, Cholera, and Civic Response (1831–1838)</strong></td>
-                <td>
-                    <strong>1831</strong> – Belfast Board of Health formed pre-emptively. Town divided into six medical districts.<br>
-                    <strong>1832</strong> – First cholera epidemic: 2,831 cases, 418 deaths (14.8% mortality). Mortality lower than Dublin (31%) and Cork (33%). Dr Henry McCormac introduces strict isolation policy at the cholera hospital.<br>
-                    <strong>1834</strong> – Cholera hospital closes; emergency sanitary measures fade.<br>
-                    <strong>1838</strong> – Irish Poor Law introduced; first structured system of state welfare and institutional health intervention.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Poor Law, Town Improvement, and Famine Crisis (1838–1849)</strong></td>
-                <td>
-                    <strong>1841</strong> – Belfast Workhouse opens. Guardians set aside beds for the sick, departing from Poor Law policy.<br>
-                    <strong>1845–1847</strong> – Town Improvement Acts expand powers for paving, drainage, sewerage, and nuisance removal.<br>
-                    <strong>1845–1849</strong> – Famine migration drives severe outbreaks of fever and dysentery.<br>
-                    <strong>1847</strong> – Approximately 2,500 Belfast residents die from fever and dysentery.<br>
-                    <strong>1848</strong> – Dr Andrew Malcolm's report on Belfast's sanitary condition leads to formation of the Belfast Sanitary Committee.<br>
-                    <strong>1848–1849</strong> – House-to-house inspection and cleansing programmes introduced.<br>
-                    <strong>1848–1849</strong> – Second cholera epidemic: 3,538 cases, 1,163 deaths.<br>
-                    <strong>1849</strong> – Public concern focused on persistent flooding and contamination associated with the Blackstaff.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Medical Charities, Sanitary Reform, and Failures (1850s)</strong></td>
-                <td>
-                    <strong>1851</strong> – Medical Charities Act reorganises Ireland's dispensary system.<br>
-                    <strong>1852</strong> – Malcolm's <em>The Sanitary State of Belfast</em> catalogues urban deficiencies. Of 12,902 houses, 4,047 lack rear accommodation, 4,326 have no drainage, and 6,179 are without privies. Malcolm estimated life expectancy at birth in the poorest districts at approximately nine years, reflecting extreme infant and childhood mortality.<br>
-                    <strong>1852</strong> – McCormac condemns the Blackstaff as a polluted open sewer, "worse than the London Fleet."<br>
-                    <strong>1853</strong> – Rev. William Murphy O'Hanlon publishes <em>Walks Among the Poor of Belfast</em>. Rev. Anthony McIntyre's diary records conditions among the city's poorest inhabitants.<br>
-                    <strong>1853–1855</strong> – Third cholera epidemic: 1,871 cases, 677 deaths (36% mortality).<br>
-                    <strong>1855</strong> – John Rea's Chancery Suit exposes major financial irregularities and contributes to a prolonged slowdown in sanitary reform.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Water Famine and Final Cholera (1860s)</strong></td>
-                <td>
-                    <strong>1864</strong> – Sanitary administration strengthened; permanent inspector appointed. Samuel Browne becomes Medical Officer of Health.<br>
-                    <strong>1865</strong> – Severe drought causes a major water famine. Reservoirs fail and contaminated water is widely used.<br>
-                    <strong>1865</strong> – Registrar General records 334 fever deaths.<br>
-                    <strong>1865</strong> – Joseph Watt links rising fever mortality directly to water shortage and contaminated supply.<br>
-                    <strong>1866</strong> – Sanitary Act expands local authority powers and formalises dispensary-based sanitary administration.<br>
-                    <strong>8 August 1866</strong> – First confirmed cholera case recorded at Bridge End, Ballymacarrett.<br>
-                    <strong>1866</strong> – Only 28 cholera cases and 15 deaths recorded in Belfast.<br>
-                    <strong>11 September 1866</strong> – Authorities address continuing nuisances associated with the Blackstaff and Pound Burn.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Consolidation: Public Health Reform (1874–1878)</strong></td>
-                <td>
-                    <strong>1872</strong> – Local Government Board for Ireland established.<br>
-                    <strong>1874</strong> – Public Health (Ireland) Act introduces Urban Sanitary Authorities.<br>
-                    <strong>1878</strong> – Public Health (Ireland) Act consolidates powers relating to drainage, sewerage, housing, water supply, and disease prevention.
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Post-1878 Developments</strong></td>
-                <td>
-                    <strong>1879</strong> – Public washhouses open at Peter's Hill, long advocated by Andrew Malcolm.<br>
-                    <strong>1880</strong> – Samuel Browne becomes Belfast's first Medical Superintendent of Health.<br>
-                    <strong>1880–1881</strong> – Hercules Street clearance creates Royal Avenue and removes a major overcrowded district.<br>
-                    <strong>1880s–1890s</strong> – Progressive culverting of the Blackstaff as part of wider sewerage and urban improvement schemes. Further schemes were carried out in the twentieth and twenty-first centuries.<br>
-                    <strong>1889–1890</strong> – Infectious Diseases (Notification) and (Prevention) Acts strengthen disease surveillance and control.<br>
-                    <strong>1901</strong> – Luke Livingston Macassey completes first stage of the Mourne water scheme, supplying Belfast with 10 million gallons per day.
-                </td>
-            </tr>
-        </tbody>
+        <!-- Your timeline content here -->
     </table>
 </div>
 
-<!-- KEY INDIVIDUALS SECTION -->
+<!-- KEY INDIVIDUALS -->
 <div class="info-section">
     <h3>Key Individuals</h3>
-    <ul class="info-list">
-        <li><strong>Dr Henry McCormac</strong> – Leading cholera physician. Advocated strict isolation and repeatedly condemned the Blackstaff as a major sanitary hazard.</li>
-        <li><strong>Dr Andrew Malcolm</strong> – Belfast's most influential sanitary reformer. Author of <em>The Sanitary State of Belfast</em> (1852). Campaigned for baths, washhouses, drainage reform, and housing improvement.</li>
-        <li><strong>Dr Samuel Browne</strong> – Medical Officer of Health who expanded sanitary inspection and later became Belfast's first Medical Superintendent of Health.</li>
-        <li><strong>Rev. William Murphy O'Hanlon</strong> – Author of <em>Walks Among the Poor of Belfast</em> (1853), providing a vivid contemporary account of urban poverty.</li>
-        <li><strong>Rev. Anthony McIntyre</strong> – Unitarian missionary whose diary documented conditions among Belfast's poor.</li>
-        <li><strong>John Rea</strong> – Solicitor whose Chancery Suit exposed financial mismanagement but contributed to institutional paralysis.</li>
-        <li><strong>Joseph Watt</strong> – Relieving Officer who documented the relationship between water shortages and disease in 1865.</li>
-        <li><strong>James Montgomery</strong> – Borough surveyor involved in drainage and sanitary improvement schemes.</li>
-        <li><strong>Luke Livingston Macassey</strong> – Civil engineer responsible for development of Belfast's modern water supply system.</li>
-    </ul>
+    <!-- Your key individuals list here -->
 </div>
 
-<!-- KEY LOCATIONS SECTION -->
+<!-- KEY LOCATIONS -->
 <div class="info-section">
     <h3>Key Locations</h3>
-    <ul class="info-list">
-        <li><strong>Blackstaff River</strong> – Major polluted watercourse running through industrial Belfast and repeatedly identified as a public health hazard.</li>
-        <li><strong>Pound Burn</strong> – Polluted tributary contributing to sanitation problems in working-class districts.</li>
-        <li><strong>River Farset</strong> – River from which Belfast derives its name; largely culverted during the nineteenth century.</li>
-        <li><strong>River Lagan</strong> – Principal river of Belfast, heavily polluted during industrial expansion.</li>
-        <li><strong>Millfield</strong> – Densely populated and notoriously unsanitary area of central Belfast.</li>
-        <li><strong>Hercules Street</strong> – Dense working-class district cleared during creation of Royal Avenue (1880–81).</li>
-        <li><strong>Frederick Street</strong> – Site of Fever Hospital and temporary cholera treatment facilities. Later became the Belfast General Hospital (1847), then the Belfast Royal Hospital (1875), and in 1903 relocated to the Grosvenor Road and was renamed the Royal Victoria Hospital.</li>
-        <li><strong>Lisburn Road</strong> – Site of Union Workhouse and Union Fever Hospital.</li>
-        <li><strong>Quay Lane</strong> – Location of the first unconfirmed case of cholera in Belfast in February 1832.</li>
-        <li><strong>Smithfield Court</strong> – Site of first cluster of cholera cases in April 1854.</li>
-        <li><strong>Grosvenor Road</strong> – Belfast Lunatic Asylum. Site of first cholera case in November 1848.</li>
-        <li><strong>Bridge End, Ballymacarrett</strong> – Location of Belfast's first confirmed cholera case in 1866.</li>
-    </ul>
+    <!-- Your key locations list here -->
 </div>
 
-<!-- COPYRIGHT NOTICE BOX -->
+<!-- COPYRIGHT NOTICE -->
 <div class="copyright-notice">
     <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
 </div>
@@ -570,10 +76,11 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 </div>
 
 <footer>
-<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
-<p><a href="licence.html">Copyright & Licence</a></p>
+    <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+    <p><a href="licence.html">Copyright & Licence</a></p>
 </footer>
 
+<!-- Mobile dropdown toggle script -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const dropdowns = document.querySelectorAll(".dropdown > a");
