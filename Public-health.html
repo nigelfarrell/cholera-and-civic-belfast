@@ -102,7 +102,6 @@ nav {
 .menu > li.dropdown:hover > .dropdown-content {
     display: block;
 }
-
 /* KEYBOARD NAVIGATION - FOCUS INDICATORS */
 .dropdown > a:focus {
     outline: 2px solid #e8e2d3;
@@ -121,7 +120,7 @@ nav {
 
 /* CONTENT */
 .container {
-    max-width: 1100px;
+    max-width: 950px;
     margin: auto;
     padding: 40px 20px;
 }
@@ -135,85 +134,70 @@ nav {
     padding-left: 20px;
 }
 
-/* CARD */
-.card {
-    background: #ffffff;
-    border: 1px solid #d8d2c3;
-    padding: 25px 30px;
-    margin: 30px 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+/* CARDS GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
 }
 
-.card h2 {
+.info-card {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4px;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.info-card h2 {
     color: #2f4f3e;
     margin-top: 0;
-    border-bottom: 1px solid #d8d2c3;
-    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    border-left: 3px solid #2f4f3e;
+    padding-left: 12px;
 }
 
-.card p {
-    margin: 10px 0;
+.info-card p {
+    margin: 12px 0;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
 }
 
-/* CLICKABLE CARD */
-.clickable-card {
-    transition: background 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-.clickable-card:hover {
-    background: #f4f1e8;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.clickable-card .card-arrow {
-    margin-top: 15px;
-    font-weight: bold;
+.info-card a {
+    display: inline-block;
+    margin-top: 12px;
     color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.info-card a:hover {
+    border-bottom-color: #2f4f3e;
 }
 
 /* DEVELOPMENT BOX */
 .development-box {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 20px 25px;
-    margin: 30px 0 20px 0;
-    border-radius: 3px;
+    background: #ffffff;
+    border: 1px solid #d8d2c3;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 20px;
 }
 
 .development-box h2 {
     color: #2f4f3e;
     margin-top: 0;
-    font-size: 1.2em;
-}
-
-.development-box p {
-    margin: 5px 0;
-}
-
-/* COPYRIGHT NOTICE */
-.copyright-notice {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 40px 0 20px 0;
-    font-size: 0.85em;
-    border-radius: 3px;
-}
-
-.copyright-notice p {
-    margin: 0;
-}
-
-.copyright-notice a {
-    color: #2f4f3e;
-    text-decoration: none;
-    border-bottom: 1px dotted #2f4f3e;
-}
-
-.copyright-notice a:hover {
-    border-bottom: 1px solid #2f4f3e;
 }
 
 /* FOOTER */
@@ -273,12 +257,8 @@ footer a:hover {
         padding-left: 15px;
     }
 
-    .card {
-        padding: 15px 18px;
-    }
-
-    .development-box {
-        padding: 15px 18px;
+    .info-grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -312,29 +292,30 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
 
 <h1 class="page-title">Public Health</h1>
 
-<!-- INTRO TEXT -->
-<p style="margin-bottom: 30px; font-size: 1.1em;">
-    This section explores the development of public health in nineteenth-century Belfast, focusing on sanitation reform,
-    civic administration, and the urban infrastructure that shaped the health of the city's population.
-</p>
+<!-- CARDS GRID -->
+<div class="info-grid">
 
-<!-- PUBLIC HEALTH TIMELINE CARD (CLICKABLE) -->
-<div class="card clickable-card" onclick="window.location.href='public-health-timeline.html';">
-    <h2>Public Health Timeline: Belfast, 1800–1878</h2>
-    <p>This timeline traces some of the key developments in Belfast's public health history across the nineteenth century. It follows the journey from early philanthropic efforts and piecemeal responses to poor sanitation, through recurring fever epidemics and the devastating impact of cholera, to the arrival of the Poor Law and the eventual consolidation of sanitary powers under the 1878 Public Health Act. Progress was slow and often driven by crisis. Yet each emergency pushed Belfast towards a more systematic and coordinated approach to public health.</p>
-    <p class="card-arrow">Click to view the full timeline →</p>
+    <!-- Timeline Card -->
+    <div class="info-card">
+        <h2>Public Health Timeline</h2>
+        <p>A detailed timeline tracing the development of public health in Belfast from 1800 to 1878, covering fever epidemics, cholera outbreaks, sanitary reform, and legislative change.</p>
+        <a href="public-health-timeline.html">View Timeline →</a>
+    </div>
+
 </div>
 
-<!-- DEVELOPMENT SECTION (KEPT FOR FUTURE CONTENT) -->
+<!-- DEVELOPMENT BOX -->
 <div class="development-box">
     <h2>Section in Development</h2>
-    <p>This section will expand as research progresses, focusing on sanitation reform, civic administration, and the development of public health infrastructure in nineteenth-century Belfast.</p>
-    <p>Additional case studies, documents, and thematic essays will be added over time.</p>
-</div>
 
-<!-- COPYRIGHT NOTICE -->
-<div class="copyright-notice">
-    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="licence.html">Full licence details →</a></p>
+    <p>
+        This section will expand as research progresses, focusing on sanitation reform,
+        civic administration, and the development of public health infrastructure in nineteenth-century Belfast.
+    </p>
+
+    <p>
+        Additional case studies, documents, and thematic essays will be added over time.
+    </p>
 </div>
 
 </div>
