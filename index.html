@@ -203,6 +203,7 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-bottom: 40px;
+    align-items: stretch; /* NEW — makes all cards the same height */
 }
 
 .home-card {
@@ -211,6 +212,8 @@ nav {
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 4px;
+    display: flex; /* NEW */
+    flex-direction: column; /* NEW */
 }
 
 .home-card:hover {
@@ -232,6 +235,7 @@ nav {
     color: #555;
     font-size: 0.95em;
     line-height: 1.6;
+    flex: 1; /* NEW — pushes button to bottom */
 }
 
 .home-card a {
@@ -242,6 +246,7 @@ nav {
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
+    align-self: flex-start; /* NEW — keeps button left-aligned */
 }
 
 .home-card a:hover {
