@@ -1,35 +1,37 @@
-name: Generate XML Sitemap
+name: Generate Sitemap
 
 on:
   push:
-    branches: [ main, master ]
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    branches: [ main ]
 
 jobs:
   sitemap_job:
     runs-on: ubuntu-latest
-    name: Generate a sitemap
+    name: Generate Sitemap
 
     steps:
     - name: Checkout the repo
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0 
 
     - name: Generate the sitemap
-      id: sitemap
-      uses: cicirello/generate-sitemap@v1
+      uses: jakejarvis/sitemap-generator-action@v1
       with:
-        base-url-path: https://choleraandcivicbelfast.com/
+        base-url: https://choleraandcivicbelfast.com/
+        path: ./
+        exclude: >
+          /404.html
+          /nav.html
+          /page-template.html
+          /blog/article-template.html
+          /images/
+        include-pdf: true
+        change-frequency: monthly
+        priority: '0.8'
 
     - name: Commit and push the sitemap
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git pull origin main --rebase
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add sitemap.xml
-        git diff --staged --quiet || git commit -m "Auto-generate sitemap"
+        git diff --staged --quiet || git commit -m "Automated sitemap update"
         git push
