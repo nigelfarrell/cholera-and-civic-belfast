@@ -148,6 +148,8 @@ nav {
     padding: 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
 }
 
 .info-card:hover {
@@ -169,6 +171,7 @@ nav {
     color: #555;
     font-size: 0.95em;
     line-height: 1.6;
+    flex: 1;
 }
 
 .info-card a {
@@ -179,14 +182,34 @@ nav {
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
+    align-self: flex-start;
 }
 
 .info-card a:hover {
     border-bottom-color: #2f4f3e;
 }
 
-/* DEVELOPMENT BOX */
-.development-box {
+/* PDF BUTTON INSIDE CARD */
+.pdf-button {
+    display: inline-block;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    transition: background 0.2s ease;
+    margin-top: 8px;
+    border: none;
+}
+
+.pdf-button:hover {
+    background: #3f6a52;
+}
+
+/* INFO BOX (replaces development box) */
+.info-box {
     background: #ffffff;
     border: 1px solid #d8d2c3;
     padding: 30px;
@@ -195,9 +218,15 @@ nav {
     margin-top: 20px;
 }
 
-.development-box h2 {
-    color: #2f4f3e;
-    margin-top: 0;
+.info-box p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.info-box .note {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
 }
 
 /* FOOTER */
@@ -302,20 +331,26 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
         <a href="public-health-timeline.html">View Timeline →</a>
     </div>
 
+    <!-- Cleaning Up Belfast Card (NEW) -->
+    <div class="info-card">
+        <h2>Cleaning Up Belfast</h2>
+        <p>An exploration of the sanitary condition of nineteenth-century Belfast, the challenges of urban waste, and the slow development of civic cleansing and public health infrastructure.</p>
+        <a href="blog/cleaning-up-belfast.html">Read Article →</a>
+        <a href="blog/cleaning-up-belfast.pdf" target="_blank" class="pdf-button">📄 Download PDF</a>
+    </div>
+
 </div>
 
-<!-- DEVELOPMENT BOX -->
-<div class="development-box">
-    <h2>Section in Development</h2>
-
+<!-- INFO BOX (no heading, just the text) -->
+<div class="info-box">
     <p>
         This section will expand as research progresses, focusing on sanitation reform,
         civic administration, and the development of public health infrastructure in nineteenth-century Belfast.
     </p>
-
     <p>
-        Additional case studies, documents, and thematic essays will be added over time.
+        Additional case studies will be added over time.
     </p>
+    <p class="note">If you have a suggestion for a topic or source, please get in touch.</p>
 </div>
 
 </div>
