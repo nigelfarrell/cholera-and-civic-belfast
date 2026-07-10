@@ -177,13 +177,24 @@ nav {
     text-align: center;
 }
 
-/* Both images - same size square with rounded corners */
-.image-container .image-box img {
+/* Portrait - centered */
+.image-container .image-box:first-child img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;        /* ← Forces both to be square */
-    object-fit: cover;        /* ← Crops to fill */
-    border-radius: 8px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 50%;
+    border: 2px solid #2f4f3e;
+    display: block;
+}
+
+/* Bust - face must be visible */
+.image-container .image-box:last-child img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top 30% center;
+    border-radius: 50%;
     border: 2px solid #2f4f3e;
     display: block;
 }
@@ -200,8 +211,7 @@ nav {
     content: "";
     display: block;
     clear: both;
-}
-.further-reading h3 {
+}.further-reading h3 {
     color: #2f4f3e;
     margin-top: 0;
     font-size: 1.2em;
