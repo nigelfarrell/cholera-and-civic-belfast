@@ -177,11 +177,13 @@ nav {
     text-align: center;
 }
 
-/* Both images - square with slight rounding */
+/* Both images - same size square with rounded corners */
 .image-container .image-box img {
     width: 100%;
     height: auto;
-    border-radius: 8px;        /* Slightly rounded corners */
+    aspect-ratio: 1/1;        /* ← Forces both to be square */
+    object-fit: cover;        /* ← Crops to fill */
+    border-radius: 8px;
     border: 2px solid #2f4f3e;
     display: block;
 }
@@ -198,14 +200,7 @@ nav {
     content: "";
     display: block;
     clear: both;
-}/* FURTHER READING SECTION */
-.further-reading {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #d8d2c3;
-    clear: both;
 }
-
 .further-reading h3 {
     color: #2f4f3e;
     margin-top: 0;
