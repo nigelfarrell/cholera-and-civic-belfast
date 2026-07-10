@@ -42,9 +42,82 @@ h1 {
     font-size: 1.1em;
 }
 
-/* NAV */
+/* ===== NAVIGATION STYLES ===== */
 nav {
     margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 240px;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.menu > li.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+/* KEYBOARD NAVIGATION - FOCUS INDICATORS */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+.dropdown:focus-within .dropdown-content {
+    display: block;
 }
 
 /* CONTAINER */
@@ -111,6 +184,11 @@ nav {
     border: 2px solid #2f4f3e;
     object-fit: cover;
     aspect-ratio: 1/1;
+}
+
+/* Adjust the second image (bust) to show the face */
+.image-container .image-box:last-child img {
+    object-position: top 20% center;
 }
 
 .image-container .image-box .caption {
@@ -226,6 +304,35 @@ footer a:hover {
     .page-subtitle {
         font-size: 1em;
         padding-left: 15px;
+    }
+
+    /* Mobile menu */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
     }
 }
 </style>
