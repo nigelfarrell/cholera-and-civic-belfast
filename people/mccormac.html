@@ -186,9 +186,14 @@ nav {
     aspect-ratio: 1/1;
 }
 
-/* Adjust the second image (bust) to show the face */
-.image-container .image-box:last-child img {
-    object-position: bottom 30% center;
+/* Bust image: show the full image inside the circle */
+.bust-image {
+    object-fit: contain;
+    background: #f4f1e8;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #2f4f3e;
 }
 
 .image-container .image-box .caption {
