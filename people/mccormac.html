@@ -177,27 +177,13 @@ nav {
     text-align: center;
 }
 
-/* Default image (portrait) */
+/* Both images - square with slight rounding */
 .image-container .image-box img {
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 8px;        /* Slightly rounded corners */
     border: 2px solid #2f4f3e;
-    object-fit: cover;
-    aspect-ratio: 1/1;  /* This stays for portrait */
-}
-
-/* Bust image: show the full image inside the circle */
-.image-container .image-box .bust-image {
-    object-fit: contain !important;
-    background: #f4f1e8;
-    padding: 8px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 2px solid #2f4f3e;
-    aspect-ratio: auto;  /* ADD THIS — removes the square constraint */
-    height: auto;        /* ADD THIS — allows natural height */
-    width: 100%;
+    display: block;
 }
 
 .image-container .image-box .caption {
@@ -212,8 +198,7 @@ nav {
     content: "";
     display: block;
     clear: both;
-}
-/* FURTHER READING SECTION */
+}/* FURTHER READING SECTION */
 .further-reading {
     margin-top: 40px;
     padding-top: 20px;
