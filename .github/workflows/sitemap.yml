@@ -9,24 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate Sitemap
 
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
     steps:
     - name: Checkout the repo
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Generate the sitemap
-      uses: jakejarvis/sitemap-generator-action@v1
+      uses: cicirello/generate-sitemap@v1
       with:
-        base-url: https://choleraandcivicbelfast.com/
-        path: ./
-        exclude: >
+        base-url-path: https://choleraandcivicbelfast.com/
+        exclude-paths: >
           /404.html
           /nav.html
           /page-template.html
           /blog/article-template.html
           /images/
-        include-pdf: true
-        change-frequency: monthly
-        priority: '0.8'
 
     - name: Commit and push the sitemap
       run: |
