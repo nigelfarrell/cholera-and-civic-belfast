@@ -177,24 +177,27 @@ nav {
     text-align: center;
 }
 
-/* Portrait image (default) */
+/* Default image (portrait) */
 .image-container .image-box img {
     width: 100%;
     height: auto;
     border-radius: 50%;
     border: 2px solid #2f4f3e;
     object-fit: cover;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1;  /* This stays for portrait */
 }
 
 /* Bust image: show the full image inside the circle */
-.bust-image {
+.image-container .image-box .bust-image {
     object-fit: contain !important;
     background: #f4f1e8;
     padding: 8px;
     box-sizing: border-box;
     border-radius: 50%;
     border: 2px solid #2f4f3e;
+    aspect-ratio: auto;  /* ADD THIS — removes the square constraint */
+    height: auto;        /* ADD THIS — allows natural height */
+    width: 100%;
 }
 
 .image-container .image-box .caption {
@@ -389,9 +392,9 @@ Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfas
     </div>
 
     <div class="image-box">
-        <img src="../images/Henry-McCormac.png" alt="Marble bust of Dr Henry McCormac, Ulster Museum">
-        <div class="caption">Marble bust, Ulster Museum. Credit: R.M.W. Strain, <em>Ulster Medical Journal</em>, 1967.</div>
-    </div>
+    <img class="bust-image" src="../images/Henry-McCormac.png" alt="Marble bust of Dr Henry McCormac, Ulster Museum">
+    <div class="caption">Marble bust, Ulster Museum. Credit: R.M.W. Strain, <em>Ulster Medical Journal</em>, 1967.</div>
+</div>
 
 </div>
 
