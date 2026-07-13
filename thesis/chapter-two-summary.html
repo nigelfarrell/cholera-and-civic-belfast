@@ -1,1 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 2 Summary | PhD Thesis | Cholera & Civic Belfast</title>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VMHEBKG15E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VMHEBKG15E');
+</script>
+
+<style>
+/* ============================================================
+   CHOLERA & CIVIC BELFAST — MASTER STYLING
+   This CSS is used across all pages of the website.
+   ============================================================ */
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    color: #1f1f1f;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7em;
+    letter-spacing: 0.5px;
+}
+
+header .subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1.1em;
+}
+
+header .author {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #d8d2c3;
+}
+
+header .contact-email {
+    margin-top: 8px;
+    font-size: 0.8em;
+}
+
+header .contact-email a {
+    color: #e8e2d3;
+    text-decoration: none;
+    border-bottom: 1px dotted #e8e2d3;
+}
+
+header .contact-email a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* ============================================================
+   NAVIGATION — MASTER MENU
+   ============================================================ */
+
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 260px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* KEYBOARD NAVIGATION */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ============================================================
+   BACK LINKS
+   ============================================================ */
+
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ============================================================
+   CHAPTER SUMMARY (Thesis chapters)
+   ============================================================ */
+
+.chapter-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #2f4f3e;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.chapter-subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4a6fa5;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.chapter-summary p {
+    margin: 1.2em 0;
+    text-align: justify;
+}
+
+.chapter-summary strong {
+    color: #2f4f3e;
+}
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid #d8d2c3;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.chapter-nav .nav-btn {
+    display: inline-block;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.chapter-nav .nav-btn:hover {
+    background: #3f6a52;
+}
+
+.chapter-nav .nav-btn.disabled {
+    background: #8a9b8f;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.chapter-nav .nav-text {
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* ============================================================
+   DOWNLOAD NOTE (Thesis pages)
+   ============================================================ */
+
+.download-note {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 30px 0 20px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.download-note p {
+    margin: 0 0 10px 0;
+}
+
+.download-note p:last-child {
+    margin-bottom: 0;
+}
+
+.download-note a {
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.download-note a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ============================================================
+   COPYRIGHT NOTICE
+   ============================================================ */
+
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+    clear: both;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max-width: 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header h1 {
+        font-size: 2.0em;
+    }
+
+    /* Navigation */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    /* Chapter navigation */
+    .chapter-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .chapter-nav .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Chapter titles */
+    .chapter-title {
+        font-size: 1.6em;
+    }
+}
+
+/* ============================================================
+   COLOUR REFERENCE
+   ============================================================
+
+   #2f4f3e  — Dark green (header, buttons, accents)
+   #f4f1e8  — Warm off-white (body background)
+   #faf8f3  — Light card background
+   #e8e2d3  — Beige (highlights, dropdown background)
+   #d8d2c3  — Border colour
+   #4a6fa5  — Blue (subtitles, labels)
+   #555555  — Medium grey (body text)
+   #888888  — Light grey (notes, captions)
+   #ffffff  — White (cards, info boxes)
+
+   ============================================================ */
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
+<nav>
+    <div id="menu-container"></div>
+</nav>
+
+<script>
+    fetch('../nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
+
+</header>
+
+<div class="container">
+
+<div class="back-link">
+    <a href="../Research.html">← Back to Research</a>
+</div>
+
+<div class="chapter-summary">
+
+<div class="chapter-title">Chapter 2 Summary</div>
+<div class="chapter-subtitle">Cholera in Belfast 1832–34</div>
+
+<p>This chapter examines the cholera epidemic in Belfast between 1831 and 1834, tracing the course of the outbreak from its earliest appearance through to its eventual decline, and assessing the ways in which the town's civic and medical authorities responded to the crisis.</p>
+
+<p>It begins by outlining the context of growing concern over cholera's spread from Britain into Ireland, and the steps taken in Belfast prior to the confirmed arrival of the disease. A provisional Board of Health was established in late 1831 and, working alongside civic, medical and philanthropic bodies, a range of preventative measures were implemented in advance of cholera's arrival. These included street cleansing, whitewashing and fumigation of houses, improvements to drainage, and the organisation of the town into medical districts overseen by inspectors and visitors tasked with monitoring sanitary conditions and the health of the poor.</p>
+
+<p>The first case was recorded in February 1832 in Quay Lane and subsequent early deaths were subject to diagnostic uncertainty and limited official acknowledgement but gradually came to be acknowledged as the disease became more established in the town. From this point, the epidemic escalated throughout the spring and summer of 1832. The temporary cholera hospital, under the direction of Dr Henry McCormac became an important point of therapy. Many people however, feared hospital admission due to perceptions regarding conditions, cost and the efficacy of treatments. Patients were managed using the standard therapies of the period, including bloodletting, calomel, and opiate-based medicines; however, treatments were often ineffective and outcomes were highly variable. Curiosity and fear accompanied cholera leading to rumour, and occasional hostility towards medical practitioners, though serious public disorder in Belfast remained limited.</p>
+
+<p>By late 1832 the epidemic had begun to subside, though sporadic cases continued into 1833–34 before cholera finally disappeared. Official returns recorded 2,831 cases and 418 deaths, producing a mortality rate of approximately 14.8 per cent. These figures were considerably lower than those recorded in Dublin and most major British cities, although considering the limitations of contemporary reporting, it is likely that some under-recording occurred.</p>
+
+<p>In conclusion, the chapter argues that while Belfast's cholera response was grounded in contemporary medical and environmental theories, it nevertheless highlights the significance of proactive early preventative action and coordinated civic and medical intervention in shaping the course of the epidemic. Overall, Belfast's management of the cholera outbreak between 1832 and 1834 appears comparatively effective when set against many other Irish and British urban centres. However, the failure to sustain public health measures beyond this crisis meant that when cholera recurred, the town faced a significantly more severe outbreak — one that starkly revealed the limited extent of civic improvement in precisely those areas where it was most urgently needed.</p>
+
+</div>
+
+<!-- NAVIGATION BUTTONS -->
+<div class="chapter-nav">
+    <a href="chapter-01-summary.html" class="nav-btn">← Previous Chapter</a>
+    <span class="nav-text">Chapter 2 of 8</span>
+    <a href="chapter-03-summary.html" class="nav-btn">Next Chapter →</a>
+</div>
+
+<!-- DOWNLOAD NOTE -->
+<div class="download-note">
+    <p><strong>📖 Full Thesis</strong><br>
+    The complete thesis is available to read online:<br>
+    <a href="farrell-thesis-full-document.html">Read Full Thesis Online →</a></p>
+    
+    <p><strong>📄 Download PDF</strong><br>
+    Alternatively, download the PDF version:<br>
+    <a href="Farrell_PhD_Thesis.pdf">Download Full Thesis (PDF) →</a></p>
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
