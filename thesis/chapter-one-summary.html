@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
 <title>Chapter 1 Summary | PhD Thesis | Cholera & Civic Belfast</title>
 
 <!-- Google Analytics -->
@@ -17,6 +16,7 @@
 <style>
 /* ============================================================
    CHOLERA & CIVIC BELFAST — MASTER STYLING
+   This CSS is used across all pages of the website.
    ============================================================ */
 
 /* ============================================================
@@ -166,66 +166,6 @@ nav {
 }
 
 /* ============================================================
-   HERO BANNERS
-   ============================================================ */
-
-/* Large hero (homepage) */
-.hero-banner-large {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.hero-banner-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 60%;
-    display: block;
-}
-
-/* Small hero (timelines, landing pages) */
-.hero-banner {
-    width: 100%;
-    max-height: 250px;
-    overflow: hidden;
-    margin: 0;
-}
-
-.hero-banner img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: center 65%;
-    display: block;
-}
-
-/* Article hero (gradient banner) */
-.article-hero {
-    background: linear-gradient(135deg, #2f4f3e 0%, #4a6f5e 100%);
-    color: #f4f1e8;
-    text-align: center;
-    padding: 40px 20px;
-    margin: 20px 0 40px 0;
-    border-radius: 8px;
-}
-
-.article-hero h2 {
-    color: #f4f1e8;
-    margin: 0 0 10px 0;
-    font-size: 1.8em;
-    font-weight: bold;
-}
-
-.article-hero p {
-    margin: 0;
-    font-size: 1.1em;
-    opacity: 0.9;
-}
-
-/* ============================================================
    CONTAINER
    ============================================================ */
 
@@ -233,296 +173,6 @@ nav {
     max-width: 1100px;
     margin: auto;
     padding: 40px 20px;
-}
-
-/* ============================================================
-   PAGE TITLES
-   ============================================================ */
-
-.page-title {
-    color: #2f4f3e;
-    font-size: 2em;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-left: 5px solid #2f4f3e;
-    padding-left: 20px;
-}
-
-/* ============================================================
-   INTRO BOX
-   ============================================================ */
-
-.intro {
-    background: #ffffff;
-    border: 1px solid #d8d2c3;
-    padding: 22px 25px;
-    margin-bottom: 40px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.intro p {
-    margin: 0;
-    font-size: 1.05em;
-    color: #333;
-}
-
-/* ============================================================
-   CARDS — HOMEPAGE, LANDING PAGES
-   ============================================================ */
-
-/* Grid layout */
-.home-grid,
-.info-grid,
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-    align-items: stretch;
-}
-
-/* Individual card */
-.home-card,
-.info-card,
-.research-card {
-    background: #faf8f3;
-    border: 1px solid #d8d2c3;
-    padding: 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-}
-
-.home-card:hover,
-.info-card:hover,
-.research-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-/* Card headings with green accent */
-.home-card h2,
-.info-card h2,
-.research-card h2 {
-    color: #2f4f3e;
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.4em;
-    border-left: 3px solid #2f4f3e;
-    padding-left: 12px;
-}
-
-/* Card text */
-.home-card p,
-.info-card p,
-.research-card p {
-    margin: 12px 0;
-    color: #555;
-    font-size: 0.95em;
-    line-height: 1.6;
-    flex: 1;
-}
-
-/* Card links */
-.home-card a,
-.info-card a,
-.research-card a {
-    display: inline-block;
-    margin-top: 12px;
-    color: #2f4f3e;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
-    align-self: flex-start;
-}
-
-.home-card a:hover,
-.info-card a:hover,
-.research-card a:hover {
-    border-bottom-color: #2f4f3e;
-}
-
-/* PDF button inside cards */
-.pdf-button {
-    display: inline-block;
-    background: #2f4f3e;
-    color: #f4f1e8;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    transition: background 0.2s ease;
-    margin-top: 8px;
-    border: none;
-}
-
-.pdf-button:hover {
-    background: #3f6a52;
-}
-
-/* ============================================================
-   PEOPLE PAGE — SPECIFIC CARDS
-   ============================================================ */
-
-.people-grid {
-    max-width: 600px;
-    margin: 40px auto 60px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-}
-
-.person-card {
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-}
-
-.person-img {
-    width: 150px;
-    height: 190px;
-    margin: 0 auto;
-    border-radius: 50% / 42%;
-    background-color: #cfd8e3;
-    border: 2px solid #2f4f3e;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.person-card:hover .person-img {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-.person-title {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #2f4f3e;
-}
-
-/* ============================================================
-   ARTICLE CONTENT — BLOG POSTS
-   ============================================================ */
-
-.article-content h1 {
-    color: #2f4f3e;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-left: 5px solid #2f4f3e;
-    padding-left: 20px;
-}
-
-.article-content h2 {
-    color: #2f4f3e;
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
-
-.article-content h3 {
-    color: #2f4f3e;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-/* ============================================================
-   PDF BUTTON — ARTICLE TOP RIGHT
-   ============================================================ */
-
-.pdf-button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 15px;
-    border-bottom: 1px solid #d8d2c3;
-    padding-bottom: 15px;
-}
-
-.pdf-button-container h1 {
-    margin: 0;
-    font-size: 2.2em;
-    flex: 1;
-}
-
-.pdf-button-article {
-    background: #2f4f3e;
-    color: #f4f1e8;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 18px;
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.9em;
-    transition: background 0.2s ease, transform 0.1s ease;
-    white-space: nowrap;
-}
-
-.pdf-button-article:hover {
-    background: #3f6a52;
-    transform: translateY(-1px);
-}
-
-/* ============================================================
-   IMAGES & FIGURES
-   ============================================================ */
-
-.figure {
-    text-align: center;
-    margin: 30px 0 0 0;
-}
-
-.figure img {
-    width: 80%;
-    height: auto;
-    border: 1px solid #d8d2c3;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto;
-}
-
-.caption {
-    text-align: center;
-    font-size: 0.8em;
-    font-style: italic;
-    line-height: 1.3;
-    margin-top: 8px;
-    margin-bottom: 25px;
-    color: #666;
-}
-
-/* ============================================================
-   BIOGRAPHY PAGES (People)
-   ============================================================ */
-
-.author-image {
-    float: left;
-    width: 200px;
-    margin: 0 25px 15px 0;
-}
-
-.author-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid #2f4f3e;
-    object-fit: cover;
-}
-
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /* ============================================================
@@ -542,155 +192,6 @@ nav {
 
 .back-link a:hover {
     border-bottom: 1px solid #2f4f3e;
-}
-
-/* ============================================================
-   SECTION BOXES (Timelines, Info boxes)
-   ============================================================ */
-
-.info-section {
-    background: #ffffff;
-    border: 1px solid #d8d2c3;
-    padding: 20px;
-    margin: 30px 0;
-    border-radius: 4px;
-}
-
-.info-section h3 {
-    color: #2f4f3e;
-    margin-top: 0;
-    border-bottom: 1px solid #d8d2c3;
-    padding-bottom: 8px;
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 12px;
-}
-
-.info-list li {
-    padding: 5px 0;
-    border-bottom: 1px dotted #d8d2c3;
-}
-
-.info-list li strong {
-    color: #2f4f3e;
-}
-
-/* ============================================================
-   FACT BOX (Blog articles)
-   ============================================================ */
-
-.fact-box {
-    background: #e8e2d3;
-    border: 1px solid #d8d2c3;
-    border-radius: 8px;
-    padding: 15px 20px;
-    margin: 20px 0;
-    float: right;
-    width: 40%;
-    margin-left: 20px;
-}
-
-.fact-box h3 {
-    margin-top: 0;
-    color: #2f4f3e;
-    font-size: 1.1em;
-}
-
-.fact-box ul {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.fact-box li {
-    margin: 5px 0;
-}
-
-/* ============================================================
-   QUOTE (Blog articles)
-   ============================================================ */
-
-.quote {
-    text-align: center;
-    font-style: italic;
-    margin: 40px 0 0 0;
-    line-height: 1.2;
-}
-
-.quote-caption {
-    text-align: center;
-    font-size: 0.75em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-/* ============================================================
-   AUTHOR BIO (Blog articles)
-   ============================================================ */
-
-.author-bio {
-    background: #faf8f3;
-    border: 1px solid #d8d2c3;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 40px 0 20px 0;
-}
-
-.author-bio p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-.author-bio strong {
-    color: #2f4f3e;
-}
-
-/* ============================================================
-   TIMELINE TABLE
-   ============================================================ */
-
-.table-container {
-    overflow-x: auto;
-    margin: 30px 0;
-    border-radius: 4px;
-}
-
-.timeline-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #faf8f3;
-    font-size: 0.95em;
-    min-width: 600px;
-}
-
-.timeline-table th {
-    background: #2f4f3e;
-    color: #f4f1e8;
-    padding: 12px 15px;
-    text-align: left;
-    font-weight: bold;
-    border: 1px solid #4a6f5e;
-}
-
-.timeline-table td {
-    padding: 12px 15px;
-    border: 1px solid #d8d2c3;
-    vertical-align: top;
-}
-
-.timeline-table tr:nth-child(even) {
-    background: #f4f1e8;
-}
-
-.timeline-table tr:hover {
-    background: #e8e2d3;
 }
 
 /* ============================================================
@@ -727,7 +228,7 @@ nav {
 
 .chapter-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 40px 0 20px 0;
     padding-top: 20px;
@@ -824,79 +325,6 @@ nav {
 }
 
 /* ============================================================
-   CONTACT PAGES
-   ============================================================ */
-
-.contact-card {
-    background: #faf8f3;
-    border: 1px solid #d8d2c3;
-    border-radius: 8px;
-    padding: 25px;
-    margin: 30px 0;
-}
-
-.contact-card h2 {
-    margin-top: 0;
-    color: #2f4f3e;
-    font-size: 1.4em;
-    border-bottom: 1px solid #d8d2c3;
-    padding-bottom: 10px;
-}
-
-.email-highlight {
-    background: #e8e2d3;
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #2f4f3e;
-    margin: 15px 0;
-}
-
-.email-highlight a {
-    color: #2f4f3e;
-    text-decoration: none;
-}
-
-.email-highlight a:hover {
-    text-decoration: underline;
-}
-
-.guidelines {
-    background: #efe9dc;
-    border-left: 4px solid #2f4f3e;
-    padding: 15px 20px;
-    margin: 20px 0;
-}
-
-.guidelines p {
-    margin: 5px 0;
-}
-
-.guidelines strong {
-    color: #2f4f3e;
-}
-
-/* ============================================================
-   DEVELOPMENT BOX (Public Health page)
-   ============================================================ */
-
-.development-box {
-    background: #ffffff;
-    border: 1px solid #d8d2c3;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin-top: 20px;
-}
-
-.development-box h2 {
-    color: #2f4f3e;
-    margin-top: 0;
-}
-
-/* ============================================================
    FOOTER
    ============================================================ */
 
@@ -960,73 +388,6 @@ footer a:hover {
         display: block;
     }
 
-    /* Hero banners */
-    .hero-banner-large {
-        height: 220px;
-    }
-
-    .hero-banner {
-        max-height: 180px;
-    }
-
-    .hero-banner img {
-        height: 180px;
-    }
-
-    /* Grids */
-    .home-grid,
-    .info-grid,
-    .research-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Page titles */
-    .page-title {
-        font-size: 1.6em;
-        padding-left: 15px;
-    }
-
-    /* Blog articles */
-    .pdf-button-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .pdf-button-article {
-        align-self: flex-start;
-    }
-
-    .article-hero {
-        padding: 25px 15px;
-    }
-
-    .article-hero h2 {
-        font-size: 1.4em;
-    }
-
-    .fact-box {
-        float: none;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .figure img {
-        width: 95%;
-    }
-
-    /* People */
-    .author-image {
-        float: none;
-        width: 180px;
-        margin: 0 auto 20px auto;
-        display: block;
-    }
-
-    /* Timelines */
-    .info-list {
-        grid-template-columns: 1fr;
-    }
-
     /* Chapter navigation */
     .chapter-nav {
         flex-direction: column;
@@ -1039,27 +400,39 @@ footer a:hover {
         text-align: center;
     }
 
-    /* Contact */
-    .contact-email {
-        font-size: 0.75em;
-    }
-
     /* Chapter titles */
     .chapter-title {
         font-size: 1.6em;
     }
 }
+
+/* ============================================================
+   COLOUR REFERENCE
+   ============================================================
+
+   #2f4f3e  — Dark green (header, buttons, accents)
+   #f4f1e8  — Warm off-white (body background)
+   #faf8f3  — Light card background
+   #e8e2d3  — Beige (highlights, dropdown background)
+   #d8d2c3  — Border colour
+   #4a6fa5  — Blue (subtitles, labels)
+   #555555  — Medium grey (body text)
+   #888888  — Light grey (notes, captions)
+   #ffffff  — White (cards, info boxes)
+
+   ============================================================ */
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Cholera &amp; Civic Belfast</h1>
-    <div class="subtitle">
-        Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
-    </div>
-</header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
 
 <!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
 <nav>
@@ -1075,55 +448,56 @@ footer a:hover {
         .catch(error => console.error('Error loading menu:', error));
 </script>
 
+</header>
+
 <div class="container">
 
-    <div class="back-link">
-        <a href="../Research.html">← Back to Research</a>
-    </div>
+<div class="back-link">
+    <a href="../Research.html">← Back to Research</a>
+</div>
 
-    <div class="chapter-summary">
+<div class="chapter-summary">
 
-        <div class="chapter-title">Chapter 1 Summary</div>
-        <div class="chapter-subtitle">Cholera and Civic Belfast: Introduction to the Thesis</div>
+<div class="chapter-title">Chapter 1 Summary</div>
+<div class="chapter-subtitle">Cholera and Civic Belfast: Introduction to the Thesis</div>
 
-        <p>This chapter provides an introduction to the thesis, establishing the historical and historiographical context for the study of cholera and public health in nineteenth-century Belfast. It outlines the central arguments of the thesis, which examine how cholera epidemics shaped civic governance, medical practice, and everyday life in the town between 1832 and the 1890s.</p>
+<p>This chapter provides an introduction to the thesis, establishing the historical and historiographical context for the study of cholera and public health in nineteenth-century Belfast. It outlines the central arguments of the thesis, which examine how cholera epidemics shaped civic governance, medical practice, and everyday life in the town between 1832 and the 1890s.</p>
 
-        <p>The chapter reviews existing literature on cholera and public health in Britain and Ireland, locating Belfast within broader debates concerning the relationship between disease, poverty, environment, and state intervention. It argues that while the historiography of cholera in Britain has been extensively developed, Irish urban experiences remain comparatively underexplored. This thesis addresses that gap by providing a detailed case study of Belfast, a rapidly growing industrial town whose experiences of cholera were shaped by distinct political, social, economic, and institutional contexts.</p>
+<p>The chapter reviews existing literature on cholera and public health in Britain and Ireland, locating Belfast within broader debates concerning the relationship between disease, poverty, environment, and state intervention. It argues that while the historiography of cholera in Britain has been extensively developed, Irish urban experiences remain comparatively underexplored. This thesis addresses that gap by providing a detailed case study of Belfast, a rapidly growing industrial town whose experiences of cholera were shaped by distinct political, social, economic, and institutional contexts.</p>
 
-        <p>Key themes introduced include the response of civic authorities and medical practitioners to epidemics, the role of philanthropy and poor relief, the impact of sanitary reform and municipal governance, and the everyday experiences of Belfast's inhabitants. The chapter also discusses the theoretical frameworks underpinning the thesis, drawing on social history, medical history, and urban history, as well as concepts of environmental determinism and the political economy of health.</p>
+<p>Key themes introduced include the response of civic authorities and medical practitioners to epidemics, the role of philanthropy and poor relief, the impact of sanitary reform and municipal governance, and the everyday experiences of Belfast's inhabitants. The chapter also discusses the theoretical frameworks underpinning the thesis, drawing on social history, medical history, and urban history, as well as concepts of environmental determinism and the political economy of health.</p>
 
-        <p>The chapter then outlines the structure of the thesis, briefly describing the content of each of the subsequent chapters. It concludes by emphasising the significance of Belfast's cholera experience in contributing to wider debates on public health, state intervention, and the effectiveness of local governance in mitigating epidemic disease in nineteenth-century Ireland.</p>
+<p>The chapter then outlines the structure of the thesis, briefly describing the content of each of the subsequent chapters. It concludes by emphasising the significance of Belfast's cholera experience in contributing to wider debates on public health, state intervention, and the effectiveness of local governance in mitigating epidemic disease in nineteenth-century Ireland.</p>
 
-    </div>
+</div>
 
-    <!-- NAVIGATION BUTTONS -->
-    <div class="chapter-nav">
-        <span class="nav-btn disabled">← Previous Chapter</span>
-        <span class="nav-text">Chapter 1 of 8</span>
-        <a href="chapter-02-summary.html" class="nav-btn">Next Chapter →</a>
-    </div>
+<!-- NAVIGATION BUTTONS -->
+<div class="chapter-nav">
+    <span class="nav-text">Chapter 1 of 8</span>
+    <a href="chapter-02-summary.html" class="nav-btn">Next Chapter →</a>
+</div>
 
-    <!-- DOWNLOAD NOTE -->
-    <div class="download-note">
-        <p><strong>📖 Full Thesis</strong><br>
-        The complete thesis is available to read online:<br>
-        <a href="farrell-thesis-full-document.html">Read Full Thesis Online →</a></p>
-        
-        <p><strong>📄 Download PDF</strong><br>
-        Alternatively, download the PDF version:<br>
-        <a href="Farrell_PhD_Thesis.pdf">Download Full Thesis (PDF) →</a></p>
-    </div>
+<!-- DOWNLOAD NOTE -->
+<div class="download-note">
+    <p><strong>📖 Full Thesis</strong><br>
+    The complete thesis is available to read online:<br>
+    <a href="farrell-thesis-full-document.html">Read Full Thesis Online →</a></p>
+    
+    <p><strong>📄 Download PDF</strong><br>
+    Alternatively, download the PDF version:<br>
+    <a href="Farrell_PhD_Thesis.pdf">Download Full Thesis (PDF) →</a></p>
+</div>
 
-    <!-- COPYRIGHT NOTICE BOX -->
-    <div class="copyright-notice">
-        <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
-    </div>
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
+</div>
 
 </div>
 
 <footer>
-    <p>© Cholera &amp; Civic Belfast — Dr Nigel Farrell</p>
-    <p><a href="../licence.html">Copyright &amp; Licence</a></p>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
 </footer>
 
 </body>
