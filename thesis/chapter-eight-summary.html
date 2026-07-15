@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 8 Summary | PhD Thesis | Cholera & Civic Belfast</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VMHEBKG15E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VMHEBKG15E');
+</script>
+
+<style>
+/* ============================================================
+   CHOLERA & CIVIC BELFAST — MASTER STYLING
+   This CSS is used across all pages of the website.
+   ============================================================ */
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f4f1e8;
+    color: #1f1f1f;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+header {
+    text-align: center;
+    padding: 50px 20px 20px;
+    background: #2f4f3e;
+    color: #f4f1e8;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.7em;
+    letter-spacing: 0.5px;
+}
+
+header .subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    color: #e8e2d3;
+    font-size: 1.1em;
+}
+
+header .author {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #d8d2c3;
+}
+
+header .contact-email {
+    margin-top: 8px;
+    font-size: 0.8em;
+}
+
+header .contact-email a {
+    color: #e8e2d3;
+    text-decoration: none;
+    border-bottom: 1px dotted #e8e2d3;
+}
+
+header .contact-email a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+/* ============================================================
+   NAVIGATION — MASTER MENU
+   ============================================================ */
+
+nav {
+    margin-top: 25px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #e8e2d3;
+}
+
+/* DROPDOWNS CORE */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f4f1e8;
+    border: 1px solid #d8d2c3;
+    min-width: 260px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background: #e8e2d3;
+    color: #1f4f3e;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* KEYBOARD NAVIGATION */
+.dropdown > a:focus {
+    outline: 2px solid #e8e2d3;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+.dropdown-content a:focus {
+    background: #e8e2d3;
+    outline: none;
+}
+
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ============================================================
+   BACK LINKS
+   ============================================================ */
+
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: #2f4f3e;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.back-link a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ============================================================
+   CHAPTER SUMMARY (Thesis chapters)
+   ============================================================ */
+
+.chapter-title {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #2f4f3e;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.chapter-subtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4a6fa5;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d8d2c3;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.chapter-summary p {
+    margin: 1.2em 0;
+    text-align: justify;
+}
+
+.chapter-summary strong {
+    color: #2f4f3e;
+}
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid #d8d2c3;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.chapter-nav .nav-btn {
+    display: inline-block;
+    background: #2f4f3e;
+    color: #f4f1e8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.chapter-nav .nav-btn:hover {
+    background: #3f6a52;
+}
+
+.chapter-nav .nav-btn.disabled {
+    background: #8a9b8f;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.chapter-nav .nav-text {
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* ============================================================
+   DOWNLOAD NOTE (Thesis pages)
+   ============================================================ */
+
+.download-note {
+    background: #faf8f3;
+    border: 1px solid #d8d2c3;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 30px 0 20px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.download-note p {
+    margin: 0 0 10px 0;
+}
+
+.download-note p:last-child {
+    margin-bottom: 0;
+}
+
+.download-note a {
+    color: #2f4f3e;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.download-note a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ============================================================
+   COPYRIGHT NOTICE
+   ============================================================ */
+
+.copyright-notice {
+    background: #efe9dc;
+    border-left: 4px solid #2f4f3e;
+    padding: 15px 20px;
+    margin: 40px 0 20px 0;
+    font-size: 0.85em;
+    border-radius: 3px;
+    clear: both;
+}
+
+.copyright-notice p {
+    margin: 0;
+}
+
+.copyright-notice a {
+    color: #2f4f3e;
+    text-decoration: none;
+    border-bottom: 1px dotted #2f4f3e;
+}
+
+.copyright-notice a:hover {
+    border-bottom: 1px solid #2f4f3e;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #d8d2c3;
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+footer a:hover {
+    color: #2f4f3e;
+    border-bottom-color: #2f4f3e;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (max-width: 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header h1 {
+        font-size: 2.0em;
+    }
+
+    /* Navigation */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        border: none;
+        box-shadow: none;
+        background: #e8e2d3;
+        margin-top: 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+
+    /* Chapter navigation */
+    .chapter-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .chapter-nav .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Chapter titles */
+    .chapter-title {
+        font-size: 1.6em;
+    }
+}
+
+/* ============================================================
+   COLOUR REFERENCE
+   ============================================================
+
+   #2f4f3e  — Dark green (header, buttons, accents)
+   #f4f1e8  — Warm off-white (body background)
+   #faf8f3  — Light card background
+   #e8e2d3  — Beige (highlights, dropdown background)
+   #d8d2c3  — Border colour
+   #4a6fa5  — Blue (subtitles, labels)
+   #555555  — Medium grey (body text)
+   #888888  — Light grey (notes, captions)
+   #ffffff  — White (cards, info boxes)
+
+   ============================================================ */
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Cholera & Civic Belfast</h1>
+
+<div class="subtitle">
+Stories of Disease, Public Health and Everyday Life in Nineteenth-Century Belfast
+</div>
+
+<!-- JAVASCRIPT LOADER - MENU LOADS FROM nav.html -->
+<nav>
+    <div id="menu-container"></div>
+</nav>
+
+<script>
+    fetch('../nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading menu:', error));
+</script>
+
+</header>
+
+<div class="container">
+
+<div class="back-link">
+    <a href="../Research.html">← Back to Research</a>
+</div>
+
+<div class="chapter-summary">
+
+<div class="chapter-title">Chapter 8 Summary</div>
+<div class="chapter-subtitle">Postscript and Conclusion</div>
+
+<p>This chapter examines the aftermath of cholera in the decades following its decline as a major epidemic threat and situates these developments within the broader evolution of public health policy in the later nineteenth century. It argues that although cholera had ceased to be a major cause of mortality in many urban centres, it remained highly significant in shaping scientific debate, administrative reform, and the development of modern public health structures.</p>
+
+<p>The chapter first explores continuing medical uncertainty regarding the causes and transmission of epidemic disease. Throughout the mid- to late nineteenth century, competing theories of miasma, contagion, and emerging germ theory continued to coexist. While anti-contagionist thinking, with its emphasis on environmental sanitation, remained dominant in policy terms, growing scientific attention to contaminated water and microbial explanations gradually reshaped understandings of cholera. International sanitary conferences reflected this uncertainty, often producing compromise positions that acknowledged both environmental and contagionist explanations. Over time, however, there was a gradual convergence towards acceptance of waterborne transmission, particularly following the work of John Snow and subsequent international discussion, even if consensus remained incomplete until the end of the century.</p>
+
+<p>In Ireland, these debates unfolded alongside significant administrative restructuring. The establishment of the Local Government Board in 1872 and the introduction of successive Public Health Acts in 1874 and 1878 marked a major reorganisation of sanitary governance. Although these measures extended state oversight and created a more coherent administrative framework, they largely built upon existing institutions rather than replacing them. Despite this, Irish public health legislation continued to lag behind developments in England, particularly in the appointment and authority of medical officers of health.</p>
+
+<p>The chapter then examines the implementation of late nineteenth-century public health policy in Belfast. Rapid industrialisation and population growth transformed the urban landscape, producing significant expansion in housing, infrastructure, and municipal services. While improvements in water supply, drainage, and urban regulation were evident, they tended to be concentrated in the more prosperous areas of the town. Sanitary administration became more structured and professionalised, with a growing hierarchy of medical and sanitary officers responsible for monitoring disease and environmental conditions. However, significant problems persisted in housing quality, waste disposal, and overcrowding, particularly in poorer districts.</p>
+
+<p>Despite the formal strengthening of public health authority, Belfast continued to experience outbreaks of disease associated with environmental conditions, including typhoid and other infections linked to contaminated water sources. These developments suggest that while administrative capacity had improved, structural inequalities and infrastructural limitations remained significant obstacles to effective disease prevention.</p>
+
+<p>The chapter concludes by arguing that the late nineteenth century marked a period of important but incomplete transition in public health governance. While legislative reform and administrative restructuring created a more systematic framework for disease control, practical outcomes remained uneven. Improvements in sanitation and municipal organisation did not eliminate the underlying environmental conditions that sustained endemic disease. Nevertheless, by the end of the century, the growing authority of central public health bodies, particularly the Local Government Board, reflected a significant shift in attitudes towards epidemic preparedness and control. Cholera, though no longer a recurring epidemic in Ireland after 1866, continued to shape public health thinking, leaving a legacy that influenced both policy and practice well into the modern period.</p>
+
+</div>
+
+<!-- NAVIGATION BUTTONS -->
+<div class="chapter-nav">
+    <a href="chapter-07-summary.html" class="nav-btn">← Previous Chapter</a>
+    <span class="nav-text">Chapter 8 of 8</span>
+    <span class="nav-btn disabled">Next Chapter →</span>
+</div>
+
+<!-- DOWNLOAD NOTE -->
+<div class="download-note">
+    <p><strong>📖 Full Thesis</strong><br>
+    The complete thesis is available to read online:<br>
+    <a href="farrell-thesis-full-document.html">Read Full Thesis Online →</a></p>
+    
+    <p><strong>📄 Download PDF</strong><br>
+    Alternatively, download the PDF version:<br>
+    <a href="Farrell_PhD_Thesis.pdf">Download Full Thesis (PDF) →</a></p>
+</div>
+
+<!-- COPYRIGHT NOTICE BOX -->
+<div class="copyright-notice">
+    <p><strong>© Dr Nigel Farrell</strong> — This work is shared for research and educational purposes. Any reuse, quotation, or reproduction must include appropriate academic attribution to the author. The content may not be redistributed commercially without permission. <a href="../licence.html">Full licence details →</a></p>
+</div>
+
+</div>
+
+<footer>
+<p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+<p><a href="../licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
