@@ -216,6 +216,37 @@
       color: #2f4f3e;
     }
 
+    /* IMAGE WITH TEXT WRAP - FLOATING LEFT */
+    .article-image {
+      float: left;
+      width: 300px;
+      margin: 0 25px 15px 0;
+      max-width: 100%;
+    }
+
+    .article-image img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #d8d2c3;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .article-image .image-credit {
+      font-size: 0.65em;
+      font-style: italic;
+      color: #666;
+      text-align: center;
+      margin-top: 4px;
+      line-height: 1.2;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
     /* FIGURES AND IMAGES */
     .figure {
       text-align: center;
@@ -384,6 +415,14 @@
       .article-hero h2 {
         font-size: 1.4em;
       }
+
+      .article-image {
+        float: none;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+        display: block;
+      }
     }
   </style>
 </head>
@@ -491,6 +530,12 @@
 
   <h2>Introduction</h2>
 
+  <!-- IMAGE WITH TEXT WRAP - TOP LEFT -->
+  <div class="article-image">
+    <img src="../images/Board-of-Health-Pigs-and-Slaughter-Houses.jpg" alt="Bound volume of cuttings relating to cholera in Belfast, showing Board of Health notices on pigs and slaughterhouses">
+    <div class="image-credit">Bound volume of cuttings relating to cholera in Belfast, Royal College of Physicians Ireland (RCPI), BMS/19.</div>
+  </div>
+
   <p>On a summer day in 1865, many of Belfast's reservoirs stood almost empty. Across working-class districts, families queued at public fountains for a few hours' supply of foul water drawn from the polluted River Lagan. Within a year cholera would return. The crisis exposed a problem that had haunted Belfast throughout the nineteenth century: the city's astonishing industrial growth had far outpaced its public health capabilities.</p>
 
   <p>Early civic Belfast was shaped by landlord planning; however, its town council (Corporation) was a largely ineffectual body. By 1835, the commissioners investigating Ireland's municipal corporations concluded that Belfast's Corporation had failed its inhabitants entirely, observing that 'great neglect and abuse of trusts in the body have occurred and have remained so long concealed that the utmost difficulties now lie in the way of any attempt to correct them.'<sup><a href="#fn1" id="ref1" class="footnote-ref">1</a></sup></p>
@@ -568,4 +613,12 @@
     </ol>
   </div>
 
- 
+</div>
+
+<footer>
+  <p>© Cholera & Civic Belfast — Dr Nigel Farrell</p>
+  <p><a href="../licence.html">Copyright & Licence</a></p>
+</footer>
+
+</body>
+</html>
